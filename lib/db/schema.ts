@@ -1,0 +1,136 @@
+import { sqliteTable, text, integer, real, primaryKey, uniqueIndex } from 'drizzle-orm/sqlite-core';
+
+export const sentences = sqliteTable('sentences', {
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  korean: text('korean').notNull(),
+  literal_translation: text('literal_translation'),
+  natural_translation: text('natural_translation').notNull(),
+  audio_url: text('audio_url'),
+  source: text('source'),
+  level: text('level'),
+  notes: text('notes'),
+  created_at: integer('created_at').notNull().$defaultFn(() => Math.floor(Date.now() / 1000)),
+  updated_at: integer('updated_at').notNull().$defaultFn(() => Math.floor(Date.now() / 1000)),
+});
+
+export const words = sqliteTable('words', {
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  hangul: text('hangul').notNull().unique(),
+  hanja: text('hanja'),
+  pronunciation: text('pronunciation'),
+  audio_url: text('audio_url'),
+  pos: text('pos'),
+  level: text('level'),
+  frequency_rank: integer('frequency_rank'),
+  stem: text('stem'),
+  irregular_type: text('irregular_type'),
+  honorific_plain: text('honorific_plain'),
+  notes: text('notes'),
+  tags: text('tags'),
+  created_at: integer('created_at').notNull().$defaultFn(() => Math.floor(Date.now() / 1000)),
+  updated_at: integer('updated_at').notNull().$defaultFn(() => Math.floor(Date.now() / 1000)),
+});
+
+export const wordDefinitions = sqliteTable('word_definitions', {
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  word_id: integer('word_id').notNull().references(() => words.id, { onDelete: 'cascade' }),
+  definition_ko: text('definition_ko'),
+  definition_en: text('definition_en'),
+  order_num: integer('order_num'),
+  krdict_target_code: text('krdict_target_code'),
+});
+
+export const wordExamples = sqliteTable('word_examples', {
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  word_id: integer('word_id').notNull().references(() => words.id, { onDelete: 'cascade' }),
+  example_ko: text('example_ko'),
+  example_en: text('example_en'),
+  source: text('source'),
+});
+
+export const sentenceWords = sqliteTable('sentence_words', {
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  sentence_id: integer('sentence_id').notNull().references(() => sentences.id, { onDelete: 'cascade' }),
+  word_id: integer('word_id').notNull().references(() => words.id, { onDelete: 'cascade' }),
+  position: integer('position'),
+  surface_form: text('surface_form'),
+  morpheme_breakdown: text('morpheme_breakdown'),
+  grammatical_role: text('grammatical_role'),
+  particle_attached: text('particle_attached'),
+});
+
+export const grammarPatterns = sqliteTable('grammar_patterns', {
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  pattern: text('pattern').notNull().unique(),
+  name_ko: text('name_ko'),
+  name_en: text('name_en').notNull(),
+  description: text('description').notNull(),
+  level: text('level'),
+  category: text('category'),
+  formality: text('formality'),
+  example_pattern_use: text('example_pattern_use'),
+  notes: text('notes'),
+});
+
+export const sentenceGrammarPatterns = sqliteTable('sentence_grammar_patterns', {
+  sentence_id: integer('sentence_id').notNull().references(() => sentences.id, { onDelete: 'cascade' }),
+  grammar_pattern_id: integer('grammar_pattern_id').notNull().references(() => grammarPatterns.id, { onDelete: 'cascade' }),
+}, (t) => ({
+  pk: primaryKey({ columns: [t.sentence_id, t.grammar_pattern_id] }),
+}));
+
+export const reviews = sqliteTable('reviews', {
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  item_type: text('item_type').notNull(),
+  item_id: integer('item_id').notNull(),
+  review_mode: text('review_mode').notNull(),
+  due: integer('due').notNull(),
+  stability: real('stability').notNull().default(0),
+  difficulty: real('difficulty').notNull().default(0),
+  elapsed_days: integer('elapsed_days').notNull().default(0),
+  scheduled_days: integer('scheduled_days').notNull().default(0),
+  reps: integer('reps').notNull().default(0),
+  lapses: integer('lapses').notNull().default(0),
+  state: integer('state').notNull().default(0),
+  last_review: integer('last_review'),
+}, (t) => ({
+  uniq: uniqueIndex('reviews_unique').on(t.item_type, t.item_id, t.review_mode),
+}));
+
+export const reviewLogs = sqliteTable('review_logs', {
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  review_id: integer('review_id').notNull().references(() => reviews.id, { onDelete: 'cascade' }),
+  rating: integer('rating').notNull(),
+  user_answer: text('user_answer'),
+  was_correct: integer('was_correct'),
+  time_spent_ms: integer('time_spent_ms'),
+  reviewed_at: integer('reviewed_at').notNull().$defaultFn(() => Math.floor(Date.now() / 1000)),
+  session_id: text('session_id'),
+  note: text('note'),
+});
+
+export const krdictCache = sqliteTable('krdict_cache', {
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  query: text('query').notNull().unique(),
+  response_xml: text('response_xml').notNull(),
+  cached_at: integer('cached_at').notNull().$defaultFn(() => Math.floor(Date.now() / 1000)),
+});
+
+export const settings = sqliteTable('settings', {
+  key: text('key').primaryKey(),
+  value: text('value'),
+});
+
+export type Sentence = typeof sentences.$inferSelect;
+export type NewSentence = typeof sentences.$inferInsert;
+export type Word = typeof words.$inferSelect;
+export type NewWord = typeof words.$inferInsert;
+export type WordDefinition = typeof wordDefinitions.$inferSelect;
+export type WordExample = typeof wordExamples.$inferSelect;
+export type SentenceWord = typeof sentenceWords.$inferSelect;
+export type GrammarPattern = typeof grammarPatterns.$inferSelect;
+export type NewGrammarPattern = typeof grammarPatterns.$inferInsert;
+export type Review = typeof reviews.$inferSelect;
+export type NewReview = typeof reviews.$inferInsert;
+export type ReviewLog = typeof reviewLogs.$inferSelect;
+export type Settings = typeof settings.$inferSelect;
