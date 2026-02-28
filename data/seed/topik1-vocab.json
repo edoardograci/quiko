@@ -1,0 +1,8352 @@
+[
+  {
+    "hangul": "가게",
+    "level": "TOPIK-I",
+    "english": "store, shop"
+  },
+  {
+    "hangul": "감사하다",
+    "level": "TOPIK-I",
+    "english": "thank, appreciate"
+  },
+  {
+    "hangul": "가격",
+    "level": "TOPIK-I",
+    "english": "price"
+  },
+  {
+    "hangul": "감사합니다",
+    "level": "TOPIK-I",
+    "english": "thank you"
+  },
+  {
+    "hangul": "가구",
+    "level": "TOPIK-I",
+    "english": "furniture"
+  },
+  {
+    "hangul": "감자",
+    "level": "TOPIK-I",
+    "english": "potato"
+  },
+  {
+    "hangul": "가깝다",
+    "level": "TOPIK-I",
+    "english": "close"
+  },
+  {
+    "hangul": "감자탕",
+    "level": "TOPIK-I",
+    "english": "Gamjatang, potato soup"
+  },
+  {
+    "hangul": "가끔",
+    "level": "TOPIK-I",
+    "english": "sometimes"
+  },
+  {
+    "hangul": "갑자기",
+    "level": "TOPIK-I",
+    "english": "suddenly"
+  },
+  {
+    "hangul": "가다",
+    "level": "TOPIK-I",
+    "english": "go"
+  },
+  {
+    "hangul": "값",
+    "level": "TOPIK-I",
+    "english": "price"
+  },
+  {
+    "hangul": "가르치다",
+    "level": "TOPIK-I",
+    "english": "teach"
+  },
+  {
+    "hangul": "강",
+    "level": "TOPIK-I",
+    "english": "river"
+  },
+  {
+    "hangul": "가방",
+    "level": "TOPIK-I",
+    "english": "bag"
+  },
+  {
+    "hangul": "강아지",
+    "level": "TOPIK-I",
+    "english": "puppy"
+  },
+  {
+    "hangul": "가볍다",
+    "level": "TOPIK-I",
+    "english": "light"
+  },
+  {
+    "hangul": "강좌",
+    "level": "TOPIK-I",
+    "english": "lecture"
+  },
+  {
+    "hangul": "가수",
+    "level": "TOPIK-I",
+    "english": "singer"
+  },
+  {
+    "hangul": "갖다",
+    "level": "TOPIK-I",
+    "english": "have"
+  },
+  {
+    "hangul": "가슴",
+    "level": "TOPIK-I",
+    "english": "chest, breast"
+  },
+  {
+    "hangul": "같다",
+    "level": "TOPIK-I",
+    "english": "same"
+  },
+  {
+    "hangul": "가요",
+    "level": "TOPIK-I",
+    "english": "song"
+  },
+  {
+    "hangul": "같이",
+    "level": "TOPIK-I",
+    "english": "together"
+  },
+  {
+    "hangul": "가운데",
+    "level": "TOPIK-I",
+    "english": "middle"
+  },
+  {
+    "hangul": "개",
+    "level": "TOPIK-I",
+    "english": "dog, ~ piece(s)"
+  },
+  {
+    "hangul": "가위",
+    "level": "TOPIK-I",
+    "english": "scissors"
+  },
+  {
+    "hangul": "개나리",
+    "level": "TOPIK-I",
+    "english": "forsythia"
+  },
+  {
+    "hangul": "가을",
+    "level": "TOPIK-I",
+    "english": "autumn, fall"
+  },
+  {
+    "hangul": "개인",
+    "level": "TOPIK-I",
+    "english": "individual"
+  },
+  {
+    "hangul": "가장",
+    "level": "TOPIK-I",
+    "english": "most"
+  },
+  {
+    "hangul": "거기",
+    "level": "TOPIK-I",
+    "english": "there"
+  },
+  {
+    "hangul": "가져가다",
+    "level": "TOPIK-I",
+    "english": "take away"
+  },
+  {
+    "hangul": "거리",
+    "level": "TOPIK-I",
+    "english": "street"
+  },
+  {
+    "hangul": "가져오다",
+    "level": "TOPIK-I",
+    "english": "bring"
+  },
+  {
+    "hangul": "거실",
+    "level": "TOPIK-I",
+    "english": "living room"
+  },
+  {
+    "hangul": "가족",
+    "level": "TOPIK-I",
+    "english": "family"
+  },
+  {
+    "hangul": "거울",
+    "level": "TOPIK-I",
+    "english": "mirror"
+  },
+  {
+    "hangul": "가지",
+    "level": "TOPIK-I",
+    "english": "branch"
+  },
+  {
+    "hangul": "거의",
+    "level": "TOPIK-I",
+    "english": "almost, nearly"
+  },
+  {
+    "hangul": "가지다",
+    "level": "TOPIK-I",
+    "english": "have"
+  },
+  {
+    "hangul": "거짓말",
+    "level": "TOPIK-I",
+    "english": "lie"
+  },
+  {
+    "hangul": "각",
+    "level": "TOPIK-I",
+    "english": "each"
+  },
+  {
+    "hangul": "걱정",
+    "level": "TOPIK-I",
+    "english": "anxiety, concern"
+  },
+  {
+    "hangul": "간",
+    "level": "TOPIK-I",
+    "english": "while"
+  },
+  {
+    "hangul": "걱정하다",
+    "level": "TOPIK-I",
+    "english": "worry"
+  },
+  {
+    "hangul": "간단하다",
+    "level": "TOPIK-I",
+    "english": "simple, easy"
+  },
+  {
+    "hangul": "건강",
+    "level": "TOPIK-I",
+    "english": "health"
+  },
+  {
+    "hangul": "간단히",
+    "level": "TOPIK-I",
+    "english": "simply"
+  },
+  {
+    "hangul": "건강하다",
+    "level": "TOPIK-I",
+    "english": "be healthy"
+  },
+  {
+    "hangul": "간식",
+    "level": "TOPIK-I",
+    "english": "snack"
+  },
+  {
+    "hangul": "건너가다",
+    "level": "TOPIK-I",
+    "english": "cross (a road)"
+  },
+  {
+    "hangul": "간장",
+    "level": "TOPIK-I",
+    "english": "soy sauce"
+  },
+  {
+    "hangul": "건너다",
+    "level": "TOPIK-I",
+    "english": "cross over"
+  },
+  {
+    "hangul": "간호사",
+    "level": "TOPIK-I",
+    "english": "nurse"
+  },
+  {
+    "hangul": "건너편",
+    "level": "TOPIK-I",
+    "english": "other side, opposite side"
+  },
+  {
+    "hangul": "갈비",
+    "level": "TOPIK-I",
+    "english": "Galvi, spareribs"
+  },
+  {
+    "hangul": "건물",
+    "level": "TOPIK-I",
+    "english": "building"
+  },
+  {
+    "hangul": "갈비탕",
+    "level": "TOPIK-I",
+    "english": "Galbitang, spareribs soup"
+  },
+  {
+    "hangul": "건배",
+    "level": "TOPIK-I",
+    "english": "cheers, toast"
+  },
+  {
+    "hangul": "갈색",
+    "level": "TOPIK-I",
+    "english": "brown"
+  },
+  {
+    "hangul": "걷다",
+    "level": "TOPIK-I",
+    "english": "walk"
+  },
+  {
+    "hangul": "갈아타다",
+    "level": "TOPIK-I",
+    "english": "transfer"
+  },
+  {
+    "hangul": "걸다",
+    "level": "TOPIK-I",
+    "english": "bet, call"
+  },
+  {
+    "hangul": "감",
+    "level": "TOPIK-I",
+    "english": "persimmon"
+  },
+  {
+    "hangul": "걸리다",
+    "level": "TOPIK-I",
+    "english": "get caught, take (time)"
+  },
+  {
+    "hangul": "감기",
+    "level": "TOPIK-I",
+    "english": "cold"
+  },
+  {
+    "hangul": "걸어가다",
+    "level": "TOPIK-I",
+    "english": "walk (go)"
+  },
+  {
+    "hangul": "감기약",
+    "level": "TOPIK-I",
+    "english": "cold medicine"
+  },
+  {
+    "hangul": "걸어오다",
+    "level": "TOPIK-I",
+    "english": "walk (come)"
+  },
+  {
+    "hangul": "감다",
+    "level": "TOPIK-I",
+    "english": "close ~ (eyes)"
+  },
+  {
+    "hangul": "검은색",
+    "level": "TOPIK-I",
+    "english": "black"
+  },
+  {
+    "hangul": "감동",
+    "level": "TOPIK-I",
+    "english": "sensation"
+  },
+  {
+    "hangul": "것",
+    "level": "TOPIK-I",
+    "english": "that, thing, it"
+  },
+  {
+    "hangul": "감동하다",
+    "level": "TOPIK-I",
+    "english": "be impressed"
+  },
+  {
+    "hangul": "게임",
+    "level": "TOPIK-I",
+    "english": "game"
+  },
+  {
+    "hangul": "감사",
+    "level": "TOPIK-I",
+    "english": "thank"
+  },
+  {
+    "hangul": "겨울",
+    "level": "TOPIK-I",
+    "english": "winter"
+  },
+  {
+    "hangul": "감사드립니다",
+    "level": "TOPIK-I",
+    "english": "thank you"
+  },
+  {
+    "hangul": "겨울방학",
+    "level": "TOPIK-I",
+    "english": "winter vacation"
+  },
+  {
+    "hangul": "결과",
+    "level": "TOPIK-I",
+    "english": "result"
+  },
+  {
+    "hangul": "골목",
+    "level": "TOPIK-I",
+    "english": "alley"
+  },
+  {
+    "hangul": "결정",
+    "level": "TOPIK-I",
+    "english": "decision"
+  },
+  {
+    "hangul": "골프",
+    "level": "TOPIK-I",
+    "english": "golf"
+  },
+  {
+    "hangul": "결정하다",
+    "level": "TOPIK-I",
+    "english": "decide"
+  },
+  {
+    "hangul": "곱다",
+    "level": "TOPIK-I",
+    "english": "beautiful"
+  },
+  {
+    "hangul": "결혼",
+    "level": "TOPIK-I",
+    "english": "marriage"
+  },
+  {
+    "hangul": "곳",
+    "level": "TOPIK-I",
+    "english": "place"
+  },
+  {
+    "hangul": "결혼식",
+    "level": "TOPIK-I",
+    "english": "wedding ceremony"
+  },
+  {
+    "hangul": "공",
+    "level": "TOPIK-I",
+    "english": "ball"
+  },
+  {
+    "hangul": "결혼하다",
+    "level": "TOPIK-I",
+    "english": "get married"
+  },
+  {
+    "hangul": "공간",
+    "level": "TOPIK-I",
+    "english": "space"
+  },
+  {
+    "hangul": "경기",
+    "level": "TOPIK-I",
+    "english": "competition, game"
+  },
+  {
+    "hangul": "공기",
+    "level": "TOPIK-I",
+    "english": "air"
+  },
+  {
+    "hangul": "경기장",
+    "level": "TOPIK-I",
+    "english": "stadium, arena"
+  },
+  {
+    "hangul": "공무원",
+    "level": "TOPIK-I",
+    "english": "public official"
+  },
+  {
+    "hangul": "경복궁",
+    "level": "TOPIK-I",
+    "english": "Gyeongbokgung"
+  },
+  {
+    "hangul": "공부",
+    "level": "TOPIK-I",
+    "english": "study"
+  },
+  {
+    "hangul": "경주",
+    "level": "TOPIK-I",
+    "english": "Gyeongju"
+  },
+  {
+    "hangul": "공부하다",
+    "level": "TOPIK-I",
+    "english": "study"
+  },
+  {
+    "hangul": "경찰",
+    "level": "TOPIK-I",
+    "english": "police"
+  },
+  {
+    "hangul": "공연",
+    "level": "TOPIK-I",
+    "english": "show, public performance"
+  },
+  {
+    "hangul": "경찰관",
+    "level": "TOPIK-I",
+    "english": "police officer"
+  },
+  {
+    "hangul": "공원",
+    "level": "TOPIK-I",
+    "english": "park"
+  },
+  {
+    "hangul": "경찰서",
+    "level": "TOPIK-I",
+    "english": "police office"
+  },
+  {
+    "hangul": "공중전화",
+    "level": "TOPIK-I",
+    "english": "payphone, public phone"
+  },
+  {
+    "hangul": "경치",
+    "level": "TOPIK-I",
+    "english": "view, landscape"
+  },
+  {
+    "hangul": "공짜",
+    "level": "TOPIK-I",
+    "english": "free"
+  },
+  {
+    "hangul": "경험",
+    "level": "TOPIK-I",
+    "english": "experience"
+  },
+  {
+    "hangul": "공책",
+    "level": "TOPIK-I",
+    "english": "notebook, note"
+  },
+  {
+    "hangul": "계단",
+    "level": "TOPIK-I",
+    "english": "stairs"
+  },
+  {
+    "hangul": "공항",
+    "level": "TOPIK-I",
+    "english": "airport"
+  },
+  {
+    "hangul": "계란",
+    "level": "TOPIK-I",
+    "english": "egg"
+  },
+  {
+    "hangul": "공휴일",
+    "level": "TOPIK-I",
+    "english": "public holiday"
+  },
+  {
+    "hangul": "계산하다",
+    "level": "TOPIK-I",
+    "english": "calculate"
+  },
+  {
+    "hangul": "과",
+    "level": "TOPIK-I",
+    "english": "division"
+  },
+  {
+    "hangul": "계속",
+    "level": "TOPIK-I",
+    "english": "continue"
+  },
+  {
+    "hangul": "과거",
+    "level": "TOPIK-I",
+    "english": "past"
+  },
+  {
+    "hangul": "계시다",
+    "level": "TOPIK-I",
+    "english": "be, exist (honorific form)"
+  },
+  {
+    "hangul": "과일",
+    "level": "TOPIK-I",
+    "english": "fruit"
+  },
+  {
+    "hangul": "계절",
+    "level": "TOPIK-I",
+    "english": "season"
+  },
+  {
+    "hangul": "과자",
+    "level": "TOPIK-I",
+    "english": "snack"
+  },
+  {
+    "hangul": "계획",
+    "level": "TOPIK-I",
+    "english": "plan"
+  },
+  {
+    "hangul": "과학",
+    "level": "TOPIK-I",
+    "english": "science"
+  },
+  {
+    "hangul": "고기",
+    "level": "TOPIK-I",
+    "english": "meat"
+  },
+  {
+    "hangul": "관계",
+    "level": "TOPIK-I",
+    "english": "relation"
+  },
+  {
+    "hangul": "고등학교",
+    "level": "TOPIK-I",
+    "english": "high school"
+  },
+  {
+    "hangul": "관광하다",
+    "level": "TOPIK-I",
+    "english": "travel, sightsee"
+  },
+  {
+    "hangul": "고등학생",
+    "level": "TOPIK-I",
+    "english": "high school student"
+  },
+  {
+    "hangul": "관심",
+    "level": "TOPIK-I",
+    "english": "attention, interest"
+  },
+  {
+    "hangul": "고르다",
+    "level": "TOPIK-I",
+    "english": "choose"
+  },
+  {
+    "hangul": "광고",
+    "level": "TOPIK-I",
+    "english": "advertisement"
+  },
+  {
+    "hangul": "고마웠습니다",
+    "level": "TOPIK-I",
+    "english": "Thank you (past tense)"
+  },
+  {
+    "hangul": "괜찮다",
+    "level": "TOPIK-I",
+    "english": "be okay"
+  },
+  {
+    "hangul": "고맙다",
+    "level": "TOPIK-I",
+    "english": "thank"
+  },
+  {
+    "hangul": "괜찮습니다",
+    "level": "TOPIK-I",
+    "english": "It's fine."
+  },
+  {
+    "hangul": "고맙습니다",
+    "level": "TOPIK-I",
+    "english": "Thank you"
+  },
+  {
+    "hangul": "교과서",
+    "level": "TOPIK-I",
+    "english": "textbook"
+  },
+  {
+    "hangul": "고모",
+    "level": "TOPIK-I",
+    "english": "paternal aunt"
+  },
+  {
+    "hangul": "교수",
+    "level": "TOPIK-I",
+    "english": "professor"
+  },
+  {
+    "hangul": "고모부",
+    "level": "TOPIK-I",
+    "english": "paternal uncle"
+  },
+  {
+    "hangul": "교실",
+    "level": "TOPIK-I",
+    "english": "classroom"
+  },
+  {
+    "hangul": "고속버스",
+    "level": "TOPIK-I",
+    "english": "express bus"
+  },
+  {
+    "hangul": "교체",
+    "level": "TOPIK-I",
+    "english": "substitute, change"
+  },
+  {
+    "hangul": "고양이",
+    "level": "TOPIK-I",
+    "english": "cat"
+  },
+  {
+    "hangul": "교통",
+    "level": "TOPIK-I",
+    "english": "traffic"
+  },
+  {
+    "hangul": "고장",
+    "level": "TOPIK-I",
+    "english": "broken, malfunction"
+  },
+  {
+    "hangul": "교통사고",
+    "level": "TOPIK-I",
+    "english": "traffic accident"
+  },
+  {
+    "hangul": "고추",
+    "level": "TOPIK-I",
+    "english": "red pepper"
+  },
+  {
+    "hangul": "교회",
+    "level": "TOPIK-I",
+    "english": "church"
+  },
+  {
+    "hangul": "고추장",
+    "level": "TOPIK-I",
+    "english": "Kochujang, red pepper paste"
+  },
+  {
+    "hangul": "구",
+    "level": "TOPIK-I",
+    "english": "9"
+  },
+  {
+    "hangul": "고치다",
+    "level": "TOPIK-I",
+    "english": "fix"
+  },
+  {
+    "hangul": "구경하다",
+    "level": "TOPIK-I",
+    "english": "take a look"
+  },
+  {
+    "hangul": "고프다",
+    "level": "TOPIK-I",
+    "english": "hungry"
+  },
+  {
+    "hangul": "구두",
+    "level": "TOPIK-I",
+    "english": "shoes"
+  },
+  {
+    "hangul": "고향",
+    "level": "TOPIK-I",
+    "english": "hometown"
+  },
+  {
+    "hangul": "구름",
+    "level": "TOPIK-I",
+    "english": "cloud"
+  },
+  {
+    "hangul": "곧",
+    "level": "TOPIK-I",
+    "english": "soon"
+  },
+  {
+    "hangul": "구십",
+    "level": "TOPIK-I",
+    "english": "90"
+  },
+  {
+    "hangul": "구월",
+    "level": "TOPIK-I",
+    "english": "September"
+  },
+  {
+    "hangul": "그리고",
+    "level": "TOPIK-I",
+    "english": "and"
+  },
+  {
+    "hangul": "구하다",
+    "level": "TOPIK-I",
+    "english": "save, seek, get"
+  },
+  {
+    "hangul": "그리다",
+    "level": "TOPIK-I",
+    "english": "draw"
+  },
+  {
+    "hangul": "국",
+    "level": "TOPIK-I",
+    "english": "soup"
+  },
+  {
+    "hangul": "그림",
+    "level": "TOPIK-I",
+    "english": "drawing, picture"
+  },
+  {
+    "hangul": "국내",
+    "level": "TOPIK-I",
+    "english": "domestic"
+  },
+  {
+    "hangul": "그만",
+    "level": "TOPIK-I",
+    "english": "stop, finish"
+  },
+  {
+    "hangul": "국립",
+    "level": "TOPIK-I",
+    "english": "nationalestablished, state"
+  },
+  {
+    "hangul": "그분",
+    "level": "TOPIK-I",
+    "english": "his, the person"
+  },
+  {
+    "hangul": "국수",
+    "level": "TOPIK-I",
+    "english": "noodle"
+  },
+  {
+    "hangul": "그저께",
+    "level": "TOPIK-I",
+    "english": "day before yesterday"
+  },
+  {
+    "hangul": "국어",
+    "level": "TOPIK-I",
+    "english": "Korean language"
+  },
+  {
+    "hangul": "그중",
+    "level": "TOPIK-I",
+    "english": "among them"
+  },
+  {
+    "hangul": "국적",
+    "level": "TOPIK-I",
+    "english": "nationality, country of citizenship"
+  },
+  {
+    "hangul": "그쪽",
+    "level": "TOPIK-I",
+    "english": "there, the person"
+  },
+  {
+    "hangul": "국제",
+    "level": "TOPIK-I",
+    "english": "international"
+  },
+  {
+    "hangul": "그치다",
+    "level": "TOPIK-I",
+    "english": "stop, end, cease"
+  },
+  {
+    "hangul": "군인",
+    "level": "TOPIK-I",
+    "english": "soldier, military personnel"
+  },
+  {
+    "hangul": "극장",
+    "level": "TOPIK-I",
+    "english": "theater, cinema"
+  },
+  {
+    "hangul": "굽다",
+    "level": "TOPIK-I",
+    "english": "bake"
+  },
+  {
+    "hangul": "근처",
+    "level": "TOPIK-I",
+    "english": "nearby, neighborhood"
+  },
+  {
+    "hangul": "권",
+    "level": "TOPIK-I",
+    "english": "~ book(s)"
+  },
+  {
+    "hangul": "글",
+    "level": "TOPIK-I",
+    "english": "post, sentence, character"
+  },
+  {
+    "hangul": "귀",
+    "level": "TOPIK-I",
+    "english": "ear"
+  },
+  {
+    "hangul": "글쎄요",
+    "level": "TOPIK-I",
+    "english": "I do not know., well, I guess ~"
+  },
+  {
+    "hangul": "귀엽다",
+    "level": "TOPIK-I",
+    "english": "cute"
+  },
+  {
+    "hangul": "금방",
+    "level": "TOPIK-I",
+    "english": "soon, a little while ago"
+  },
+  {
+    "hangul": "규칙",
+    "level": "TOPIK-I",
+    "english": "rule"
+  },
+  {
+    "hangul": "금연",
+    "level": "TOPIK-I",
+    "english": "no smoking"
+  },
+  {
+    "hangul": "귤",
+    "level": "TOPIK-I",
+    "english": "mandarin orange"
+  },
+  {
+    "hangul": "금요일",
+    "level": "TOPIK-I",
+    "english": "Friday"
+  },
+  {
+    "hangul": "그",
+    "level": "TOPIK-I",
+    "english": "it"
+  },
+  {
+    "hangul": "금주",
+    "level": "TOPIK-I",
+    "english": "abstinence, temperance"
+  },
+  {
+    "hangul": "그거",
+    "level": "TOPIK-I",
+    "english": "it"
+  },
+  {
+    "hangul": "급",
+    "level": "TOPIK-I",
+    "english": "class, grade"
+  },
+  {
+    "hangul": "그것",
+    "level": "TOPIK-I",
+    "english": "it"
+  },
+  {
+    "hangul": "급하다",
+    "level": "TOPIK-I",
+    "english": "hurry, urgent"
+  },
+  {
+    "hangul": "그곳",
+    "level": "TOPIK-I",
+    "english": "there"
+  },
+  {
+    "hangul": "기간",
+    "level": "TOPIK-I",
+    "english": "term, period"
+  },
+  {
+    "hangul": "그날",
+    "level": "TOPIK-I",
+    "english": "that day"
+  },
+  {
+    "hangul": "기다리다",
+    "level": "TOPIK-I",
+    "english": "wait"
+  },
+  {
+    "hangul": "그냥",
+    "level": "TOPIK-I",
+    "english": "just, as it is"
+  },
+  {
+    "hangul": "기르다",
+    "level": "TOPIK-I",
+    "english": "cultivate, grow"
+  },
+  {
+    "hangul": "그동안",
+    "level": "TOPIK-I",
+    "english": "meantime, meanwhile, up to now"
+  },
+  {
+    "hangul": "기름",
+    "level": "TOPIK-I",
+    "english": "oil, gasoline"
+  },
+  {
+    "hangul": "그들",
+    "level": "TOPIK-I",
+    "english": "them, they"
+  },
+  {
+    "hangul": "기분",
+    "level": "TOPIK-I",
+    "english": "feeling"
+  },
+  {
+    "hangul": "그때",
+    "level": "TOPIK-I",
+    "english": "then, at that time"
+  },
+  {
+    "hangul": "기뻐하다",
+    "level": "TOPIK-I",
+    "english": "glad, delight"
+  },
+  {
+    "hangul": "그래",
+    "level": "TOPIK-I",
+    "english": "Yes, Yeah"
+  },
+  {
+    "hangul": "기쁘다",
+    "level": "TOPIK-I",
+    "english": "happy"
+  },
+  {
+    "hangul": "그래서",
+    "level": "TOPIK-I",
+    "english": "so, thus"
+  },
+  {
+    "hangul": "기사",
+    "level": "TOPIK-I",
+    "english": "article, driver, engineer"
+  },
+  {
+    "hangul": "그램",
+    "level": "TOPIK-I",
+    "english": "gram"
+  },
+  {
+    "hangul": "기숙사",
+    "level": "TOPIK-I",
+    "english": "dormitory"
+  },
+  {
+    "hangul": "그러나",
+    "level": "TOPIK-I",
+    "english": "but, however"
+  },
+  {
+    "hangul": "기억하다",
+    "level": "TOPIK-I",
+    "english": "remember"
+  },
+  {
+    "hangul": "그러니까",
+    "level": "TOPIK-I",
+    "english": "so, because"
+  },
+  {
+    "hangul": "기온",
+    "level": "TOPIK-I",
+    "english": "temperature"
+  },
+  {
+    "hangul": "그러면",
+    "level": "TOPIK-I",
+    "english": "then, if so"
+  },
+  {
+    "hangul": "기자",
+    "level": "TOPIK-I",
+    "english": "reporter"
+  },
+  {
+    "hangul": "그런",
+    "level": "TOPIK-I",
+    "english": "then, such"
+  },
+  {
+    "hangul": "기차",
+    "level": "TOPIK-I",
+    "english": "train"
+  },
+  {
+    "hangul": "그런데",
+    "level": "TOPIK-I",
+    "english": "by the way, however"
+  },
+  {
+    "hangul": "기침",
+    "level": "TOPIK-I",
+    "english": "cough"
+  },
+  {
+    "hangul": "그럼",
+    "level": "TOPIK-I",
+    "english": "then"
+  },
+  {
+    "hangul": "기타",
+    "level": "TOPIK-I",
+    "english": "other"
+  },
+  {
+    "hangul": "그렇게",
+    "level": "TOPIK-I",
+    "english": "like that, so"
+  },
+  {
+    "hangul": "긴장되다",
+    "level": "TOPIK-I",
+    "english": "be nervous"
+  },
+  {
+    "hangul": "그렇구나",
+    "level": "TOPIK-I",
+    "english": "well, I see."
+  },
+  {
+    "hangul": "길",
+    "level": "TOPIK-I",
+    "english": "way, road"
+  },
+  {
+    "hangul": "그렇다",
+    "level": "TOPIK-I",
+    "english": "Yes, that's it."
+  },
+  {
+    "hangul": "길다",
+    "level": "TOPIK-I",
+    "english": "long"
+  },
+  {
+    "hangul": "그렇습니다",
+    "level": "TOPIK-I",
+    "english": "That's right."
+  },
+  {
+    "hangul": "김",
+    "level": "TOPIK-I",
+    "english": "seaweed"
+  },
+  {
+    "hangul": "그렇지만",
+    "level": "TOPIK-I",
+    "english": "nevertheless, but"
+  },
+  {
+    "hangul": "김밥",
+    "level": "TOPIK-I",
+    "english": "Kimbab"
+  },
+  {
+    "hangul": "그릇",
+    "level": "TOPIK-I",
+    "english": "bowl, container, tableware"
+  },
+  {
+    "hangul": "김치",
+    "level": "TOPIK-I",
+    "english": "Kimchi"
+  },
+  {
+    "hangul": "김치찌개",
+    "level": "TOPIK-I",
+    "english": "Kimchi stew"
+  },
+  {
+    "hangul": "남기다",
+    "level": "TOPIK-I",
+    "english": "leave"
+  },
+  {
+    "hangul": "김포공항",
+    "level": "TOPIK-I",
+    "english": "Gimpo International Airport"
+  },
+  {
+    "hangul": "남녀",
+    "level": "TOPIK-I",
+    "english": "men and women"
+  },
+  {
+    "hangul": "까만색",
+    "level": "TOPIK-I",
+    "english": "black color"
+  },
+  {
+    "hangul": "남대문시장",
+    "level": "TOPIK-I",
+    "english": "Namdaemun market"
+  },
+  {
+    "hangul": "까맣다",
+    "level": "TOPIK-I",
+    "english": "black"
+  },
+  {
+    "hangul": "남동생",
+    "level": "TOPIK-I",
+    "english": "younger brother"
+  },
+  {
+    "hangul": "깎다",
+    "level": "TOPIK-I",
+    "english": "cut, shave"
+  },
+  {
+    "hangul": "남미",
+    "level": "TOPIK-I",
+    "english": "South America"
+  },
+  {
+    "hangul": "깜짝",
+    "level": "TOPIK-I",
+    "english": "startled, surprised"
+  },
+  {
+    "hangul": "남북",
+    "level": "TOPIK-I",
+    "english": "north and south"
+  },
+  {
+    "hangul": "깨끗하다",
+    "level": "TOPIK-I",
+    "english": "clean"
+  },
+  {
+    "hangul": "남자",
+    "level": "TOPIK-I",
+    "english": "man"
+  },
+  {
+    "hangul": "깨다",
+    "level": "TOPIK-I",
+    "english": "wake up, crack, break"
+  },
+  {
+    "hangul": "남쪽",
+    "level": "TOPIK-I",
+    "english": "south"
+  },
+  {
+    "hangul": "깨지다",
+    "level": "TOPIK-I",
+    "english": "chip, crack, break"
+  },
+  {
+    "hangul": "남편",
+    "level": "TOPIK-I",
+    "english": "husband"
+  },
+  {
+    "hangul": "꺼내다",
+    "level": "TOPIK-I",
+    "english": "take out"
+  },
+  {
+    "hangul": "남학생",
+    "level": "TOPIK-I",
+    "english": "male student"
+  },
+  {
+    "hangul": "껌",
+    "level": "TOPIK-I",
+    "english": "chewing gum"
+  },
+  {
+    "hangul": "낮",
+    "level": "TOPIK-I",
+    "english": "day, noon, during the day"
+  },
+  {
+    "hangul": "꼭",
+    "level": "TOPIK-I",
+    "english": "exactly, absolutely"
+  },
+  {
+    "hangul": "낮다",
+    "level": "TOPIK-I",
+    "english": "low"
+  },
+  {
+    "hangul": "꽃",
+    "level": "TOPIK-I",
+    "english": "flower"
+  },
+  {
+    "hangul": "내",
+    "level": "TOPIK-I",
+    "english": "of mine, my"
+  },
+  {
+    "hangul": "꽃집",
+    "level": "TOPIK-I",
+    "english": "florist"
+  },
+  {
+    "hangul": "내가",
+    "level": "TOPIK-I",
+    "english": "I"
+  },
+  {
+    "hangul": "꾸다",
+    "level": "TOPIK-I",
+    "english": "dream"
+  },
+  {
+    "hangul": "내과",
+    "level": "TOPIK-I",
+    "english": "internal medicine"
+  },
+  {
+    "hangul": "꿈",
+    "level": "TOPIK-I",
+    "english": "dream"
+  },
+  {
+    "hangul": "내년",
+    "level": "TOPIK-I",
+    "english": "next year"
+  },
+  {
+    "hangul": "끄다",
+    "level": "TOPIK-I",
+    "english": "turn off, extinguish, stop"
+  },
+  {
+    "hangul": "내다",
+    "level": "TOPIK-I",
+    "english": "pay, put out"
+  },
+  {
+    "hangul": "끓이다",
+    "level": "TOPIK-I",
+    "english": "boil"
+  },
+  {
+    "hangul": "내려가다",
+    "level": "TOPIK-I",
+    "english": "go down"
+  },
+  {
+    "hangul": "끝",
+    "level": "TOPIK-I",
+    "english": "end"
+  },
+  {
+    "hangul": "내려오다",
+    "level": "TOPIK-I",
+    "english": "come down"
+  },
+  {
+    "hangul": "끝나다",
+    "level": "TOPIK-I",
+    "english": "finish, end"
+  },
+  {
+    "hangul": "내리다",
+    "level": "TOPIK-I",
+    "english": "go down"
+  },
+  {
+    "hangul": "끝내다",
+    "level": "TOPIK-I",
+    "english": "finish"
+  },
+  {
+    "hangul": "내용",
+    "level": "TOPIK-I",
+    "english": "content"
+  },
+  {
+    "hangul": "끼다",
+    "level": "TOPIK-I",
+    "english": "put on, plug, (fog) rolls in"
+  },
+  {
+    "hangul": "내일",
+    "level": "TOPIK-I",
+    "english": "tomorrow"
+  },
+  {
+    "hangul": "나",
+    "level": "TOPIK-I",
+    "english": "I"
+  },
+  {
+    "hangul": "냄비",
+    "level": "TOPIK-I",
+    "english": "pot"
+  },
+  {
+    "hangul": "나가다",
+    "level": "TOPIK-I",
+    "english": "go out, get out"
+  },
+  {
+    "hangul": "냄새",
+    "level": "TOPIK-I",
+    "english": "smell"
+  },
+  {
+    "hangul": "나누다",
+    "level": "TOPIK-I",
+    "english": "share, divide"
+  },
+  {
+    "hangul": "냉면",
+    "level": "TOPIK-I",
+    "english": "cold noodle"
+  },
+  {
+    "hangul": "나다",
+    "level": "TOPIK-I",
+    "english": "occur, come out"
+  },
+  {
+    "hangul": "냉장고",
+    "level": "TOPIK-I",
+    "english": "refrigerator"
+  },
+  {
+    "hangul": "나라",
+    "level": "TOPIK-I",
+    "english": "country"
+  },
+  {
+    "hangul": "너",
+    "level": "TOPIK-I",
+    "english": "you"
+  },
+  {
+    "hangul": "나무",
+    "level": "TOPIK-I",
+    "english": "tree"
+  },
+  {
+    "hangul": "너무",
+    "level": "TOPIK-I",
+    "english": "too, very"
+  },
+  {
+    "hangul": "나빠지다",
+    "level": "TOPIK-I",
+    "english": "spoil, deteriorate"
+  },
+  {
+    "hangul": "넓다",
+    "level": "TOPIK-I",
+    "english": "wide"
+  },
+  {
+    "hangul": "나쁘다",
+    "level": "TOPIK-I",
+    "english": "bad"
+  },
+  {
+    "hangul": "넘다",
+    "level": "TOPIK-I",
+    "english": "exceed, more than"
+  },
+  {
+    "hangul": "나오다",
+    "level": "TOPIK-I",
+    "english": "come out, appear"
+  },
+  {
+    "hangul": "넘어지다",
+    "level": "TOPIK-I",
+    "english": "fall down, fall"
+  },
+  {
+    "hangul": "나이",
+    "level": "TOPIK-I",
+    "english": "age, old"
+  },
+  {
+    "hangul": "넣다",
+    "level": "TOPIK-I",
+    "english": "put in"
+  },
+  {
+    "hangul": "나중",
+    "level": "TOPIK-I",
+    "english": "later, after"
+  },
+  {
+    "hangul": "네",
+    "level": "TOPIK-I",
+    "english": "yes, 4"
+  },
+  {
+    "hangul": "나타나다",
+    "level": "TOPIK-I",
+    "english": "appear"
+  },
+  {
+    "hangul": "넥타이",
+    "level": "TOPIK-I",
+    "english": "necktie"
+  },
+  {
+    "hangul": "나흘",
+    "level": "TOPIK-I",
+    "english": "four days"
+  },
+  {
+    "hangul": "넷",
+    "level": "TOPIK-I",
+    "english": "4"
+  },
+  {
+    "hangul": "낚시",
+    "level": "TOPIK-I",
+    "english": "fishing"
+  },
+  {
+    "hangul": "넷째",
+    "level": "TOPIK-I",
+    "english": "fourth"
+  },
+  {
+    "hangul": "날",
+    "level": "TOPIK-I",
+    "english": "day"
+  },
+  {
+    "hangul": "년",
+    "level": "TOPIK-I",
+    "english": "year"
+  },
+  {
+    "hangul": "날씨",
+    "level": "TOPIK-I",
+    "english": "weather"
+  },
+  {
+    "hangul": "노란색",
+    "level": "TOPIK-I",
+    "english": "yellow color"
+  },
+  {
+    "hangul": "날짜",
+    "level": "TOPIK-I",
+    "english": "date"
+  },
+  {
+    "hangul": "노랗다",
+    "level": "TOPIK-I",
+    "english": "yellow"
+  },
+  {
+    "hangul": "남",
+    "level": "TOPIK-I",
+    "english": "south, man"
+  },
+  {
+    "hangul": "노래",
+    "level": "TOPIK-I",
+    "english": "song"
+  },
+  {
+    "hangul": "노래방",
+    "level": "TOPIK-I",
+    "english": "Karaoke shop"
+  },
+  {
+    "hangul": "다음달",
+    "level": "TOPIK-I",
+    "english": "next month"
+  },
+  {
+    "hangul": "노래하다",
+    "level": "TOPIK-I",
+    "english": "sing"
+  },
+  {
+    "hangul": "다음주",
+    "level": "TOPIK-I",
+    "english": "next week"
+  },
+  {
+    "hangul": "노력하다",
+    "level": "TOPIK-I",
+    "english": "endeavor, strive"
+  },
+  {
+    "hangul": "다음해",
+    "level": "TOPIK-I",
+    "english": "next year, following year"
+  },
+  {
+    "hangul": "노트",
+    "level": "TOPIK-I",
+    "english": "note"
+  },
+  {
+    "hangul": "다이어트",
+    "level": "TOPIK-I",
+    "english": "diet"
+  },
+  {
+    "hangul": "녹색",
+    "level": "TOPIK-I",
+    "english": "green"
+  },
+  {
+    "hangul": "다치다",
+    "level": "TOPIK-I",
+    "english": "hurt"
+  },
+  {
+    "hangul": "녹차",
+    "level": "TOPIK-I",
+    "english": "green tea"
+  },
+  {
+    "hangul": "닦다",
+    "level": "TOPIK-I",
+    "english": "wipe, polish"
+  },
+  {
+    "hangul": "놀다",
+    "level": "TOPIK-I",
+    "english": "play"
+  },
+  {
+    "hangul": "단어",
+    "level": "TOPIK-I",
+    "english": "word"
+  },
+  {
+    "hangul": "놀라다",
+    "level": "TOPIK-I",
+    "english": "be surprised"
+  },
+  {
+    "hangul": "단점",
+    "level": "TOPIK-I",
+    "english": "disadvantage, shortcoming, drawback"
+  },
+  {
+    "hangul": "농구",
+    "level": "TOPIK-I",
+    "english": "basketball"
+  },
+  {
+    "hangul": "닫다",
+    "level": "TOPIK-I",
+    "english": "close"
+  },
+  {
+    "hangul": "높다",
+    "level": "TOPIK-I",
+    "english": "high"
+  },
+  {
+    "hangul": "닫히다",
+    "level": "TOPIK-I",
+    "english": "shut, close"
+  },
+  {
+    "hangul": "놓다",
+    "level": "TOPIK-I",
+    "english": "put"
+  },
+  {
+    "hangul": "달",
+    "level": "TOPIK-I",
+    "english": "month, moon"
+  },
+  {
+    "hangul": "누가",
+    "level": "TOPIK-I",
+    "english": "who"
+  },
+  {
+    "hangul": "달걀",
+    "level": "TOPIK-I",
+    "english": "egg"
+  },
+  {
+    "hangul": "누구",
+    "level": "TOPIK-I",
+    "english": "who"
+  },
+  {
+    "hangul": "달다",
+    "level": "TOPIK-I",
+    "english": "sweet"
+  },
+  {
+    "hangul": "누나",
+    "level": "TOPIK-I",
+    "english": "sister (as seen from the younger brother)"
+  },
+  {
+    "hangul": "달러",
+    "level": "TOPIK-I",
+    "english": "dollar"
+  },
+  {
+    "hangul": "누르다",
+    "level": "TOPIK-I",
+    "english": "press down, push"
+  },
+  {
+    "hangul": "달력",
+    "level": "TOPIK-I",
+    "english": "calendar"
+  },
+  {
+    "hangul": "눈",
+    "level": "TOPIK-I",
+    "english": "eye, snow"
+  },
+  {
+    "hangul": "달리다",
+    "level": "TOPIK-I",
+    "english": "run"
+  },
+  {
+    "hangul": "눈물",
+    "level": "TOPIK-I",
+    "english": "tear"
+  },
+  {
+    "hangul": "닭",
+    "level": "TOPIK-I",
+    "english": "chicken, hen"
+  },
+  {
+    "hangul": "눈사람",
+    "level": "TOPIK-I",
+    "english": "snowman"
+  },
+  {
+    "hangul": "닭고기",
+    "level": "TOPIK-I",
+    "english": "chicken"
+  },
+  {
+    "hangul": "눈싸움",
+    "level": "TOPIK-I",
+    "english": "staring contest, snowball fight"
+  },
+  {
+    "hangul": "닮다",
+    "level": "TOPIK-I",
+    "english": "resemble"
+  },
+  {
+    "hangul": "눕다",
+    "level": "TOPIK-I",
+    "english": "lie down, sleep"
+  },
+  {
+    "hangul": "담그다",
+    "level": "TOPIK-I",
+    "english": "dip, pickle"
+  },
+  {
+    "hangul": "뉴스",
+    "level": "TOPIK-I",
+    "english": "news"
+  },
+  {
+    "hangul": "담배",
+    "level": "TOPIK-I",
+    "english": "tobacco"
+  },
+  {
+    "hangul": "뉴욕",
+    "level": "TOPIK-I",
+    "english": "New York"
+  },
+  {
+    "hangul": "답장",
+    "level": "TOPIK-I",
+    "english": "reply"
+  },
+  {
+    "hangul": "느끼다",
+    "level": "TOPIK-I",
+    "english": "feel"
+  },
+  {
+    "hangul": "당근",
+    "level": "TOPIK-I",
+    "english": "carrot"
+  },
+  {
+    "hangul": "느낌",
+    "level": "TOPIK-I",
+    "english": "feeling"
+  },
+  {
+    "hangul": "당신",
+    "level": "TOPIK-I",
+    "english": "you"
+  },
+  {
+    "hangul": "느리다",
+    "level": "TOPIK-I",
+    "english": "slow"
+  },
+  {
+    "hangul": "대",
+    "level": "TOPIK-I",
+    "english": "versus, large"
+  },
+  {
+    "hangul": "늘",
+    "level": "TOPIK-I",
+    "english": "always"
+  },
+  {
+    "hangul": "대답",
+    "level": "TOPIK-I",
+    "english": "answer"
+  },
+  {
+    "hangul": "늘다",
+    "level": "TOPIK-I",
+    "english": "gain, increase"
+  },
+  {
+    "hangul": "대답하다",
+    "level": "TOPIK-I",
+    "english": "answer, reply"
+  },
+  {
+    "hangul": "능력",
+    "level": "TOPIK-I",
+    "english": "ability"
+  },
+  {
+    "hangul": "대부분",
+    "level": "TOPIK-I",
+    "english": "mostly, almost"
+  },
+  {
+    "hangul": "늦다",
+    "level": "TOPIK-I",
+    "english": "late, delay"
+  },
+  {
+    "hangul": "대사관",
+    "level": "TOPIK-I",
+    "english": "embassy"
+  },
+  {
+    "hangul": "늦잠",
+    "level": "TOPIK-I",
+    "english": "overslept, sleeping in late"
+  },
+  {
+    "hangul": "대학",
+    "level": "TOPIK-I",
+    "english": "university, college"
+  },
+  {
+    "hangul": "님",
+    "level": "TOPIK-I",
+    "english": "Sir"
+  },
+  {
+    "hangul": "대학교",
+    "level": "TOPIK-I",
+    "english": "university, college"
+  },
+  {
+    "hangul": "다",
+    "level": "TOPIK-I",
+    "english": "all, whole"
+  },
+  {
+    "hangul": "대학생",
+    "level": "TOPIK-I",
+    "english": "college student"
+  },
+  {
+    "hangul": "다녀오다",
+    "level": "TOPIK-I",
+    "english": "return, come back"
+  },
+  {
+    "hangul": "대학원",
+    "level": "TOPIK-I",
+    "english": "graduate school"
+  },
+  {
+    "hangul": "다니다",
+    "level": "TOPIK-I",
+    "english": "go, commute"
+  },
+  {
+    "hangul": "대학원생",
+    "level": "TOPIK-I",
+    "english": "postgraduate student, graduate student"
+  },
+  {
+    "hangul": "다르다",
+    "level": "TOPIK-I",
+    "english": "different"
+  },
+  {
+    "hangul": "대한민국",
+    "level": "TOPIK-I",
+    "english": "Republic of Korea, South Korea"
+  },
+  {
+    "hangul": "다른",
+    "level": "TOPIK-I",
+    "english": "other ~, another ~, different ~"
+  },
+  {
+    "hangul": "대화",
+    "level": "TOPIK-I",
+    "english": "conversation, dialogue"
+  },
+  {
+    "hangul": "다리",
+    "level": "TOPIK-I",
+    "english": "bridge, leg, foot"
+  },
+  {
+    "hangul": "대회",
+    "level": "TOPIK-I",
+    "english": "competition, tournament"
+  },
+  {
+    "hangul": "다섯",
+    "level": "TOPIK-I",
+    "english": "5"
+  },
+  {
+    "hangul": "댁",
+    "level": "TOPIK-I",
+    "english": "house"
+  },
+  {
+    "hangul": "다시",
+    "level": "TOPIK-I",
+    "english": "again"
+  },
+  {
+    "hangul": "더",
+    "level": "TOPIK-I",
+    "english": "more"
+  },
+  {
+    "hangul": "다음",
+    "level": "TOPIK-I",
+    "english": "next, after"
+  },
+  {
+    "hangul": "더럽다",
+    "level": "TOPIK-I",
+    "english": "dirty"
+  },
+  {
+    "hangul": "더운물",
+    "level": "TOPIK-I",
+    "english": "hot water"
+  },
+  {
+    "hangul": "두부",
+    "level": "TOPIK-I",
+    "english": "tofu"
+  },
+  {
+    "hangul": "덕분",
+    "level": "TOPIK-I",
+    "english": "thanks for, thanks to"
+  },
+  {
+    "hangul": "두부찌개",
+    "level": "TOPIK-I",
+    "english": "tofu soup"
+  },
+  {
+    "hangul": "덥다",
+    "level": "TOPIK-I",
+    "english": "hot"
+  },
+  {
+    "hangul": "둘",
+    "level": "TOPIK-I",
+    "english": "2"
+  },
+  {
+    "hangul": "덮다",
+    "level": "TOPIK-I",
+    "english": "cover"
+  },
+  {
+    "hangul": "둘째",
+    "level": "TOPIK-I",
+    "english": "second, the second of~"
+  },
+  {
+    "hangul": "데리다",
+    "level": "TOPIK-I",
+    "english": "bring, take along"
+  },
+  {
+    "hangul": "뒤",
+    "level": "TOPIK-I",
+    "english": "rear, back"
+  },
+  {
+    "hangul": "데이트",
+    "level": "TOPIK-I",
+    "english": "date, dating"
+  },
+  {
+    "hangul": "뒤쪽",
+    "level": "TOPIK-I",
+    "english": "behind, back, towards the rear"
+  },
+  {
+    "hangul": "도로",
+    "level": "TOPIK-I",
+    "english": "road"
+  },
+  {
+    "hangul": "드라마",
+    "level": "TOPIK-I",
+    "english": "drama"
+  },
+  {
+    "hangul": "도서관",
+    "level": "TOPIK-I",
+    "english": "library"
+  },
+  {
+    "hangul": "드리다",
+    "level": "TOPIK-I",
+    "english": "give"
+  },
+  {
+    "hangul": "도시",
+    "level": "TOPIK-I",
+    "english": "city"
+  },
+  {
+    "hangul": "드시다",
+    "level": "TOPIK-I",
+    "english": "eat (honorific form)"
+  },
+  {
+    "hangul": "도와주다",
+    "level": "TOPIK-I",
+    "english": "help"
+  },
+  {
+    "hangul": "듣기",
+    "level": "TOPIK-I",
+    "english": "listening, hearing"
+  },
+  {
+    "hangul": "도움",
+    "level": "TOPIK-I",
+    "english": "help, assistance"
+  },
+  {
+    "hangul": "듣다",
+    "level": "TOPIK-I",
+    "english": "listen"
+  },
+  {
+    "hangul": "도착",
+    "level": "TOPIK-I",
+    "english": "arrival"
+  },
+  {
+    "hangul": "들",
+    "level": "TOPIK-I",
+    "english": "field, ~s,"
+  },
+  {
+    "hangul": "도착하다",
+    "level": "TOPIK-I",
+    "english": "arrive"
+  },
+  {
+    "hangul": "들다",
+    "level": "TOPIK-I",
+    "english": "hold, enter"
+  },
+  {
+    "hangul": "도쿄",
+    "level": "TOPIK-I",
+    "english": "Tokyo"
+  },
+  {
+    "hangul": "들어가다",
+    "level": "TOPIK-I",
+    "english": "go in, enter"
+  },
+  {
+    "hangul": "독서",
+    "level": "TOPIK-I",
+    "english": "reading"
+  },
+  {
+    "hangul": "들어오다",
+    "level": "TOPIK-I",
+    "english": "come in, enter"
+  },
+  {
+    "hangul": "독서실",
+    "level": "TOPIK-I",
+    "english": "reading room"
+  },
+  {
+    "hangul": "등",
+    "level": "TOPIK-I",
+    "english": "etc, back"
+  },
+  {
+    "hangul": "독서하다",
+    "level": "TOPIK-I",
+    "english": "read"
+  },
+  {
+    "hangul": "등산",
+    "level": "TOPIK-I",
+    "english": "hiking, mountain-climbing"
+  },
+  {
+    "hangul": "독일",
+    "level": "TOPIK-I",
+    "english": "Germany"
+  },
+  {
+    "hangul": "등산복",
+    "level": "TOPIK-I",
+    "english": "mountaineering clothing"
+  },
+  {
+    "hangul": "돈",
+    "level": "TOPIK-I",
+    "english": "money"
+  },
+  {
+    "hangul": "등산화",
+    "level": "TOPIK-I",
+    "english": "hiking boots, climbing shoes"
+  },
+  {
+    "hangul": "돌아가다",
+    "level": "TOPIK-I",
+    "english": "return, go back"
+  },
+  {
+    "hangul": "디브이디",
+    "level": "TOPIK-I",
+    "english": "DVD"
+  },
+  {
+    "hangul": "돌아오다",
+    "level": "TOPIK-I",
+    "english": "come back, come home"
+  },
+  {
+    "hangul": "디자인",
+    "level": "TOPIK-I",
+    "english": "design"
+  },
+  {
+    "hangul": "돕다",
+    "level": "TOPIK-I",
+    "english": "help"
+  },
+  {
+    "hangul": "따뜻하다",
+    "level": "TOPIK-I",
+    "english": "warm"
+  },
+  {
+    "hangul": "동네",
+    "level": "TOPIK-I",
+    "english": "town, neighborhood"
+  },
+  {
+    "hangul": "따라가다",
+    "level": "TOPIK-I",
+    "english": "follow"
+  },
+  {
+    "hangul": "동대문시장",
+    "level": "TOPIK-I",
+    "english": "Dongdaemun market"
+  },
+  {
+    "hangul": "따라오다",
+    "level": "TOPIK-I",
+    "english": "come with, follow"
+  },
+  {
+    "hangul": "동물",
+    "level": "TOPIK-I",
+    "english": "animal"
+  },
+  {
+    "hangul": "따로",
+    "level": "TOPIK-I",
+    "english": "separately"
+  },
+  {
+    "hangul": "동생",
+    "level": "TOPIK-I",
+    "english": "brother, sister"
+  },
+  {
+    "hangul": "따르다",
+    "level": "TOPIK-I",
+    "english": "follow"
+  },
+  {
+    "hangul": "동아리",
+    "level": "TOPIK-I",
+    "english": "club, group"
+  },
+  {
+    "hangul": "딸",
+    "level": "TOPIK-I",
+    "english": "daughter"
+  },
+  {
+    "hangul": "동안",
+    "level": "TOPIK-I",
+    "english": "during, between"
+  },
+  {
+    "hangul": "딸기",
+    "level": "TOPIK-I",
+    "english": "strawberry"
+  },
+  {
+    "hangul": "동양",
+    "level": "TOPIK-I",
+    "english": "eastern, orient"
+  },
+  {
+    "hangul": "땀",
+    "level": "TOPIK-I",
+    "english": "sweat"
+  },
+  {
+    "hangul": "동전",
+    "level": "TOPIK-I",
+    "english": "coin"
+  },
+  {
+    "hangul": "때",
+    "level": "TOPIK-I",
+    "english": "time"
+  },
+  {
+    "hangul": "동쪽",
+    "level": "TOPIK-I",
+    "english": "east"
+  },
+  {
+    "hangul": "때문",
+    "level": "TOPIK-I",
+    "english": "because, for ~, so~"
+  },
+  {
+    "hangul": "돼지",
+    "level": "TOPIK-I",
+    "english": "pig"
+  },
+  {
+    "hangul": "떠나다",
+    "level": "TOPIK-I",
+    "english": "leave"
+  },
+  {
+    "hangul": "돼지고기",
+    "level": "TOPIK-I",
+    "english": "pork"
+  },
+  {
+    "hangul": "떠들다",
+    "level": "TOPIK-I",
+    "english": "chatter, make a noise"
+  },
+  {
+    "hangul": "되다",
+    "level": "TOPIK-I",
+    "english": "become"
+  },
+  {
+    "hangul": "떡",
+    "level": "TOPIK-I",
+    "english": "rice cake"
+  },
+  {
+    "hangul": "된장",
+    "level": "TOPIK-I",
+    "english": "fermented soybean paste"
+  },
+  {
+    "hangul": "떡국",
+    "level": "TOPIK-I",
+    "english": "rice cake soup"
+  },
+  {
+    "hangul": "된장국",
+    "level": "TOPIK-I",
+    "english": "soybean paste soup"
+  },
+  {
+    "hangul": "떡볶이",
+    "level": "TOPIK-I",
+    "english": "Toppogi"
+  },
+  {
+    "hangul": "된장찌개",
+    "level": "TOPIK-I",
+    "english": "soybean paste stew"
+  },
+  {
+    "hangul": "떨어지다",
+    "level": "TOPIK-I",
+    "english": "drop"
+  },
+  {
+    "hangul": "두",
+    "level": "TOPIK-I",
+    "english": "two"
+  },
+  {
+    "hangul": "또",
+    "level": "TOPIK-I",
+    "english": "in addition, again"
+  },
+  {
+    "hangul": "두껍다",
+    "level": "TOPIK-I",
+    "english": "thick"
+  },
+  {
+    "hangul": "또는",
+    "level": "TOPIK-I",
+    "english": "or"
+  },
+  {
+    "hangul": "두다",
+    "level": "TOPIK-I",
+    "english": "put"
+  },
+  {
+    "hangul": "똑같다",
+    "level": "TOPIK-I",
+    "english": "same"
+  },
+  {
+    "hangul": "똑바로",
+    "level": "TOPIK-I",
+    "english": "upright, straight"
+  },
+  {
+    "hangul": "매다",
+    "level": "TOPIK-I",
+    "english": "tie"
+  },
+  {
+    "hangul": "뛰다",
+    "level": "TOPIK-I",
+    "english": "run"
+  },
+  {
+    "hangul": "매우",
+    "level": "TOPIK-I",
+    "english": "extremely, very"
+  },
+  {
+    "hangul": "뜨겁다",
+    "level": "TOPIK-I",
+    "english": "hot"
+  },
+  {
+    "hangul": "매일",
+    "level": "TOPIK-I",
+    "english": "everyday"
+  },
+  {
+    "hangul": "뜨다",
+    "level": "TOPIK-I",
+    "english": "rise, open (the eyes)"
+  },
+  {
+    "hangul": "매주",
+    "level": "TOPIK-I",
+    "english": "every week"
+  },
+  {
+    "hangul": "뜻",
+    "level": "TOPIK-I",
+    "english": "meaning"
+  },
+  {
+    "hangul": "맥주",
+    "level": "TOPIK-I",
+    "english": "beer"
+  },
+  {
+    "hangul": "라디오",
+    "level": "TOPIK-I",
+    "english": "radio"
+  },
+  {
+    "hangul": "맵다",
+    "level": "TOPIK-I",
+    "english": "spicy"
+  },
+  {
+    "hangul": "라면",
+    "level": "TOPIK-I",
+    "english": "ramen"
+  },
+  {
+    "hangul": "머리",
+    "level": "TOPIK-I",
+    "english": "head, hair"
+  },
+  {
+    "hangul": "러시아",
+    "level": "TOPIK-I",
+    "english": "Russia"
+  },
+  {
+    "hangul": "먹다",
+    "level": "TOPIK-I",
+    "english": "eat"
+  },
+  {
+    "hangul": "로션",
+    "level": "TOPIK-I",
+    "english": "skin lotion"
+  },
+  {
+    "hangul": "먼저",
+    "level": "TOPIK-I",
+    "english": "first, first of all, before"
+  },
+  {
+    "hangul": "마늘",
+    "level": "TOPIK-I",
+    "english": "garlic"
+  },
+  {
+    "hangul": "멀다",
+    "level": "TOPIK-I",
+    "english": "far, distant, long"
+  },
+  {
+    "hangul": "마르다",
+    "level": "TOPIK-I",
+    "english": "dry"
+  },
+  {
+    "hangul": "멋있다",
+    "level": "TOPIK-I",
+    "english": "cool, nice"
+  },
+  {
+    "hangul": "마리",
+    "level": "TOPIK-I",
+    "english": "~ animal(s), ~ head(s)"
+  },
+  {
+    "hangul": "메뉴",
+    "level": "TOPIK-I",
+    "english": "menu"
+  },
+  {
+    "hangul": "마시다",
+    "level": "TOPIK-I",
+    "english": "drink"
+  },
+  {
+    "hangul": "메다",
+    "level": "TOPIK-I",
+    "english": "shoulder, carry"
+  },
+  {
+    "hangul": "마음",
+    "level": "TOPIK-I",
+    "english": "mind, feeling"
+  },
+  {
+    "hangul": "메모",
+    "level": "TOPIK-I",
+    "english": "memo"
+  },
+  {
+    "hangul": "마지막",
+    "level": "TOPIK-I",
+    "english": "last"
+  },
+  {
+    "hangul": "메시지",
+    "level": "TOPIK-I",
+    "english": "message"
+  },
+  {
+    "hangul": "마치다",
+    "level": "TOPIK-I",
+    "english": "finish, end"
+  },
+  {
+    "hangul": "멕시코",
+    "level": "TOPIK-I",
+    "english": "Mexico"
+  },
+  {
+    "hangul": "마흔",
+    "level": "TOPIK-I",
+    "english": "40"
+  },
+  {
+    "hangul": "며칠",
+    "level": "TOPIK-I",
+    "english": "a few days, what date"
+  },
+  {
+    "hangul": "막히다",
+    "level": "TOPIK-I",
+    "english": "be blocked, be clogged"
+  },
+  {
+    "hangul": "면도",
+    "level": "TOPIK-I",
+    "english": "razor, shaving"
+  },
+  {
+    "hangul": "만",
+    "level": "TOPIK-I",
+    "english": "only, ten thousand"
+  },
+  {
+    "hangul": "명",
+    "level": "TOPIK-I",
+    "english": "~ person(s)"
+  },
+  {
+    "hangul": "만나다",
+    "level": "TOPIK-I",
+    "english": "meet"
+  },
+  {
+    "hangul": "명절",
+    "level": "TOPIK-I",
+    "english": "holidays, annual events"
+  },
+  {
+    "hangul": "만두",
+    "level": "TOPIK-I",
+    "english": "dumpling"
+  },
+  {
+    "hangul": "몇",
+    "level": "TOPIK-I",
+    "english": "a few, a number of"
+  },
+  {
+    "hangul": "만들다",
+    "level": "TOPIK-I",
+    "english": "make, create"
+  },
+  {
+    "hangul": "모두",
+    "level": "TOPIK-I",
+    "english": "all, everyone"
+  },
+  {
+    "hangul": "만일",
+    "level": "TOPIK-I",
+    "english": "if, should"
+  },
+  {
+    "hangul": "모레",
+    "level": "TOPIK-I",
+    "english": "the day after tomorrow"
+  },
+  {
+    "hangul": "만지다",
+    "level": "TOPIK-I",
+    "english": "touch"
+  },
+  {
+    "hangul": "모르겠습니다",
+    "level": "TOPIK-I",
+    "english": "I don't know."
+  },
+  {
+    "hangul": "만화",
+    "level": "TOPIK-I",
+    "english": "comic book, cartoon"
+  },
+  {
+    "hangul": "모르다",
+    "level": "TOPIK-I",
+    "english": "do not know"
+  },
+  {
+    "hangul": "많다",
+    "level": "TOPIK-I",
+    "english": "many"
+  },
+  {
+    "hangul": "모시다",
+    "level": "TOPIK-I",
+    "english": "take you, serve you  (honorific form)"
+  },
+  {
+    "hangul": "많이",
+    "level": "TOPIK-I",
+    "english": "a lot of, many"
+  },
+  {
+    "hangul": "모양",
+    "level": "TOPIK-I",
+    "english": "shape, form, style"
+  },
+  {
+    "hangul": "말",
+    "level": "TOPIK-I",
+    "english": "word, talk"
+  },
+  {
+    "hangul": "모으다",
+    "level": "TOPIK-I",
+    "english": "collect, gather"
+  },
+  {
+    "hangul": "말씀",
+    "level": "TOPIK-I",
+    "english": "words, remarks"
+  },
+  {
+    "hangul": "모이다",
+    "level": "TOPIK-I",
+    "english": "gather, get together"
+  },
+  {
+    "hangul": "말씀하다",
+    "level": "TOPIK-I",
+    "english": "talk"
+  },
+  {
+    "hangul": "모임",
+    "level": "TOPIK-I",
+    "english": "meeting, gathering"
+  },
+  {
+    "hangul": "말하기",
+    "level": "TOPIK-I",
+    "english": "speaking"
+  },
+  {
+    "hangul": "모자",
+    "level": "TOPIK-I",
+    "english": "hat"
+  },
+  {
+    "hangul": "말하다",
+    "level": "TOPIK-I",
+    "english": "say, talk"
+  },
+  {
+    "hangul": "목",
+    "level": "TOPIK-I",
+    "english": "neck, throat"
+  },
+  {
+    "hangul": "맑다",
+    "level": "TOPIK-I",
+    "english": "clear, clean"
+  },
+  {
+    "hangul": "목걸이",
+    "level": "TOPIK-I",
+    "english": "necklace"
+  },
+  {
+    "hangul": "맛",
+    "level": "TOPIK-I",
+    "english": "flavor, taste"
+  },
+  {
+    "hangul": "목소리",
+    "level": "TOPIK-I",
+    "english": "voice"
+  },
+  {
+    "hangul": "맛없다",
+    "level": "TOPIK-I",
+    "english": "not delicious"
+  },
+  {
+    "hangul": "목요일",
+    "level": "TOPIK-I",
+    "english": "Thursday"
+  },
+  {
+    "hangul": "맛있다",
+    "level": "TOPIK-I",
+    "english": "delicious"
+  },
+  {
+    "hangul": "목욕",
+    "level": "TOPIK-I",
+    "english": "bath, bathing"
+  },
+  {
+    "hangul": "맞다",
+    "level": "TOPIK-I",
+    "english": "right, fit, correct"
+  },
+  {
+    "hangul": "목욕하다",
+    "level": "TOPIK-I",
+    "english": "take a bath"
+  },
+  {
+    "hangul": "맞습니다",
+    "level": "TOPIK-I",
+    "english": "That's right."
+  },
+  {
+    "hangul": "목적",
+    "level": "TOPIK-I",
+    "english": "purpose"
+  },
+  {
+    "hangul": "맞아요",
+    "level": "TOPIK-I",
+    "english": "That's right."
+  },
+  {
+    "hangul": "몸",
+    "level": "TOPIK-I",
+    "english": "body"
+  },
+  {
+    "hangul": "맞은편",
+    "level": "TOPIK-I",
+    "english": "across, the other side, opposite"
+  },
+  {
+    "hangul": "몸살",
+    "level": "TOPIK-I",
+    "english": "sickness, disease that comes from fatigue"
+  },
+  {
+    "hangul": "못하다",
+    "level": "TOPIK-I",
+    "english": "~ can not do"
+  },
+  {
+    "hangul": "바뀌다",
+    "level": "TOPIK-I",
+    "english": "be changed"
+  },
+  {
+    "hangul": "몽골",
+    "level": "TOPIK-I",
+    "english": "Mongolia"
+  },
+  {
+    "hangul": "바나나",
+    "level": "TOPIK-I",
+    "english": "banana"
+  },
+  {
+    "hangul": "무",
+    "level": "TOPIK-I",
+    "english": "radish"
+  },
+  {
+    "hangul": "바다",
+    "level": "TOPIK-I",
+    "english": "sea"
+  },
+  {
+    "hangul": "무겁다",
+    "level": "TOPIK-I",
+    "english": "heavy"
+  },
+  {
+    "hangul": "바닷가",
+    "level": "TOPIK-I",
+    "english": "beach"
+  },
+  {
+    "hangul": "무궁화",
+    "level": "TOPIK-I",
+    "english": "rose of sharon"
+  },
+  {
+    "hangul": "바라다",
+    "level": "TOPIK-I",
+    "english": "hope"
+  },
+  {
+    "hangul": "무료",
+    "level": "TOPIK-I",
+    "english": "free"
+  },
+  {
+    "hangul": "바람",
+    "level": "TOPIK-I",
+    "english": "wind"
+  },
+  {
+    "hangul": "무릎",
+    "level": "TOPIK-I",
+    "english": "knee"
+  },
+  {
+    "hangul": "바로",
+    "level": "TOPIK-I",
+    "english": "immediately, soon, just"
+  },
+  {
+    "hangul": "무리",
+    "level": "TOPIK-I",
+    "english": "swarm, unreasonable"
+  },
+  {
+    "hangul": "바르다",
+    "level": "TOPIK-I",
+    "english": "right, paint, wear"
+  },
+  {
+    "hangul": "무섭다",
+    "level": "TOPIK-I",
+    "english": "scary"
+  },
+  {
+    "hangul": "바쁘다",
+    "level": "TOPIK-I",
+    "english": "busy"
+  },
+  {
+    "hangul": "무슨",
+    "level": "TOPIK-I",
+    "english": "what"
+  },
+  {
+    "hangul": "바이올린",
+    "level": "TOPIK-I",
+    "english": "violin"
+  },
+  {
+    "hangul": "무엇",
+    "level": "TOPIK-I",
+    "english": "what"
+  },
+  {
+    "hangul": "바지",
+    "level": "TOPIK-I",
+    "english": "pants"
+  },
+  {
+    "hangul": "무엇이",
+    "level": "TOPIK-I",
+    "english": "what"
+  },
+  {
+    "hangul": "박물관",
+    "level": "TOPIK-I",
+    "english": "museum"
+  },
+  {
+    "hangul": "무역",
+    "level": "TOPIK-I",
+    "english": "trade"
+  },
+  {
+    "hangul": "박수",
+    "level": "TOPIK-I",
+    "english": "clap, applause"
+  },
+  {
+    "hangul": "무용",
+    "level": "TOPIK-I",
+    "english": "dance"
+  },
+  {
+    "hangul": "밖",
+    "level": "TOPIK-I",
+    "english": "out, outside"
+  },
+  {
+    "hangul": "무척",
+    "level": "TOPIK-I",
+    "english": "very"
+  },
+  {
+    "hangul": "반",
+    "level": "TOPIK-I",
+    "english": "half, group"
+  },
+  {
+    "hangul": "문",
+    "level": "TOPIK-I",
+    "english": "door, gate"
+  },
+  {
+    "hangul": "반갑다",
+    "level": "TOPIK-I",
+    "english": "nice to meet, happy"
+  },
+  {
+    "hangul": "문구점",
+    "level": "TOPIK-I",
+    "english": "stationery store"
+  },
+  {
+    "hangul": "반갑습니다",
+    "level": "TOPIK-I",
+    "english": "Nice to meet you."
+  },
+  {
+    "hangul": "문장",
+    "level": "TOPIK-I",
+    "english": "sentence"
+  },
+  {
+    "hangul": "반년",
+    "level": "TOPIK-I",
+    "english": "half a year"
+  },
+  {
+    "hangul": "문제",
+    "level": "TOPIK-I",
+    "english": "problem"
+  },
+  {
+    "hangul": "반달",
+    "level": "TOPIK-I",
+    "english": "half-moon"
+  },
+  {
+    "hangul": "문화",
+    "level": "TOPIK-I",
+    "english": "culture"
+  },
+  {
+    "hangul": "반바지",
+    "level": "TOPIK-I",
+    "english": "shorts"
+  },
+  {
+    "hangul": "묻다",
+    "level": "TOPIK-I",
+    "english": "ask"
+  },
+  {
+    "hangul": "반지",
+    "level": "TOPIK-I",
+    "english": "ring"
+  },
+  {
+    "hangul": "물",
+    "level": "TOPIK-I",
+    "english": "water"
+  },
+  {
+    "hangul": "반찬",
+    "level": "TOPIK-I",
+    "english": "side dish"
+  },
+  {
+    "hangul": "물건",
+    "level": "TOPIK-I",
+    "english": "stuff, thing"
+  },
+  {
+    "hangul": "받다",
+    "level": "TOPIK-I",
+    "english": "receive"
+  },
+  {
+    "hangul": "물론",
+    "level": "TOPIK-I",
+    "english": "sure, of course"
+  },
+  {
+    "hangul": "발",
+    "level": "TOPIK-I",
+    "english": "foot, leg"
+  },
+  {
+    "hangul": "물어보다",
+    "level": "TOPIK-I",
+    "english": "ask"
+  },
+  {
+    "hangul": "발가락",
+    "level": "TOPIK-I",
+    "english": "toe(s)"
+  },
+  {
+    "hangul": "뭐",
+    "level": "TOPIK-I",
+    "english": "what"
+  },
+  {
+    "hangul": "발음",
+    "level": "TOPIK-I",
+    "english": "pronunciation"
+  },
+  {
+    "hangul": "미국",
+    "level": "TOPIK-I",
+    "english": "The United States"
+  },
+  {
+    "hangul": "발전",
+    "level": "TOPIK-I",
+    "english": "development"
+  },
+  {
+    "hangul": "미래",
+    "level": "TOPIK-I",
+    "english": "future"
+  },
+  {
+    "hangul": "발표",
+    "level": "TOPIK-I",
+    "english": "announcement, presentation"
+  },
+  {
+    "hangul": "미리",
+    "level": "TOPIK-I",
+    "english": "in advance, beforehand"
+  },
+  {
+    "hangul": "밝다",
+    "level": "TOPIK-I",
+    "english": "bright"
+  },
+  {
+    "hangul": "미술",
+    "level": "TOPIK-I",
+    "english": "art"
+  },
+  {
+    "hangul": "밤",
+    "level": "TOPIK-I",
+    "english": "night"
+  },
+  {
+    "hangul": "미술관",
+    "level": "TOPIK-I",
+    "english": "art gallery, art museum"
+  },
+  {
+    "hangul": "밥",
+    "level": "TOPIK-I",
+    "english": "rice, meal"
+  },
+  {
+    "hangul": "미안하다",
+    "level": "TOPIK-I",
+    "english": "sorry"
+  },
+  {
+    "hangul": "방",
+    "level": "TOPIK-I",
+    "english": "room"
+  },
+  {
+    "hangul": "미안합니다",
+    "level": "TOPIK-I",
+    "english": "I'm sorry."
+  },
+  {
+    "hangul": "방법",
+    "level": "TOPIK-I",
+    "english": "way, method"
+  },
+  {
+    "hangul": "미용실",
+    "level": "TOPIK-I",
+    "english": "beauty salon"
+  },
+  {
+    "hangul": "방송",
+    "level": "TOPIK-I",
+    "english": "broadcast"
+  },
+  {
+    "hangul": "미터",
+    "level": "TOPIK-I",
+    "english": "meter"
+  },
+  {
+    "hangul": "방송국",
+    "level": "TOPIK-I",
+    "english": "broadcast stations"
+  },
+  {
+    "hangul": "민속촌",
+    "level": "TOPIK-I",
+    "english": "folk village"
+  },
+  {
+    "hangul": "방학",
+    "level": "TOPIK-I",
+    "english": "vacation"
+  },
+  {
+    "hangul": "밀가루",
+    "level": "TOPIK-I",
+    "english": "flour"
+  },
+  {
+    "hangul": "배",
+    "level": "TOPIK-I",
+    "english": "ship, stomach, pear"
+  },
+  {
+    "hangul": "밀리다",
+    "level": "TOPIK-I",
+    "english": "be shaved, be pushed"
+  },
+  {
+    "hangul": "배고프다",
+    "level": "TOPIK-I",
+    "english": "hungry"
+  },
+  {
+    "hangul": "밑",
+    "level": "TOPIK-I",
+    "english": "bottom, below"
+  },
+  {
+    "hangul": "배구",
+    "level": "TOPIK-I",
+    "english": "volleyball"
+  },
+  {
+    "hangul": "바꾸다",
+    "level": "TOPIK-I",
+    "english": "change"
+  },
+  {
+    "hangul": "배달",
+    "level": "TOPIK-I",
+    "english": "delivery"
+  },
+  {
+    "hangul": "배부르다",
+    "level": "TOPIK-I",
+    "english": "be full (I am full.)"
+  },
+  {
+    "hangul": "부부",
+    "level": "TOPIK-I",
+    "english": "couple, husband and wife, married couple"
+  },
+  {
+    "hangul": "배우",
+    "level": "TOPIK-I",
+    "english": "actor"
+  },
+  {
+    "hangul": "부산",
+    "level": "TOPIK-I",
+    "english": "Busan"
+  },
+  {
+    "hangul": "배우다",
+    "level": "TOPIK-I",
+    "english": "learn"
+  },
+  {
+    "hangul": "부업",
+    "level": "TOPIK-I",
+    "english": "sideline"
+  },
+  {
+    "hangul": "배탈",
+    "level": "TOPIK-I",
+    "english": "stomachache"
+  },
+  {
+    "hangul": "부엌",
+    "level": "TOPIK-I",
+    "english": "kitchen"
+  },
+  {
+    "hangul": "백",
+    "level": "TOPIK-I",
+    "english": "100"
+  },
+  {
+    "hangul": "부인",
+    "level": "TOPIK-I",
+    "english": "wife, Mrs."
+  },
+  {
+    "hangul": "백화점",
+    "level": "TOPIK-I",
+    "english": "department store"
+  },
+  {
+    "hangul": "부장",
+    "level": "TOPIK-I",
+    "english": "director"
+  },
+  {
+    "hangul": "버리다",
+    "level": "TOPIK-I",
+    "english": "abandon, throw away"
+  },
+  {
+    "hangul": "부지런하다",
+    "level": "TOPIK-I",
+    "english": "diligent"
+  },
+  {
+    "hangul": "버스",
+    "level": "TOPIK-I",
+    "english": "bus"
+  },
+  {
+    "hangul": "부치다",
+    "level": "TOPIK-I",
+    "english": "send, fry, transmit"
+  },
+  {
+    "hangul": "번",
+    "level": "TOPIK-I",
+    "english": "~ time(s)"
+  },
+  {
+    "hangul": "부탁",
+    "level": "TOPIK-I",
+    "english": "request, please"
+  },
+  {
+    "hangul": "번호",
+    "level": "TOPIK-I",
+    "english": "number"
+  },
+  {
+    "hangul": "부탁하다",
+    "level": "TOPIK-I",
+    "english": "beg, ask"
+  },
+  {
+    "hangul": "벌다",
+    "level": "TOPIK-I",
+    "english": "earn, make money"
+  },
+  {
+    "hangul": "북쪽",
+    "level": "TOPIK-I",
+    "english": "North"
+  },
+  {
+    "hangul": "벌써",
+    "level": "TOPIK-I",
+    "english": "already"
+  },
+  {
+    "hangul": "분",
+    "level": "TOPIK-I",
+    "english": "~ person(s), ~ minute(s)"
+  },
+  {
+    "hangul": "벗다",
+    "level": "TOPIK-I",
+    "english": "take off (clothes, shoes)"
+  },
+  {
+    "hangul": "분위기",
+    "level": "TOPIK-I",
+    "english": "#N/A"
+  },
+  {
+    "hangul": "벚꽃",
+    "level": "TOPIK-I",
+    "english": "cherry blossom"
+  },
+  {
+    "hangul": "불",
+    "level": "TOPIK-I",
+    "english": "fire, electrical light"
+  },
+  {
+    "hangul": "베이징",
+    "level": "TOPIK-I",
+    "english": "Beijing"
+  },
+  {
+    "hangul": "불고기",
+    "level": "TOPIK-I",
+    "english": "Bulgogi, grilled meat"
+  },
+  {
+    "hangul": "베트남",
+    "level": "TOPIK-I",
+    "english": "Vietnam"
+  },
+  {
+    "hangul": "불다",
+    "level": "TOPIK-I",
+    "english": "blow (wind or whistle, musical instruments, etc.)"
+  },
+  {
+    "hangul": "벽",
+    "level": "TOPIK-I",
+    "english": "wall"
+  },
+  {
+    "hangul": "불편하다",
+    "level": "TOPIK-I",
+    "english": "uncomfortable, inconvenient"
+  },
+  {
+    "hangul": "변호사",
+    "level": "TOPIK-I",
+    "english": "lawyer"
+  },
+  {
+    "hangul": "붓다",
+    "level": "TOPIK-I",
+    "english": "pour"
+  },
+  {
+    "hangul": "별",
+    "level": "TOPIK-I",
+    "english": "star"
+  },
+  {
+    "hangul": "붙다",
+    "level": "TOPIK-I",
+    "english": "stick, pass a test"
+  },
+  {
+    "hangul": "별로",
+    "level": "TOPIK-I",
+    "english": "not really"
+  },
+  {
+    "hangul": "붙이다",
+    "level": "TOPIK-I",
+    "english": "attach, stick"
+  },
+  {
+    "hangul": "병",
+    "level": "TOPIK-I",
+    "english": "illness, ~ bottle(s)"
+  },
+  {
+    "hangul": "브라질",
+    "level": "TOPIK-I",
+    "english": "Brazil"
+  },
+  {
+    "hangul": "병원",
+    "level": "TOPIK-I",
+    "english": "hospital"
+  },
+  {
+    "hangul": "블라우스",
+    "level": "TOPIK-I",
+    "english": "blouse"
+  },
+  {
+    "hangul": "보내다",
+    "level": "TOPIK-I",
+    "english": "send, spend"
+  },
+  {
+    "hangul": "비",
+    "level": "TOPIK-I",
+    "english": "rain"
+  },
+  {
+    "hangul": "보다",
+    "level": "TOPIK-I",
+    "english": "see"
+  },
+  {
+    "hangul": "비누",
+    "level": "TOPIK-I",
+    "english": "soap"
+  },
+  {
+    "hangul": "보도",
+    "level": "TOPIK-I",
+    "english": "sidewalk, report"
+  },
+  {
+    "hangul": "비디오",
+    "level": "TOPIK-I",
+    "english": "video"
+  },
+  {
+    "hangul": "보이다",
+    "level": "TOPIK-I",
+    "english": "show, look"
+  },
+  {
+    "hangul": "비밀",
+    "level": "TOPIK-I",
+    "english": "secret"
+  },
+  {
+    "hangul": "보통",
+    "level": "TOPIK-I",
+    "english": "usually, normally, in general"
+  },
+  {
+    "hangul": "비빔밥",
+    "level": "TOPIK-I",
+    "english": "Bibimbap, mixed rice"
+  },
+  {
+    "hangul": "복숭아",
+    "level": "TOPIK-I",
+    "english": "peach"
+  },
+  {
+    "hangul": "비슷하다",
+    "level": "TOPIK-I",
+    "english": "similar, like"
+  },
+  {
+    "hangul": "복잡하다",
+    "level": "TOPIK-I",
+    "english": "complicated, crowded"
+  },
+  {
+    "hangul": "비싸다",
+    "level": "TOPIK-I",
+    "english": "expensive"
+  },
+  {
+    "hangul": "볶다",
+    "level": "TOPIK-I",
+    "english": "fry"
+  },
+  {
+    "hangul": "비행기",
+    "level": "TOPIK-I",
+    "english": "airplane"
+  },
+  {
+    "hangul": "볶음밥",
+    "level": "TOPIK-I",
+    "english": "fried rice"
+  },
+  {
+    "hangul": "비행장",
+    "level": "TOPIK-I",
+    "english": "airfield, airport"
+  },
+  {
+    "hangul": "볼펜",
+    "level": "TOPIK-I",
+    "english": "ballpoint pen"
+  },
+  {
+    "hangul": "빌딩",
+    "level": "TOPIK-I",
+    "english": "building"
+  },
+  {
+    "hangul": "봄",
+    "level": "TOPIK-I",
+    "english": "spring"
+  },
+  {
+    "hangul": "빌리다",
+    "level": "TOPIK-I",
+    "english": "borrow, lend"
+  },
+  {
+    "hangul": "봉지",
+    "level": "TOPIK-I",
+    "english": "bag"
+  },
+  {
+    "hangul": "빠르다",
+    "level": "TOPIK-I",
+    "english": "fast"
+  },
+  {
+    "hangul": "봉투",
+    "level": "TOPIK-I",
+    "english": "envelope"
+  },
+  {
+    "hangul": "빨간색",
+    "level": "TOPIK-I",
+    "english": "red color"
+  },
+  {
+    "hangul": "뵙다",
+    "level": "TOPIK-I",
+    "english": "meet"
+  },
+  {
+    "hangul": "빨갛다",
+    "level": "TOPIK-I",
+    "english": "red"
+  },
+  {
+    "hangul": "부동산",
+    "level": "TOPIK-I",
+    "english": "real estate"
+  },
+  {
+    "hangul": "빨다",
+    "level": "TOPIK-I",
+    "english": "suck, do laundry"
+  },
+  {
+    "hangul": "부드럽다",
+    "level": "TOPIK-I",
+    "english": "soft, friendly"
+  },
+  {
+    "hangul": "빨래",
+    "level": "TOPIK-I",
+    "english": "laundry, wash"
+  },
+  {
+    "hangul": "부르다",
+    "level": "TOPIK-I",
+    "english": "call, sing"
+  },
+  {
+    "hangul": "빨리",
+    "level": "TOPIK-I",
+    "english": "quickly"
+  },
+  {
+    "hangul": "부모",
+    "level": "TOPIK-I",
+    "english": "parents"
+  },
+  {
+    "hangul": "빵",
+    "level": "TOPIK-I",
+    "english": "bread"
+  },
+  {
+    "hangul": "빵집",
+    "level": "TOPIK-I",
+    "english": "bakery"
+  },
+  {
+    "hangul": "삼촌",
+    "level": "TOPIK-I",
+    "english": "paternal uncle"
+  },
+  {
+    "hangul": "빼다",
+    "level": "TOPIK-I",
+    "english": "remove, pull, pull out"
+  },
+  {
+    "hangul": "상관",
+    "level": "TOPIK-I",
+    "english": "relation"
+  },
+  {
+    "hangul": "뿐",
+    "level": "TOPIK-I",
+    "english": "only"
+  },
+  {
+    "hangul": "상자",
+    "level": "TOPIK-I",
+    "english": "box"
+  },
+  {
+    "hangul": "사",
+    "level": "TOPIK-I",
+    "english": "4"
+  },
+  {
+    "hangul": "상처",
+    "level": "TOPIK-I",
+    "english": "wound, scratch"
+  },
+  {
+    "hangul": "사거리",
+    "level": "TOPIK-I",
+    "english": "intersection, four corners"
+  },
+  {
+    "hangul": "상품",
+    "level": "TOPIK-I",
+    "english": "product"
+  },
+  {
+    "hangul": "사계절",
+    "level": "TOPIK-I",
+    "english": "four seasons"
+  },
+  {
+    "hangul": "새",
+    "level": "TOPIK-I",
+    "english": "bird, new"
+  },
+  {
+    "hangul": "사고",
+    "level": "TOPIK-I",
+    "english": "accident"
+  },
+  {
+    "hangul": "새로",
+    "level": "TOPIK-I",
+    "english": "newly"
+  },
+  {
+    "hangul": "사과",
+    "level": "TOPIK-I",
+    "english": "apple"
+  },
+  {
+    "hangul": "새벽",
+    "level": "TOPIK-I",
+    "english": "dawn, late at night, early morning"
+  },
+  {
+    "hangul": "사다",
+    "level": "TOPIK-I",
+    "english": "buy"
+  },
+  {
+    "hangul": "새우",
+    "level": "TOPIK-I",
+    "english": "shrimp"
+  },
+  {
+    "hangul": "사람",
+    "level": "TOPIK-I",
+    "english": "person, man"
+  },
+  {
+    "hangul": "색",
+    "level": "TOPIK-I",
+    "english": "color"
+  },
+  {
+    "hangul": "사랑",
+    "level": "TOPIK-I",
+    "english": "love"
+  },
+  {
+    "hangul": "색깔",
+    "level": "TOPIK-I",
+    "english": "color"
+  },
+  {
+    "hangul": "사랑하다",
+    "level": "TOPIK-I",
+    "english": "love"
+  },
+  {
+    "hangul": "샌드위치",
+    "level": "TOPIK-I",
+    "english": "sandwich"
+  },
+  {
+    "hangul": "사례",
+    "level": "TOPIK-I",
+    "english": "case, example"
+  },
+  {
+    "hangul": "생각",
+    "level": "TOPIK-I",
+    "english": "thinking, thought"
+  },
+  {
+    "hangul": "사무실",
+    "level": "TOPIK-I",
+    "english": "office"
+  },
+  {
+    "hangul": "생각되다",
+    "level": "TOPIK-I",
+    "english": "be considered, it seems~"
+  },
+  {
+    "hangul": "사물",
+    "level": "TOPIK-I",
+    "english": "object, thing"
+  },
+  {
+    "hangul": "생각하다",
+    "level": "TOPIK-I",
+    "english": "think"
+  },
+  {
+    "hangul": "사십",
+    "level": "TOPIK-I",
+    "english": "40"
+  },
+  {
+    "hangul": "생기다",
+    "level": "TOPIK-I",
+    "english": "form, arise"
+  },
+  {
+    "hangul": "사업가",
+    "level": "TOPIK-I",
+    "english": "entrepreneur, businessman"
+  },
+  {
+    "hangul": "생선",
+    "level": "TOPIK-I",
+    "english": "fish"
+  },
+  {
+    "hangul": "사용하다",
+    "level": "TOPIK-I",
+    "english": "use"
+  },
+  {
+    "hangul": "생신",
+    "level": "TOPIK-I",
+    "english": "birthday  (honorific form)"
+  },
+  {
+    "hangul": "사원",
+    "level": "TOPIK-I",
+    "english": "temple, employee"
+  },
+  {
+    "hangul": "생일",
+    "level": "TOPIK-I",
+    "english": "birthday"
+  },
+  {
+    "hangul": "사월",
+    "level": "TOPIK-I",
+    "english": "April"
+  },
+  {
+    "hangul": "생활",
+    "level": "TOPIK-I",
+    "english": "life"
+  },
+  {
+    "hangul": "사이",
+    "level": "TOPIK-I",
+    "english": "between, while"
+  },
+  {
+    "hangul": "샤워하다",
+    "level": "TOPIK-I",
+    "english": "take a shower"
+  },
+  {
+    "hangul": "사이다",
+    "level": "TOPIK-I",
+    "english": "cider"
+  },
+  {
+    "hangul": "샴푸",
+    "level": "TOPIK-I",
+    "english": "shampoo"
+  },
+  {
+    "hangul": "사이즈",
+    "level": "TOPIK-I",
+    "english": "size"
+  },
+  {
+    "hangul": "서다",
+    "level": "TOPIK-I",
+    "english": "stand"
+  },
+  {
+    "hangul": "사인하다",
+    "level": "TOPIK-I",
+    "english": "sign"
+  },
+  {
+    "hangul": "서로",
+    "level": "TOPIK-I",
+    "english": "each other, both"
+  },
+  {
+    "hangul": "사장",
+    "level": "TOPIK-I",
+    "english": "CEO, the president"
+  },
+  {
+    "hangul": "서류",
+    "level": "TOPIK-I",
+    "english": "document"
+  },
+  {
+    "hangul": "사전",
+    "level": "TOPIK-I",
+    "english": "dictionary"
+  },
+  {
+    "hangul": "서른",
+    "level": "TOPIK-I",
+    "english": "30"
+  },
+  {
+    "hangul": "사진",
+    "level": "TOPIK-I",
+    "english": "picture, photo"
+  },
+  {
+    "hangul": "서비스",
+    "level": "TOPIK-I",
+    "english": "service"
+  },
+  {
+    "hangul": "사진기",
+    "level": "TOPIK-I",
+    "english": "camera"
+  },
+  {
+    "hangul": "서양",
+    "level": "TOPIK-I",
+    "english": "western, west"
+  },
+  {
+    "hangul": "사촌",
+    "level": "TOPIK-I",
+    "english": "cousin"
+  },
+  {
+    "hangul": "서울",
+    "level": "TOPIK-I",
+    "english": "Seoul"
+  },
+  {
+    "hangul": "사탕",
+    "level": "TOPIK-I",
+    "english": "candy"
+  },
+  {
+    "hangul": "서울역",
+    "level": "TOPIK-I",
+    "english": "Seoul station"
+  },
+  {
+    "hangul": "사흘",
+    "level": "TOPIK-I",
+    "english": "3 days"
+  },
+  {
+    "hangul": "서점",
+    "level": "TOPIK-I",
+    "english": "bookstore"
+  },
+  {
+    "hangul": "산",
+    "level": "TOPIK-I",
+    "english": "mountain"
+  },
+  {
+    "hangul": "서쪽",
+    "level": "TOPIK-I",
+    "english": "west, western"
+  },
+  {
+    "hangul": "산책",
+    "level": "TOPIK-I",
+    "english": "walk"
+  },
+  {
+    "hangul": "선물",
+    "level": "TOPIK-I",
+    "english": "gift, present"
+  },
+  {
+    "hangul": "살",
+    "level": "TOPIK-I",
+    "english": "flesh, ~ year(s) old"
+  },
+  {
+    "hangul": "선배",
+    "level": "TOPIK-I",
+    "english": "elder, senior"
+  },
+  {
+    "hangul": "살다",
+    "level": "TOPIK-I",
+    "english": "live"
+  },
+  {
+    "hangul": "선생님",
+    "level": "TOPIK-I",
+    "english": "teacher"
+  },
+  {
+    "hangul": "삼",
+    "level": "TOPIK-I",
+    "english": "3"
+  },
+  {
+    "hangul": "선수",
+    "level": "TOPIK-I",
+    "english": "player"
+  },
+  {
+    "hangul": "삼거리",
+    "level": "TOPIK-I",
+    "english": "intersection, three-way intersection"
+  },
+  {
+    "hangul": "선택하다",
+    "level": "TOPIK-I",
+    "english": "choose, select"
+  },
+  {
+    "hangul": "삼계탕",
+    "level": "TOPIK-I",
+    "english": "Samgyetang"
+  },
+  {
+    "hangul": "선풍기",
+    "level": "TOPIK-I",
+    "english": "fan"
+  },
+  {
+    "hangul": "삼십",
+    "level": "TOPIK-I",
+    "english": "30"
+  },
+  {
+    "hangul": "설거지",
+    "level": "TOPIK-I",
+    "english": "washing dishes, dish-washing"
+  },
+  {
+    "hangul": "삼월",
+    "level": "TOPIK-I",
+    "english": "March"
+  },
+  {
+    "hangul": "설날",
+    "level": "TOPIK-I",
+    "english": "Lunar New Year"
+  },
+  {
+    "hangul": "설렁탕",
+    "level": "TOPIK-I",
+    "english": "Seolleongtang"
+  },
+  {
+    "hangul": "수도",
+    "level": "TOPIK-I",
+    "english": "capital, water supply"
+  },
+  {
+    "hangul": "설명",
+    "level": "TOPIK-I",
+    "english": "explanation, description"
+  },
+  {
+    "hangul": "수돗물",
+    "level": "TOPIK-I",
+    "english": "tap water"
+  },
+  {
+    "hangul": "설명하다",
+    "level": "TOPIK-I",
+    "english": "explain"
+  },
+  {
+    "hangul": "수박",
+    "level": "TOPIK-I",
+    "english": "watermelon"
+  },
+  {
+    "hangul": "설악산",
+    "level": "TOPIK-I",
+    "english": "Mt. Seorak"
+  },
+  {
+    "hangul": "수술하다",
+    "level": "TOPIK-I",
+    "english": "operate on for"
+  },
+  {
+    "hangul": "설탕",
+    "level": "TOPIK-I",
+    "english": "sugar"
+  },
+  {
+    "hangul": "수업",
+    "level": "TOPIK-I",
+    "english": "class, lesson"
+  },
+  {
+    "hangul": "섬",
+    "level": "TOPIK-I",
+    "english": "island"
+  },
+  {
+    "hangul": "수영",
+    "level": "TOPIK-I",
+    "english": "swimming"
+  },
+  {
+    "hangul": "성",
+    "level": "TOPIK-I",
+    "english": "castle, last name"
+  },
+  {
+    "hangul": "수영복",
+    "level": "TOPIK-I",
+    "english": "swimsuit"
+  },
+  {
+    "hangul": "성격",
+    "level": "TOPIK-I",
+    "english": "personality"
+  },
+  {
+    "hangul": "수영장",
+    "level": "TOPIK-I",
+    "english": "swimming pool"
+  },
+  {
+    "hangul": "성함",
+    "level": "TOPIK-I",
+    "english": "name"
+  },
+  {
+    "hangul": "수요일",
+    "level": "TOPIK-I",
+    "english": "Wednesday"
+  },
+  {
+    "hangul": "세계",
+    "level": "TOPIK-I",
+    "english": "world"
+  },
+  {
+    "hangul": "수저",
+    "level": "TOPIK-I",
+    "english": "chopsticks and a spoon"
+  },
+  {
+    "hangul": "세수하다",
+    "level": "TOPIK-I",
+    "english": "wash"
+  },
+  {
+    "hangul": "수첩",
+    "level": "TOPIK-I",
+    "english": "note, notebook"
+  },
+  {
+    "hangul": "세우다",
+    "level": "TOPIK-I",
+    "english": "set up, formulate"
+  },
+  {
+    "hangul": "수학",
+    "level": "TOPIK-I",
+    "english": "mathematics"
+  },
+  {
+    "hangul": "세일하다",
+    "level": "TOPIK-I",
+    "english": "have a sale"
+  },
+  {
+    "hangul": "숙제",
+    "level": "TOPIK-I",
+    "english": "homework"
+  },
+  {
+    "hangul": "세탁기",
+    "level": "TOPIK-I",
+    "english": "washing machine"
+  },
+  {
+    "hangul": "순서",
+    "level": "TOPIK-I",
+    "english": "order, turn"
+  },
+  {
+    "hangul": "세탁소",
+    "level": "TOPIK-I",
+    "english": "dry cleaners, laundromat"
+  },
+  {
+    "hangul": "숟가락",
+    "level": "TOPIK-I",
+    "english": "spoon"
+  },
+  {
+    "hangul": "센터",
+    "level": "TOPIK-I",
+    "english": "center"
+  },
+  {
+    "hangul": "술",
+    "level": "TOPIK-I",
+    "english": "alcohol, liquor"
+  },
+  {
+    "hangul": "센티미터",
+    "level": "TOPIK-I",
+    "english": "centimeter"
+  },
+  {
+    "hangul": "쉬다",
+    "level": "TOPIK-I",
+    "english": "rest"
+  },
+  {
+    "hangul": "셋",
+    "level": "TOPIK-I",
+    "english": "3"
+  },
+  {
+    "hangul": "쉰",
+    "level": "TOPIK-I",
+    "english": "50"
+  },
+  {
+    "hangul": "셋째",
+    "level": "TOPIK-I",
+    "english": "third"
+  },
+  {
+    "hangul": "쉽다",
+    "level": "TOPIK-I",
+    "english": "easy"
+  },
+  {
+    "hangul": "소",
+    "level": "TOPIK-I",
+    "english": "small, cow"
+  },
+  {
+    "hangul": "슈퍼마켓",
+    "level": "TOPIK-I",
+    "english": "supermarket"
+  },
+  {
+    "hangul": "소개",
+    "level": "TOPIK-I",
+    "english": "introduction"
+  },
+  {
+    "hangul": "스물",
+    "level": "TOPIK-I",
+    "english": "20"
+  },
+  {
+    "hangul": "소개하다",
+    "level": "TOPIK-I",
+    "english": "introduce"
+  },
+  {
+    "hangul": "스웨터",
+    "level": "TOPIK-I",
+    "english": "sweater"
+  },
+  {
+    "hangul": "소고기",
+    "level": "TOPIK-I",
+    "english": "beef"
+  },
+  {
+    "hangul": "스케이트",
+    "level": "TOPIK-I",
+    "english": "skate"
+  },
+  {
+    "hangul": "소금",
+    "level": "TOPIK-I",
+    "english": "salt"
+  },
+  {
+    "hangul": "스키",
+    "level": "TOPIK-I",
+    "english": "ski, skiing"
+  },
+  {
+    "hangul": "소리",
+    "level": "TOPIK-I",
+    "english": "sound, voice"
+  },
+  {
+    "hangul": "스키장",
+    "level": "TOPIK-I",
+    "english": "ski resort"
+  },
+  {
+    "hangul": "소설",
+    "level": "TOPIK-I",
+    "english": "novel"
+  },
+  {
+    "hangul": "스타",
+    "level": "TOPIK-I",
+    "english": "star"
+  },
+  {
+    "hangul": "소설가",
+    "level": "TOPIK-I",
+    "english": "novelist"
+  },
+  {
+    "hangul": "스타킹",
+    "level": "TOPIK-I",
+    "english": "stockings"
+  },
+  {
+    "hangul": "소식",
+    "level": "TOPIK-I",
+    "english": "news"
+  },
+  {
+    "hangul": "스트레스",
+    "level": "TOPIK-I",
+    "english": "stress"
+  },
+  {
+    "hangul": "소파",
+    "level": "TOPIK-I",
+    "english": "sofa"
+  },
+  {
+    "hangul": "스페인어",
+    "level": "TOPIK-I",
+    "english": "Spanish"
+  },
+  {
+    "hangul": "소포",
+    "level": "TOPIK-I",
+    "english": "parcel"
+  },
+  {
+    "hangul": "스포츠",
+    "level": "TOPIK-I",
+    "english": "sport"
+  },
+  {
+    "hangul": "소풍",
+    "level": "TOPIK-I",
+    "english": "picnic, trip"
+  },
+  {
+    "hangul": "슬퍼하다",
+    "level": "TOPIK-I",
+    "english": "sorrow, mourn"
+  },
+  {
+    "hangul": "소화제",
+    "level": "TOPIK-I",
+    "english": "peptic, digestive"
+  },
+  {
+    "hangul": "슬프다",
+    "level": "TOPIK-I",
+    "english": "sad"
+  },
+  {
+    "hangul": "속",
+    "level": "TOPIK-I",
+    "english": "inside"
+  },
+  {
+    "hangul": "습관",
+    "level": "TOPIK-I",
+    "english": "habit"
+  },
+  {
+    "hangul": "손",
+    "level": "TOPIK-I",
+    "english": "hand"
+  },
+  {
+    "hangul": "시",
+    "level": "TOPIK-I",
+    "english": "city, time"
+  },
+  {
+    "hangul": "손가락",
+    "level": "TOPIK-I",
+    "english": "finger"
+  },
+  {
+    "hangul": "시간",
+    "level": "TOPIK-I",
+    "english": "time"
+  },
+  {
+    "hangul": "손님",
+    "level": "TOPIK-I",
+    "english": "customer"
+  },
+  {
+    "hangul": "시간표",
+    "level": "TOPIK-I",
+    "english": "schedule, timetable"
+  },
+  {
+    "hangul": "손수건",
+    "level": "TOPIK-I",
+    "english": "handkerchief"
+  },
+  {
+    "hangul": "시계",
+    "level": "TOPIK-I",
+    "english": "clock"
+  },
+  {
+    "hangul": "송이",
+    "level": "TOPIK-I",
+    "english": "bunch, flower, cluster"
+  },
+  {
+    "hangul": "시골",
+    "level": "TOPIK-I",
+    "english": "countryside"
+  },
+  {
+    "hangul": "쇼핑",
+    "level": "TOPIK-I",
+    "english": "shopping"
+  },
+  {
+    "hangul": "시끄럽다",
+    "level": "TOPIK-I",
+    "english": "noisy"
+  },
+  {
+    "hangul": "수건",
+    "level": "TOPIK-I",
+    "english": "towel, washcloth"
+  },
+  {
+    "hangul": "시내",
+    "level": "TOPIK-I",
+    "english": "downtown, city, stream"
+  },
+  {
+    "hangul": "시다",
+    "level": "TOPIK-I",
+    "english": "sour"
+  },
+  {
+    "hangul": "쓰기",
+    "level": "TOPIK-I",
+    "english": "writing, dictation"
+  },
+  {
+    "hangul": "시디",
+    "level": "TOPIK-I",
+    "english": "CD"
+  },
+  {
+    "hangul": "쓰다",
+    "level": "TOPIK-I",
+    "english": "write, use, wear (glasses)"
+  },
+  {
+    "hangul": "시민",
+    "level": "TOPIK-I",
+    "english": "citizen"
+  },
+  {
+    "hangul": "쓰레기",
+    "level": "TOPIK-I",
+    "english": "garbage"
+  },
+  {
+    "hangul": "시설",
+    "level": "TOPIK-I",
+    "english": "facility"
+  },
+  {
+    "hangul": "쓰이다",
+    "level": "TOPIK-I",
+    "english": "be written, be used"
+  },
+  {
+    "hangul": "시외",
+    "level": "TOPIK-I",
+    "english": "suburbs"
+  },
+  {
+    "hangul": "씨",
+    "level": "TOPIK-I",
+    "english": "seed, Mr. ~"
+  },
+  {
+    "hangul": "시원하다",
+    "level": "TOPIK-I",
+    "english": "cool, refresh"
+  },
+  {
+    "hangul": "씩",
+    "level": "TOPIK-I",
+    "english": "each, every, per"
+  },
+  {
+    "hangul": "시월",
+    "level": "TOPIK-I",
+    "english": "October"
+  },
+  {
+    "hangul": "씹다",
+    "level": "TOPIK-I",
+    "english": "chew, bite"
+  },
+  {
+    "hangul": "시작",
+    "level": "TOPIK-I",
+    "english": "start"
+  },
+  {
+    "hangul": "씻다",
+    "level": "TOPIK-I",
+    "english": "wash"
+  },
+  {
+    "hangul": "시작되다",
+    "level": "TOPIK-I",
+    "english": "begin"
+  },
+  {
+    "hangul": "아가씨",
+    "level": "TOPIK-I",
+    "english": "Miss, daughter"
+  },
+  {
+    "hangul": "시작하다",
+    "level": "TOPIK-I",
+    "english": "start, begin"
+  },
+  {
+    "hangul": "아기",
+    "level": "TOPIK-I",
+    "english": "baby, toddler"
+  },
+  {
+    "hangul": "시장",
+    "level": "TOPIK-I",
+    "english": "market"
+  },
+  {
+    "hangul": "아까",
+    "level": "TOPIK-I",
+    "english": "earlier, while ago"
+  },
+  {
+    "hangul": "시청",
+    "level": "TOPIK-I",
+    "english": "city hall"
+  },
+  {
+    "hangul": "아내",
+    "level": "TOPIK-I",
+    "english": "wife"
+  },
+  {
+    "hangul": "시키다",
+    "level": "TOPIK-I",
+    "english": "make someone do, order"
+  },
+  {
+    "hangul": "아뇨",
+    "level": "TOPIK-I",
+    "english": "no"
+  },
+  {
+    "hangul": "시험",
+    "level": "TOPIK-I",
+    "english": "exam, test"
+  },
+  {
+    "hangul": "아니다",
+    "level": "TOPIK-I",
+    "english": "no"
+  },
+  {
+    "hangul": "식당",
+    "level": "TOPIK-I",
+    "english": "restaurant, cafeteria"
+  },
+  {
+    "hangul": "아니오",
+    "level": "TOPIK-I",
+    "english": "no"
+  },
+  {
+    "hangul": "식사",
+    "level": "TOPIK-I",
+    "english": "meal"
+  },
+  {
+    "hangul": "아니요",
+    "level": "TOPIK-I",
+    "english": "no"
+  },
+  {
+    "hangul": "식탁",
+    "level": "TOPIK-I",
+    "english": "table"
+  },
+  {
+    "hangul": "아들",
+    "level": "TOPIK-I",
+    "english": "son"
+  },
+  {
+    "hangul": "신",
+    "level": "TOPIK-I",
+    "english": "god, new"
+  },
+  {
+    "hangul": "아랍어",
+    "level": "TOPIK-I",
+    "english": "Arabic"
+  },
+  {
+    "hangul": "신다",
+    "level": "TOPIK-I",
+    "english": "put on, wear"
+  },
+  {
+    "hangul": "아래",
+    "level": "TOPIK-I",
+    "english": "bottom, under"
+  },
+  {
+    "hangul": "신문",
+    "level": "TOPIK-I",
+    "english": "newspaper"
+  },
+  {
+    "hangul": "아름답다",
+    "level": "TOPIK-I",
+    "english": "beautiful"
+  },
+  {
+    "hangul": "신발",
+    "level": "TOPIK-I",
+    "english": "shoes, footwear"
+  },
+  {
+    "hangul": "아마",
+    "level": "TOPIK-I",
+    "english": "maybe, perhaps"
+  },
+  {
+    "hangul": "신청서",
+    "level": "TOPIK-I",
+    "english": "application forms"
+  },
+  {
+    "hangul": "아무",
+    "level": "TOPIK-I",
+    "english": "any"
+  },
+  {
+    "hangul": "신청하다",
+    "level": "TOPIK-I",
+    "english": "put in for, apply for"
+  },
+  {
+    "hangul": "아버님",
+    "level": "TOPIK-I",
+    "english": "father"
+  },
+  {
+    "hangul": "실례",
+    "level": "TOPIK-I",
+    "english": "excuse"
+  },
+  {
+    "hangul": "아버지",
+    "level": "TOPIK-I",
+    "english": "father"
+  },
+  {
+    "hangul": "실례하다",
+    "level": "TOPIK-I",
+    "english": "be excused"
+  },
+  {
+    "hangul": "아빠",
+    "level": "TOPIK-I",
+    "english": "dad"
+  },
+  {
+    "hangul": "실수",
+    "level": "TOPIK-I",
+    "english": "mistake, failure"
+  },
+  {
+    "hangul": "아시아",
+    "level": "TOPIK-I",
+    "english": "Asia"
+  },
+  {
+    "hangul": "싫다",
+    "level": "TOPIK-I",
+    "english": "hate"
+  },
+  {
+    "hangul": "아이",
+    "level": "TOPIK-I",
+    "english": "child"
+  },
+  {
+    "hangul": "싫어하다",
+    "level": "TOPIK-I",
+    "english": "dislike, hate"
+  },
+  {
+    "hangul": "아이스크림",
+    "level": "TOPIK-I",
+    "english": "ice cream"
+  },
+  {
+    "hangul": "심하다",
+    "level": "TOPIK-I",
+    "english": "severe, terrible"
+  },
+  {
+    "hangul": "아저씨",
+    "level": "TOPIK-I",
+    "english": "uncle, mister"
+  },
+  {
+    "hangul": "십",
+    "level": "TOPIK-I",
+    "english": "10"
+  },
+  {
+    "hangul": "아주",
+    "level": "TOPIK-I",
+    "english": "very, completely"
+  },
+  {
+    "hangul": "십이월",
+    "level": "TOPIK-I",
+    "english": "December"
+  },
+  {
+    "hangul": "아주머니",
+    "level": "TOPIK-I",
+    "english": "old lady, madame, aunt"
+  },
+  {
+    "hangul": "십일월",
+    "level": "TOPIK-I",
+    "english": "November"
+  },
+  {
+    "hangul": "아줌마",
+    "level": "TOPIK-I",
+    "english": "old lady, madame, aunt"
+  },
+  {
+    "hangul": "싱겁다",
+    "level": "TOPIK-I",
+    "english": "not salty"
+  },
+  {
+    "hangul": "아직",
+    "level": "TOPIK-I",
+    "english": "yet, still"
+  },
+  {
+    "hangul": "싶다",
+    "level": "TOPIK-I",
+    "english": "want"
+  },
+  {
+    "hangul": "아침",
+    "level": "TOPIK-I",
+    "english": "morning, breakfast"
+  },
+  {
+    "hangul": "싸다",
+    "level": "TOPIK-I",
+    "english": "cheap, wrap"
+  },
+  {
+    "hangul": "아침밥",
+    "level": "TOPIK-I",
+    "english": "breakfast"
+  },
+  {
+    "hangul": "싸우다",
+    "level": "TOPIK-I",
+    "english": "fight"
+  },
+  {
+    "hangul": "아침식사",
+    "level": "TOPIK-I",
+    "english": "breakfast"
+  },
+  {
+    "hangul": "쌀",
+    "level": "TOPIK-I",
+    "english": "rice"
+  },
+  {
+    "hangul": "아파트",
+    "level": "TOPIK-I",
+    "english": "apartment, mansion"
+  },
+  {
+    "hangul": "쌀밥",
+    "level": "TOPIK-I",
+    "english": "cooked rice"
+  },
+  {
+    "hangul": "아프다",
+    "level": "TOPIK-I",
+    "english": "painful, sick"
+  },
+  {
+    "hangul": "쌓이다",
+    "level": "TOPIK-I",
+    "english": "stack up, pile up"
+  },
+  {
+    "hangul": "아프리카",
+    "level": "TOPIK-I",
+    "english": "Africa"
+  },
+  {
+    "hangul": "썰다",
+    "level": "TOPIK-I",
+    "english": "chop, cut"
+  },
+  {
+    "hangul": "아홉",
+    "level": "TOPIK-I",
+    "english": "9"
+  },
+  {
+    "hangul": "아흔",
+    "level": "TOPIK-I",
+    "english": "90"
+  },
+  {
+    "hangul": "어른",
+    "level": "TOPIK-I",
+    "english": "adult"
+  },
+  {
+    "hangul": "악기",
+    "level": "TOPIK-I",
+    "english": "musical instrument"
+  },
+  {
+    "hangul": "어리다",
+    "level": "TOPIK-I",
+    "english": "young"
+  },
+  {
+    "hangul": "안",
+    "level": "TOPIK-I",
+    "english": "within, not ~"
+  },
+  {
+    "hangul": "어린이",
+    "level": "TOPIK-I",
+    "english": "child"
+  },
+  {
+    "hangul": "안경",
+    "level": "TOPIK-I",
+    "english": "glasses"
+  },
+  {
+    "hangul": "어머",
+    "level": "TOPIK-I",
+    "english": "oh, well"
+  },
+  {
+    "hangul": "안내하다",
+    "level": "TOPIK-I",
+    "english": "guide, invite"
+  },
+  {
+    "hangul": "어머니",
+    "level": "TOPIK-I",
+    "english": "mother"
+  },
+  {
+    "hangul": "안녕하세요",
+    "level": "TOPIK-I",
+    "english": "hi, hello"
+  },
+  {
+    "hangul": "어머님",
+    "level": "TOPIK-I",
+    "english": "mother"
+  },
+  {
+    "hangul": "안녕하십니까",
+    "level": "TOPIK-I",
+    "english": "hello"
+  },
+  {
+    "hangul": "어서",
+    "level": "TOPIK-I",
+    "english": "hurry, quickly"
+  },
+  {
+    "hangul": "안다",
+    "level": "TOPIK-I",
+    "english": "embrace, cradle"
+  },
+  {
+    "hangul": "어울리다",
+    "level": "TOPIK-I",
+    "english": "look good on, befit"
+  },
+  {
+    "hangul": "안전하다",
+    "level": "TOPIK-I",
+    "english": "safe"
+  },
+  {
+    "hangul": "어저께",
+    "level": "TOPIK-I",
+    "english": "yesterday"
+  },
+  {
+    "hangul": "앉다",
+    "level": "TOPIK-I",
+    "english": "sit"
+  },
+  {
+    "hangul": "어제",
+    "level": "TOPIK-I",
+    "english": "yesterday"
+  },
+  {
+    "hangul": "알다",
+    "level": "TOPIK-I",
+    "english": "know"
+  },
+  {
+    "hangul": "어젯밤",
+    "level": "TOPIK-I",
+    "english": "last night"
+  },
+  {
+    "hangul": "알리다",
+    "level": "TOPIK-I",
+    "english": "inform"
+  },
+  {
+    "hangul": "언니",
+    "level": "TOPIK-I",
+    "english": "sister (as seen from the younger sister)"
+  },
+  {
+    "hangul": "알맞다",
+    "level": "TOPIK-I",
+    "english": "fit, appropriate"
+  },
+  {
+    "hangul": "언제",
+    "level": "TOPIK-I",
+    "english": "when"
+  },
+  {
+    "hangul": "알았습니다",
+    "level": "TOPIK-I",
+    "english": "I understood."
+  },
+  {
+    "hangul": "언제나",
+    "level": "TOPIK-I",
+    "english": "always, anytime"
+  },
+  {
+    "hangul": "앞",
+    "level": "TOPIK-I",
+    "english": "front, previous"
+  },
+  {
+    "hangul": "얼굴",
+    "level": "TOPIK-I",
+    "english": "face"
+  },
+  {
+    "hangul": "애",
+    "level": "TOPIK-I",
+    "english": "child"
+  },
+  {
+    "hangul": "얼마나",
+    "level": "TOPIK-I",
+    "english": "how much"
+  },
+  {
+    "hangul": "액세서리",
+    "level": "TOPIK-I",
+    "english": "accessory"
+  },
+  {
+    "hangul": "얼음",
+    "level": "TOPIK-I",
+    "english": "ice"
+  },
+  {
+    "hangul": "야구",
+    "level": "TOPIK-I",
+    "english": "baseball"
+  },
+  {
+    "hangul": "엄마",
+    "level": "TOPIK-I",
+    "english": "mom"
+  },
+  {
+    "hangul": "야채",
+    "level": "TOPIK-I",
+    "english": "vegetable"
+  },
+  {
+    "hangul": "없다",
+    "level": "TOPIK-I",
+    "english": "none, no, not"
+  },
+  {
+    "hangul": "약",
+    "level": "TOPIK-I",
+    "english": "about, medicine"
+  },
+  {
+    "hangul": "없이",
+    "level": "TOPIK-I",
+    "english": "without"
+  },
+  {
+    "hangul": "약간",
+    "level": "TOPIK-I",
+    "english": "slightly, a little"
+  },
+  {
+    "hangul": "에어컨",
+    "level": "TOPIK-I",
+    "english": "air conditioner"
+  },
+  {
+    "hangul": "약국",
+    "level": "TOPIK-I",
+    "english": "pharmacy"
+  },
+  {
+    "hangul": "엔",
+    "level": "TOPIK-I",
+    "english": "yen"
+  },
+  {
+    "hangul": "약사",
+    "level": "TOPIK-I",
+    "english": "pharmacist"
+  },
+  {
+    "hangul": "엘리베이터",
+    "level": "TOPIK-I",
+    "english": "elevator"
+  },
+  {
+    "hangul": "약속",
+    "level": "TOPIK-I",
+    "english": "appointment, promise"
+  },
+  {
+    "hangul": "여권",
+    "level": "TOPIK-I",
+    "english": "passport"
+  },
+  {
+    "hangul": "얇다",
+    "level": "TOPIK-I",
+    "english": "thin"
+  },
+  {
+    "hangul": "여기",
+    "level": "TOPIK-I",
+    "english": "here"
+  },
+  {
+    "hangul": "양",
+    "level": "TOPIK-I",
+    "english": "amount, sheep"
+  },
+  {
+    "hangul": "여기저기",
+    "level": "TOPIK-I",
+    "english": "here and there"
+  },
+  {
+    "hangul": "양말",
+    "level": "TOPIK-I",
+    "english": "socks"
+  },
+  {
+    "hangul": "여덟",
+    "level": "TOPIK-I",
+    "english": "8"
+  },
+  {
+    "hangul": "양복",
+    "level": "TOPIK-I",
+    "english": "suit"
+  },
+  {
+    "hangul": "여동생",
+    "level": "TOPIK-I",
+    "english": "younger sister"
+  },
+  {
+    "hangul": "양식",
+    "level": "TOPIK-I",
+    "english": "form, western style"
+  },
+  {
+    "hangul": "여든",
+    "level": "TOPIK-I",
+    "english": "80"
+  },
+  {
+    "hangul": "양파",
+    "level": "TOPIK-I",
+    "english": "onion"
+  },
+  {
+    "hangul": "여러",
+    "level": "TOPIK-I",
+    "english": "various, many"
+  },
+  {
+    "hangul": "얘기하다",
+    "level": "TOPIK-I",
+    "english": "talk"
+  },
+  {
+    "hangul": "여러가지",
+    "level": "TOPIK-I",
+    "english": "several, various"
+  },
+  {
+    "hangul": "어깨",
+    "level": "TOPIK-I",
+    "english": "shoulder"
+  },
+  {
+    "hangul": "여러분",
+    "level": "TOPIK-I",
+    "english": "everyone, ladies and gentlemen"
+  },
+  {
+    "hangul": "어느",
+    "level": "TOPIK-I",
+    "english": "which, how"
+  },
+  {
+    "hangul": "여름",
+    "level": "TOPIK-I",
+    "english": "summer"
+  },
+  {
+    "hangul": "어둡다",
+    "level": "TOPIK-I",
+    "english": "dark"
+  },
+  {
+    "hangul": "여보세요",
+    "level": "TOPIK-I",
+    "english": "hello"
+  },
+  {
+    "hangul": "어디",
+    "level": "TOPIK-I",
+    "english": "where"
+  },
+  {
+    "hangul": "여섯",
+    "level": "TOPIK-I",
+    "english": "6"
+  },
+  {
+    "hangul": "어떤",
+    "level": "TOPIK-I",
+    "english": "which, what"
+  },
+  {
+    "hangul": "여자",
+    "level": "TOPIK-I",
+    "english": "woman"
+  },
+  {
+    "hangul": "어떻게",
+    "level": "TOPIK-I",
+    "english": "how"
+  },
+  {
+    "hangul": "여학생",
+    "level": "TOPIK-I",
+    "english": "female student"
+  },
+  {
+    "hangul": "어떻다",
+    "level": "TOPIK-I",
+    "english": "how"
+  },
+  {
+    "hangul": "여행",
+    "level": "TOPIK-I",
+    "english": "travel"
+  },
+  {
+    "hangul": "여행사",
+    "level": "TOPIK-I",
+    "english": "travel agency, travel firm"
+  },
+  {
+    "hangul": "어렵다",
+    "level": "TOPIK-I",
+    "english": "difficult"
+  },
+  {
+    "hangul": "역",
+    "level": "TOPIK-I",
+    "english": "station"
+  },
+  {
+    "hangul": "역사",
+    "level": "TOPIK-I",
+    "english": "history"
+  },
+  {
+    "hangul": "오랫동안",
+    "level": "TOPIK-I",
+    "english": "for a long time"
+  },
+  {
+    "hangul": "연락처",
+    "level": "TOPIK-I",
+    "english": "contact information"
+  },
+  {
+    "hangul": "오렌지",
+    "level": "TOPIK-I",
+    "english": "orange"
+  },
+  {
+    "hangul": "연세",
+    "level": "TOPIK-I",
+    "english": "age  (honorific form)"
+  },
+  {
+    "hangul": "오르다",
+    "level": "TOPIK-I",
+    "english": "climb"
+  },
+  {
+    "hangul": "연습",
+    "level": "TOPIK-I",
+    "english": "practice"
+  },
+  {
+    "hangul": "오른쪽",
+    "level": "TOPIK-I",
+    "english": "right side, right"
+  },
+  {
+    "hangul": "연습하다",
+    "level": "TOPIK-I",
+    "english": "practice"
+  },
+  {
+    "hangul": "오리",
+    "level": "TOPIK-I",
+    "english": "duck"
+  },
+  {
+    "hangul": "연예인",
+    "level": "TOPIK-I",
+    "english": "celebrity"
+  },
+  {
+    "hangul": "오빠",
+    "level": "TOPIK-I",
+    "english": "brother (as seen from the younger sister)"
+  },
+  {
+    "hangul": "연필",
+    "level": "TOPIK-I",
+    "english": "pencil"
+  },
+  {
+    "hangul": "오십",
+    "level": "TOPIK-I",
+    "english": "50"
+  },
+  {
+    "hangul": "연휴",
+    "level": "TOPIK-I",
+    "english": "consecutive holidays"
+  },
+  {
+    "hangul": "오월",
+    "level": "TOPIK-I",
+    "english": "May"
+  },
+  {
+    "hangul": "열",
+    "level": "TOPIK-I",
+    "english": "10"
+  },
+  {
+    "hangul": "오이",
+    "level": "TOPIK-I",
+    "english": "cucumber"
+  },
+  {
+    "hangul": "열다",
+    "level": "TOPIK-I",
+    "english": "open"
+  },
+  {
+    "hangul": "오전",
+    "level": "TOPIK-I",
+    "english": "morning, a.m."
+  },
+  {
+    "hangul": "열리다",
+    "level": "TOPIK-I",
+    "english": "be opened"
+  },
+  {
+    "hangul": "오징어",
+    "level": "TOPIK-I",
+    "english": "squid"
+  },
+  {
+    "hangul": "열쇠",
+    "level": "TOPIK-I",
+    "english": "key"
+  },
+  {
+    "hangul": "오후",
+    "level": "TOPIK-I",
+    "english": "afternoon"
+  },
+  {
+    "hangul": "열심히",
+    "level": "TOPIK-I",
+    "english": "hard, enthusiastic"
+  },
+  {
+    "hangul": "올라가다",
+    "level": "TOPIK-I",
+    "english": "go up"
+  },
+  {
+    "hangul": "열차",
+    "level": "TOPIK-I",
+    "english": "train"
+  },
+  {
+    "hangul": "올라오다",
+    "level": "TOPIK-I",
+    "english": "come up"
+  },
+  {
+    "hangul": "엽서",
+    "level": "TOPIK-I",
+    "english": "postcard"
+  },
+  {
+    "hangul": "올려놓다",
+    "level": "TOPIK-I",
+    "english": "put on, place"
+  },
+  {
+    "hangul": "영",
+    "level": "TOPIK-I",
+    "english": "spirit, zero"
+  },
+  {
+    "hangul": "올림픽",
+    "level": "TOPIK-I",
+    "english": "olympic"
+  },
+  {
+    "hangul": "영국",
+    "level": "TOPIK-I",
+    "english": "The United Kingdom"
+  },
+  {
+    "hangul": "올해",
+    "level": "TOPIK-I",
+    "english": "this year"
+  },
+  {
+    "hangul": "영상",
+    "level": "TOPIK-I",
+    "english": "video"
+  },
+  {
+    "hangul": "옮기다",
+    "level": "TOPIK-I",
+    "english": "move, transfer, translate"
+  },
+  {
+    "hangul": "영어",
+    "level": "TOPIK-I",
+    "english": "English"
+  },
+  {
+    "hangul": "옷",
+    "level": "TOPIK-I",
+    "english": "dress, clothes"
+  },
+  {
+    "hangul": "영어회화",
+    "level": "TOPIK-I",
+    "english": "English conversation"
+  },
+  {
+    "hangul": "옷가게",
+    "level": "TOPIK-I",
+    "english": "clothing store"
+  },
+  {
+    "hangul": "영하",
+    "level": "TOPIK-I",
+    "english": "minus, below zero"
+  },
+  {
+    "hangul": "옷장",
+    "level": "TOPIK-I",
+    "english": "closet"
+  },
+  {
+    "hangul": "영화",
+    "level": "TOPIK-I",
+    "english": "movie"
+  },
+  {
+    "hangul": "와이셔츠",
+    "level": "TOPIK-I",
+    "english": "shirt"
+  },
+  {
+    "hangul": "영화관",
+    "level": "TOPIK-I",
+    "english": "movie theater"
+  },
+  {
+    "hangul": "왜",
+    "level": "TOPIK-I",
+    "english": "why"
+  },
+  {
+    "hangul": "영화배우",
+    "level": "TOPIK-I",
+    "english": "movie star"
+  },
+  {
+    "hangul": "왜냐하면",
+    "level": "TOPIK-I",
+    "english": "because"
+  },
+  {
+    "hangul": "영화표",
+    "level": "TOPIK-I",
+    "english": "movie ticket"
+  },
+  {
+    "hangul": "외국",
+    "level": "TOPIK-I",
+    "english": "foreign country"
+  },
+  {
+    "hangul": "옆",
+    "level": "TOPIK-I",
+    "english": "side"
+  },
+  {
+    "hangul": "외국어",
+    "level": "TOPIK-I",
+    "english": "foreign language"
+  },
+  {
+    "hangul": "예",
+    "level": "TOPIK-I",
+    "english": "yes"
+  },
+  {
+    "hangul": "외국인",
+    "level": "TOPIK-I",
+    "english": "foreigner"
+  },
+  {
+    "hangul": "예문",
+    "level": "TOPIK-I",
+    "english": "example, model sentence"
+  },
+  {
+    "hangul": "외롭다",
+    "level": "TOPIK-I",
+    "english": "lonely"
+  },
+  {
+    "hangul": "예쁘다",
+    "level": "TOPIK-I",
+    "english": "pretty, beautiful"
+  },
+  {
+    "hangul": "외삼촌",
+    "level": "TOPIK-I",
+    "english": "maternal uncle"
+  },
+  {
+    "hangul": "예순",
+    "level": "TOPIK-I",
+    "english": "60"
+  },
+  {
+    "hangul": "외숙모",
+    "level": "TOPIK-I",
+    "english": "maternal aunt"
+  },
+  {
+    "hangul": "예약",
+    "level": "TOPIK-I",
+    "english": "reservation"
+  },
+  {
+    "hangul": "외출하다",
+    "level": "TOPIK-I",
+    "english": "go out"
+  },
+  {
+    "hangul": "옛날",
+    "level": "TOPIK-I",
+    "english": "a long ago, olden days"
+  },
+  {
+    "hangul": "외할머니",
+    "level": "TOPIK-I",
+    "english": "maternal grandmother"
+  },
+  {
+    "hangul": "오",
+    "level": "TOPIK-I",
+    "english": "5"
+  },
+  {
+    "hangul": "외할아버지",
+    "level": "TOPIK-I",
+    "english": "maternal grandfather"
+  },
+  {
+    "hangul": "오늘",
+    "level": "TOPIK-I",
+    "english": "today"
+  },
+  {
+    "hangul": "왼쪽",
+    "level": "TOPIK-I",
+    "english": "left"
+  },
+  {
+    "hangul": "오다",
+    "level": "TOPIK-I",
+    "english": "come"
+  },
+  {
+    "hangul": "요금",
+    "level": "TOPIK-I",
+    "english": "fee"
+  },
+  {
+    "hangul": "오래",
+    "level": "TOPIK-I",
+    "english": "long, much"
+  },
+  {
+    "hangul": "요르단",
+    "level": "TOPIK-I",
+    "english": "Jordan"
+  },
+  {
+    "hangul": "오래간만",
+    "level": "TOPIK-I",
+    "english": "after a long time"
+  },
+  {
+    "hangul": "요리",
+    "level": "TOPIK-I",
+    "english": "cooking, cuisine"
+  },
+  {
+    "hangul": "오래간만입니다",
+    "level": "TOPIK-I",
+    "english": "Long time no see."
+  },
+  {
+    "hangul": "요일",
+    "level": "TOPIK-I",
+    "english": "day of the week"
+  },
+  {
+    "hangul": "오랜만",
+    "level": "TOPIK-I",
+    "english": "after a long time"
+  },
+  {
+    "hangul": "요즘",
+    "level": "TOPIK-I",
+    "english": "nowadays, around this time, lately"
+  },
+  {
+    "hangul": "오랜만에",
+    "level": "TOPIK-I",
+    "english": "after a long time"
+  },
+  {
+    "hangul": "우리",
+    "level": "TOPIK-I",
+    "english": "we, us"
+  },
+  {
+    "hangul": "우리나라",
+    "level": "TOPIK-I",
+    "english": "our country, South Korea"
+  },
+  {
+    "hangul": "은행",
+    "level": "TOPIK-I",
+    "english": "bank"
+  },
+  {
+    "hangul": "우산",
+    "level": "TOPIK-I",
+    "english": "umbrella"
+  },
+  {
+    "hangul": "은행원",
+    "level": "TOPIK-I",
+    "english": "bank clerk"
+  },
+  {
+    "hangul": "우선",
+    "level": "TOPIK-I",
+    "english": "first"
+  },
+  {
+    "hangul": "음료수",
+    "level": "TOPIK-I",
+    "english": "drink, soft drink"
+  },
+  {
+    "hangul": "우유",
+    "level": "TOPIK-I",
+    "english": "milk"
+  },
+  {
+    "hangul": "음반",
+    "level": "TOPIK-I",
+    "english": "record"
+  },
+  {
+    "hangul": "우체국",
+    "level": "TOPIK-I",
+    "english": "post office"
+  },
+  {
+    "hangul": "음식",
+    "level": "TOPIK-I",
+    "english": "food, cooking"
+  },
+  {
+    "hangul": "우표",
+    "level": "TOPIK-I",
+    "english": "stamp"
+  },
+  {
+    "hangul": "음악",
+    "level": "TOPIK-I",
+    "english": "music"
+  },
+  {
+    "hangul": "운동",
+    "level": "TOPIK-I",
+    "english": "exercise"
+  },
+  {
+    "hangul": "음악가",
+    "level": "TOPIK-I",
+    "english": "musician"
+  },
+  {
+    "hangul": "운동복",
+    "level": "TOPIK-I",
+    "english": "sportswear, gym clothes"
+  },
+  {
+    "hangul": "응",
+    "level": "TOPIK-I",
+    "english": "Yeah (answer)"
+  },
+  {
+    "hangul": "운동선수",
+    "level": "TOPIK-I",
+    "english": "athlete"
+  },
+  {
+    "hangul": "의미",
+    "level": "TOPIK-I",
+    "english": "meaning"
+  },
+  {
+    "hangul": "운동장",
+    "level": "TOPIK-I",
+    "english": "playground, athletic field"
+  },
+  {
+    "hangul": "의사",
+    "level": "TOPIK-I",
+    "english": "doctor"
+  },
+  {
+    "hangul": "운동하다",
+    "level": "TOPIK-I",
+    "english": "exercise"
+  },
+  {
+    "hangul": "의자",
+    "level": "TOPIK-I",
+    "english": "chair"
+  },
+  {
+    "hangul": "운동화",
+    "level": "TOPIK-I",
+    "english": "sports shoes"
+  },
+  {
+    "hangul": "이",
+    "level": "TOPIK-I",
+    "english": "this, tooth, 2"
+  },
+  {
+    "hangul": "운전하다",
+    "level": "TOPIK-I",
+    "english": "drive"
+  },
+  {
+    "hangul": "이거",
+    "level": "TOPIK-I",
+    "english": "this"
+  },
+  {
+    "hangul": "울다",
+    "level": "TOPIK-I",
+    "english": "cry"
+  },
+  {
+    "hangul": "이것",
+    "level": "TOPIK-I",
+    "english": "this"
+  },
+  {
+    "hangul": "울리다",
+    "level": "TOPIK-I",
+    "english": "make cry, chime"
+  },
+  {
+    "hangul": "이곳",
+    "level": "TOPIK-I",
+    "english": "this place, here"
+  },
+  {
+    "hangul": "움직이다",
+    "level": "TOPIK-I",
+    "english": "move"
+  },
+  {
+    "hangul": "이따가",
+    "level": "TOPIK-I",
+    "english": "later"
+  },
+  {
+    "hangul": "웃기다",
+    "level": "TOPIK-I",
+    "english": "funny, make someone laugh"
+  },
+  {
+    "hangul": "이런",
+    "level": "TOPIK-I",
+    "english": "this, such ~"
+  },
+  {
+    "hangul": "웃다",
+    "level": "TOPIK-I",
+    "english": "laugh"
+  },
+  {
+    "hangul": "이렇게",
+    "level": "TOPIK-I",
+    "english": "like this, so, in this way"
+  },
+  {
+    "hangul": "원",
+    "level": "TOPIK-I",
+    "english": "won (currency units of Korea)"
+  },
+  {
+    "hangul": "이렇다",
+    "level": "TOPIK-I",
+    "english": "like this"
+  },
+  {
+    "hangul": "원피스",
+    "level": "TOPIK-I",
+    "english": "one-piece dress"
+  },
+  {
+    "hangul": "이름",
+    "level": "TOPIK-I",
+    "english": "name"
+  },
+  {
+    "hangul": "원하다",
+    "level": "TOPIK-I",
+    "english": "want, wish, desire"
+  },
+  {
+    "hangul": "이메일",
+    "level": "TOPIK-I",
+    "english": "e-mail"
+  },
+  {
+    "hangul": "월",
+    "level": "TOPIK-I",
+    "english": "month"
+  },
+  {
+    "hangul": "이모",
+    "level": "TOPIK-I",
+    "english": "maternal aunt"
+  },
+  {
+    "hangul": "월급",
+    "level": "TOPIK-I",
+    "english": "monthly salary"
+  },
+  {
+    "hangul": "이모부",
+    "level": "TOPIK-I",
+    "english": "maternal uncle"
+  },
+  {
+    "hangul": "월드컵",
+    "level": "TOPIK-I",
+    "english": "world cup"
+  },
+  {
+    "hangul": "이번",
+    "level": "TOPIK-I",
+    "english": "this time"
+  },
+  {
+    "hangul": "월세",
+    "level": "TOPIK-I",
+    "english": "monthly rent"
+  },
+  {
+    "hangul": "이분",
+    "level": "TOPIK-I",
+    "english": "this person"
+  },
+  {
+    "hangul": "월요일",
+    "level": "TOPIK-I",
+    "english": "Monday"
+  },
+  {
+    "hangul": "이사",
+    "level": "TOPIK-I",
+    "english": "move, moving"
+  },
+  {
+    "hangul": "웬일",
+    "level": "TOPIK-I",
+    "english": "for some reason,  What was it?"
+  },
+  {
+    "hangul": "이상",
+    "level": "TOPIK-I",
+    "english": "more than, strange"
+  },
+  {
+    "hangul": "위",
+    "level": "TOPIK-I",
+    "english": "top, up"
+  },
+  {
+    "hangul": "이상하다",
+    "level": "TOPIK-I",
+    "english": "strange, funny, weird"
+  },
+  {
+    "hangul": "위치",
+    "level": "TOPIK-I",
+    "english": "location, position"
+  },
+  {
+    "hangul": "이십",
+    "level": "TOPIK-I",
+    "english": "20"
+  },
+  {
+    "hangul": "위하다",
+    "level": "TOPIK-I",
+    "english": "for, in favor of, for the sake of"
+  },
+  {
+    "hangul": "이야기",
+    "level": "TOPIK-I",
+    "english": "story"
+  },
+  {
+    "hangul": "위험하다",
+    "level": "TOPIK-I",
+    "english": "dangerous"
+  },
+  {
+    "hangul": "이야기하다",
+    "level": "TOPIK-I",
+    "english": "talk"
+  },
+  {
+    "hangul": "유럽",
+    "level": "TOPIK-I",
+    "english": "Europe"
+  },
+  {
+    "hangul": "이용",
+    "level": "TOPIK-I",
+    "english": "usage"
+  },
+  {
+    "hangul": "유리",
+    "level": "TOPIK-I",
+    "english": "glass"
+  },
+  {
+    "hangul": "이용하다",
+    "level": "TOPIK-I",
+    "english": "use"
+  },
+  {
+    "hangul": "유명하다",
+    "level": "TOPIK-I",
+    "english": "famous"
+  },
+  {
+    "hangul": "이월",
+    "level": "TOPIK-I",
+    "english": "February"
+  },
+  {
+    "hangul": "유월",
+    "level": "TOPIK-I",
+    "english": "June"
+  },
+  {
+    "hangul": "이유",
+    "level": "TOPIK-I",
+    "english": "reason"
+  },
+  {
+    "hangul": "유학",
+    "level": "TOPIK-I",
+    "english": "study abroad"
+  },
+  {
+    "hangul": "이제",
+    "level": "TOPIK-I",
+    "english": "now"
+  },
+  {
+    "hangul": "유학생",
+    "level": "TOPIK-I",
+    "english": "foreign student, international student"
+  },
+  {
+    "hangul": "이집트",
+    "level": "TOPIK-I",
+    "english": "Egypt"
+  },
+  {
+    "hangul": "유행",
+    "level": "TOPIK-I",
+    "english": "trend"
+  },
+  {
+    "hangul": "이쪽",
+    "level": "TOPIK-I",
+    "english": "this way, here, this person"
+  },
+  {
+    "hangul": "육",
+    "level": "TOPIK-I",
+    "english": "6"
+  },
+  {
+    "hangul": "이틀",
+    "level": "TOPIK-I",
+    "english": "two days"
+  },
+  {
+    "hangul": "육십",
+    "level": "TOPIK-I",
+    "english": "60"
+  },
+  {
+    "hangul": "이해",
+    "level": "TOPIK-I",
+    "english": "understanding"
+  },
+  {
+    "hangul": "이해하다",
+    "level": "TOPIK-I",
+    "english": "understand"
+  },
+  {
+    "hangul": "입다",
+    "level": "TOPIK-I",
+    "english": "put on, wear"
+  },
+  {
+    "hangul": "인",
+    "level": "TOPIK-I",
+    "english": "sign, ~ person(s)"
+  },
+  {
+    "hangul": "입원하다",
+    "level": "TOPIK-I",
+    "english": "hospitalize"
+  },
+  {
+    "hangul": "인구",
+    "level": "TOPIK-I",
+    "english": "population"
+  },
+  {
+    "hangul": "입학",
+    "level": "TOPIK-I",
+    "english": "admission"
+  },
+  {
+    "hangul": "인기",
+    "level": "TOPIK-I",
+    "english": "popularity"
+  },
+  {
+    "hangul": "있다",
+    "level": "TOPIK-I",
+    "english": "have, there"
+  },
+  {
+    "hangul": "인기스타",
+    "level": "TOPIK-I",
+    "english": "popular star"
+  },
+  {
+    "hangul": "잊다",
+    "level": "TOPIK-I",
+    "english": "forget"
+  },
+  {
+    "hangul": "인도",
+    "level": "TOPIK-I",
+    "english": "India"
+  },
+  {
+    "hangul": "잊어버리다",
+    "level": "TOPIK-I",
+    "english": "forget"
+  },
+  {
+    "hangul": "인사",
+    "level": "TOPIK-I",
+    "english": "greetings"
+  },
+  {
+    "hangul": "자",
+    "level": "TOPIK-I",
+    "english": "character, Here we go."
+  },
+  {
+    "hangul": "인사하다",
+    "level": "TOPIK-I",
+    "english": "greet"
+  },
+  {
+    "hangul": "자기",
+    "level": "TOPIK-I",
+    "english": "myself, own"
+  },
+  {
+    "hangul": "인삼",
+    "level": "TOPIK-I",
+    "english": "ginseng"
+  },
+  {
+    "hangul": "자다",
+    "level": "TOPIK-I",
+    "english": "sleep"
+  },
+  {
+    "hangul": "인상",
+    "level": "TOPIK-I",
+    "english": "impression"
+  },
+  {
+    "hangul": "자동차",
+    "level": "TOPIK-I",
+    "english": "car, automobile"
+  },
+  {
+    "hangul": "인천",
+    "level": "TOPIK-I",
+    "english": "Incheon"
+  },
+  {
+    "hangul": "자동차회사",
+    "level": "TOPIK-I",
+    "english": "car company"
+  },
+  {
+    "hangul": "인터넷",
+    "level": "TOPIK-I",
+    "english": "internet"
+  },
+  {
+    "hangul": "자료",
+    "level": "TOPIK-I",
+    "english": "material, document"
+  },
+  {
+    "hangul": "인터뷰하다",
+    "level": "TOPIK-I",
+    "english": "interview"
+  },
+  {
+    "hangul": "자르다",
+    "level": "TOPIK-I",
+    "english": "cut"
+  },
+  {
+    "hangul": "인형",
+    "level": "TOPIK-I",
+    "english": "doll"
+  },
+  {
+    "hangul": "자리",
+    "level": "TOPIK-I",
+    "english": "seat, location"
+  },
+  {
+    "hangul": "일",
+    "level": "TOPIK-I",
+    "english": "work, 1, day"
+  },
+  {
+    "hangul": "자신",
+    "level": "TOPIK-I",
+    "english": "myself, own"
+  },
+  {
+    "hangul": "일곱",
+    "level": "TOPIK-I",
+    "english": "7"
+  },
+  {
+    "hangul": "자연",
+    "level": "TOPIK-I",
+    "english": "nature"
+  },
+  {
+    "hangul": "일기",
+    "level": "TOPIK-I",
+    "english": "diary"
+  },
+  {
+    "hangul": "자유",
+    "level": "TOPIK-I",
+    "english": "freedom"
+  },
+  {
+    "hangul": "일기예보",
+    "level": "TOPIK-I",
+    "english": "weather forecast"
+  },
+  {
+    "hangul": "자장면",
+    "level": "TOPIK-I",
+    "english": "Jajangmyeon"
+  },
+  {
+    "hangul": "일본",
+    "level": "TOPIK-I",
+    "english": "Japan"
+  },
+  {
+    "hangul": "자전거",
+    "level": "TOPIK-I",
+    "english": "bicycle"
+  },
+  {
+    "hangul": "일본드라마",
+    "level": "TOPIK-I",
+    "english": "Japanese drama"
+  },
+  {
+    "hangul": "자주",
+    "level": "TOPIK-I",
+    "english": "often"
+  },
+  {
+    "hangul": "일본말",
+    "level": "TOPIK-I",
+    "english": "Japanese language"
+  },
+  {
+    "hangul": "작년",
+    "level": "TOPIK-I",
+    "english": "last year"
+  },
+  {
+    "hangul": "일본사람",
+    "level": "TOPIK-I",
+    "english": "Japanese people"
+  },
+  {
+    "hangul": "작다",
+    "level": "TOPIK-I",
+    "english": "small"
+  },
+  {
+    "hangul": "일본어",
+    "level": "TOPIK-I",
+    "english": "Japanese language"
+  },
+  {
+    "hangul": "작은아버지",
+    "level": "TOPIK-I",
+    "english": "uncle"
+  },
+  {
+    "hangul": "일본요리",
+    "level": "TOPIK-I",
+    "english": "Japanese food"
+  },
+  {
+    "hangul": "작은어머니",
+    "level": "TOPIK-I",
+    "english": "aunt"
+  },
+  {
+    "hangul": "일상생활",
+    "level": "TOPIK-I",
+    "english": "everyday life"
+  },
+  {
+    "hangul": "잔",
+    "level": "TOPIK-I",
+    "english": "glass, ~ cup(s)"
+  },
+  {
+    "hangul": "일식",
+    "level": "TOPIK-I",
+    "english": "Japanese style, Japanese food"
+  },
+  {
+    "hangul": "잔치",
+    "level": "TOPIK-I",
+    "english": "party, feast"
+  },
+  {
+    "hangul": "일어나다",
+    "level": "TOPIK-I",
+    "english": "rise, stand, occur"
+  },
+  {
+    "hangul": "잘",
+    "level": "TOPIK-I",
+    "english": "well"
+  },
+  {
+    "hangul": "일어서다",
+    "level": "TOPIK-I",
+    "english": "get up, stand up"
+  },
+  {
+    "hangul": "잘못",
+    "level": "TOPIK-I",
+    "english": "mistake"
+  },
+  {
+    "hangul": "일요일",
+    "level": "TOPIK-I",
+    "english": "Sunday"
+  },
+  {
+    "hangul": "잘생기다",
+    "level": "TOPIK-I",
+    "english": "handsome"
+  },
+  {
+    "hangul": "일월",
+    "level": "TOPIK-I",
+    "english": "January"
+  },
+  {
+    "hangul": "잘하다",
+    "level": "TOPIK-I",
+    "english": "do well, good at"
+  },
+  {
+    "hangul": "일주일",
+    "level": "TOPIK-I",
+    "english": "one week"
+  },
+  {
+    "hangul": "잠",
+    "level": "TOPIK-I",
+    "english": "slumbers, sleep"
+  },
+  {
+    "hangul": "일찍",
+    "level": "TOPIK-I",
+    "english": "early"
+  },
+  {
+    "hangul": "잠깐",
+    "level": "TOPIK-I",
+    "english": "for a while, a little"
+  },
+  {
+    "hangul": "일하다",
+    "level": "TOPIK-I",
+    "english": "work"
+  },
+  {
+    "hangul": "잠시",
+    "level": "TOPIK-I",
+    "english": "for a bit, for a while, a little"
+  },
+  {
+    "hangul": "일흔",
+    "level": "TOPIK-I",
+    "english": "70"
+  },
+  {
+    "hangul": "잠자다",
+    "level": "TOPIK-I",
+    "english": "sleep, go to bed"
+  },
+  {
+    "hangul": "읽기",
+    "level": "TOPIK-I",
+    "english": "reading"
+  },
+  {
+    "hangul": "잡다",
+    "level": "TOPIK-I",
+    "english": "catch, grab, hold"
+  },
+  {
+    "hangul": "읽다",
+    "level": "TOPIK-I",
+    "english": "read"
+  },
+  {
+    "hangul": "잡수시다",
+    "level": "TOPIK-I",
+    "english": "eat (honorific form)"
+  },
+  {
+    "hangul": "잃다",
+    "level": "TOPIK-I",
+    "english": "lose"
+  },
+  {
+    "hangul": "잡지",
+    "level": "TOPIK-I",
+    "english": "magazine"
+  },
+  {
+    "hangul": "잃어버리다",
+    "level": "TOPIK-I",
+    "english": "lose"
+  },
+  {
+    "hangul": "장",
+    "level": "TOPIK-I",
+    "english": "~ chapter(s), ~ sheet(s)"
+  },
+  {
+    "hangul": "입",
+    "level": "TOPIK-I",
+    "english": "mouth"
+  },
+  {
+    "hangul": "장갑",
+    "level": "TOPIK-I",
+    "english": "gloves"
+  },
+  {
+    "hangul": "입구",
+    "level": "TOPIK-I",
+    "english": "entrance"
+  },
+  {
+    "hangul": "장마",
+    "level": "TOPIK-I",
+    "english": "rainy season"
+  },
+  {
+    "hangul": "장마철",
+    "level": "TOPIK-I",
+    "english": "rainy season"
+  },
+  {
+    "hangul": "젓가락",
+    "level": "TOPIK-I",
+    "english": "chopsticks"
+  },
+  {
+    "hangul": "장미",
+    "level": "TOPIK-I",
+    "english": "rose"
+  },
+  {
+    "hangul": "정거장",
+    "level": "TOPIK-I",
+    "english": "station, depot"
+  },
+  {
+    "hangul": "장소",
+    "level": "TOPIK-I",
+    "english": "place"
+  },
+  {
+    "hangul": "정도",
+    "level": "TOPIK-I",
+    "english": "degree"
+  },
+  {
+    "hangul": "장점",
+    "level": "TOPIK-I",
+    "english": "advantage"
+  },
+  {
+    "hangul": "정류장",
+    "level": "TOPIK-I",
+    "english": "station, bus stop"
+  },
+  {
+    "hangul": "재료",
+    "level": "TOPIK-I",
+    "english": "material"
+  },
+  {
+    "hangul": "정리하다",
+    "level": "TOPIK-I",
+    "english": "straighten out, organize"
+  },
+  {
+    "hangul": "재미없다",
+    "level": "TOPIK-I",
+    "english": "not funny, uninteresting"
+  },
+  {
+    "hangul": "정말",
+    "level": "TOPIK-I",
+    "english": "really, truly"
+  },
+  {
+    "hangul": "재미있다",
+    "level": "TOPIK-I",
+    "english": "interesting"
+  },
+  {
+    "hangul": "정문",
+    "level": "TOPIK-I",
+    "english": "front door, main gate"
+  },
+  {
+    "hangul": "재킷",
+    "level": "TOPIK-I",
+    "english": "jacket"
+  },
+  {
+    "hangul": "정보",
+    "level": "TOPIK-I",
+    "english": "information"
+  },
+  {
+    "hangul": "저",
+    "level": "TOPIK-I",
+    "english": "that"
+  },
+  {
+    "hangul": "정하다",
+    "level": "TOPIK-I",
+    "english": "choose, establish"
+  },
+  {
+    "hangul": "저거",
+    "level": "TOPIK-I",
+    "english": "that"
+  },
+  {
+    "hangul": "제가",
+    "level": "TOPIK-I",
+    "english": "I"
+  },
+  {
+    "hangul": "저것",
+    "level": "TOPIK-I",
+    "english": "that"
+  },
+  {
+    "hangul": "제목",
+    "level": "TOPIK-I",
+    "english": "title"
+  },
+  {
+    "hangul": "저곳",
+    "level": "TOPIK-I",
+    "english": "over there"
+  },
+  {
+    "hangul": "제일",
+    "level": "TOPIK-I",
+    "english": "most"
+  },
+  {
+    "hangul": "저기",
+    "level": "TOPIK-I",
+    "english": "there, over there"
+  },
+  {
+    "hangul": "제주도",
+    "level": "TOPIK-I",
+    "english": "Jeju Island"
+  },
+  {
+    "hangul": "저녁",
+    "level": "TOPIK-I",
+    "english": "dinner, evening, night"
+  },
+  {
+    "hangul": "조금",
+    "level": "TOPIK-I",
+    "english": "a little"
+  },
+  {
+    "hangul": "저녁식사",
+    "level": "TOPIK-I",
+    "english": "dinner"
+  },
+  {
+    "hangul": "조사하다",
+    "level": "TOPIK-I",
+    "english": "investigate"
+  },
+  {
+    "hangul": "저렇게",
+    "level": "TOPIK-I",
+    "english": "like that, in that way"
+  },
+  {
+    "hangul": "조선",
+    "level": "TOPIK-I",
+    "english": "shipbuilding, Korea"
+  },
+  {
+    "hangul": "저분",
+    "level": "TOPIK-I",
+    "english": "that person"
+  },
+  {
+    "hangul": "조선말",
+    "level": "TOPIK-I",
+    "english": "Korean language"
+  },
+  {
+    "hangul": "저쪽",
+    "level": "TOPIK-I",
+    "english": "there, over there"
+  },
+  {
+    "hangul": "조선어",
+    "level": "TOPIK-I",
+    "english": "Korean language"
+  },
+  {
+    "hangul": "저희",
+    "level": "TOPIK-I",
+    "english": "we"
+  },
+  {
+    "hangul": "조심하다",
+    "level": "TOPIK-I",
+    "english": "be careful, warn"
+  },
+  {
+    "hangul": "적",
+    "level": "TOPIK-I",
+    "english": "enemy"
+  },
+  {
+    "hangul": "조용하다",
+    "level": "TOPIK-I",
+    "english": "silent, quiet"
+  },
+  {
+    "hangul": "적다",
+    "level": "TOPIK-I",
+    "english": "be few, write down"
+  },
+  {
+    "hangul": "조용히",
+    "level": "TOPIK-I",
+    "english": "quietly"
+  },
+  {
+    "hangul": "전",
+    "level": "TOPIK-I",
+    "english": "all, before"
+  },
+  {
+    "hangul": "조카",
+    "level": "TOPIK-I",
+    "english": "nephew"
+  },
+  {
+    "hangul": "전공",
+    "level": "TOPIK-I",
+    "english": "major"
+  },
+  {
+    "hangul": "졸업",
+    "level": "TOPIK-I",
+    "english": "graduation"
+  },
+  {
+    "hangul": "전기자동차",
+    "level": "TOPIK-I",
+    "english": "electric car"
+  },
+  {
+    "hangul": "졸업하다",
+    "level": "TOPIK-I",
+    "english": "graduate"
+  },
+  {
+    "hangul": "전자사전",
+    "level": "TOPIK-I",
+    "english": "electronic dictionary"
+  },
+  {
+    "hangul": "좀",
+    "level": "TOPIK-I",
+    "english": "a little"
+  },
+  {
+    "hangul": "전하다",
+    "level": "TOPIK-I",
+    "english": "tell"
+  },
+  {
+    "hangul": "좀더",
+    "level": "TOPIK-I",
+    "english": "a little more"
+  },
+  {
+    "hangul": "전혀",
+    "level": "TOPIK-I",
+    "english": "not at all"
+  },
+  {
+    "hangul": "좁다",
+    "level": "TOPIK-I",
+    "english": "narrow"
+  },
+  {
+    "hangul": "전화",
+    "level": "TOPIK-I",
+    "english": "telephone"
+  },
+  {
+    "hangul": "종로",
+    "level": "TOPIK-I",
+    "english": "Jong-ro"
+  },
+  {
+    "hangul": "전화기",
+    "level": "TOPIK-I",
+    "english": "telephone"
+  },
+  {
+    "hangul": "종류",
+    "level": "TOPIK-I",
+    "english": "kind, type"
+  },
+  {
+    "hangul": "전화번호",
+    "level": "TOPIK-I",
+    "english": "phone number"
+  },
+  {
+    "hangul": "종업원",
+    "level": "TOPIK-I",
+    "english": "employee"
+  },
+  {
+    "hangul": "절",
+    "level": "TOPIK-I",
+    "english": "~ section(s), temple"
+  },
+  {
+    "hangul": "종이",
+    "level": "TOPIK-I",
+    "english": "paper"
+  },
+  {
+    "hangul": "절대",
+    "level": "TOPIK-I",
+    "english": "never, absolutely"
+  },
+  {
+    "hangul": "종일",
+    "level": "TOPIK-I",
+    "english": "all day"
+  },
+  {
+    "hangul": "젊다",
+    "level": "TOPIK-I",
+    "english": "young"
+  },
+  {
+    "hangul": "좋다",
+    "level": "TOPIK-I",
+    "english": "good"
+  },
+  {
+    "hangul": "점",
+    "level": "TOPIK-I",
+    "english": "point"
+  },
+  {
+    "hangul": "좋아하다",
+    "level": "TOPIK-I",
+    "english": "like"
+  },
+  {
+    "hangul": "점수",
+    "level": "TOPIK-I",
+    "english": "score, point"
+  },
+  {
+    "hangul": "죄송하다",
+    "level": "TOPIK-I",
+    "english": "sorry"
+  },
+  {
+    "hangul": "점심",
+    "level": "TOPIK-I",
+    "english": "lunch"
+  },
+  {
+    "hangul": "주",
+    "level": "TOPIK-I",
+    "english": "week"
+  },
+  {
+    "hangul": "점심시간",
+    "level": "TOPIK-I",
+    "english": "lunchtime"
+  },
+  {
+    "hangul": "주다",
+    "level": "TOPIK-I",
+    "english": "give"
+  },
+  {
+    "hangul": "점심식사",
+    "level": "TOPIK-I",
+    "english": "lunch"
+  },
+  {
+    "hangul": "주로",
+    "level": "TOPIK-I",
+    "english": "mainly"
+  },
+  {
+    "hangul": "점원",
+    "level": "TOPIK-I",
+    "english": "clerk"
+  },
+  {
+    "hangul": "주말",
+    "level": "TOPIK-I",
+    "english": "weekend"
+  },
+  {
+    "hangul": "점퍼",
+    "level": "TOPIK-I",
+    "english": "jacket"
+  },
+  {
+    "hangul": "주머니",
+    "level": "TOPIK-I",
+    "english": "pocket, pouch"
+  },
+  {
+    "hangul": "주무시다",
+    "level": "TOPIK-I",
+    "english": "sleep, rest"
+  },
+  {
+    "hangul": "지다",
+    "level": "TOPIK-I",
+    "english": "lose"
+  },
+  {
+    "hangul": "주문하다",
+    "level": "TOPIK-I",
+    "english": "order"
+  },
+  {
+    "hangul": "지도",
+    "level": "TOPIK-I",
+    "english": "map"
+  },
+  {
+    "hangul": "주변",
+    "level": "TOPIK-I",
+    "english": "around"
+  },
+  {
+    "hangul": "지방",
+    "level": "TOPIK-I",
+    "english": "fat, region"
+  },
+  {
+    "hangul": "주부",
+    "level": "TOPIK-I",
+    "english": "housewife"
+  },
+  {
+    "hangul": "지우개",
+    "level": "TOPIK-I",
+    "english": "eraser"
+  },
+  {
+    "hangul": "주사",
+    "level": "TOPIK-I",
+    "english": "injection"
+  },
+  {
+    "hangul": "지키다",
+    "level": "TOPIK-I",
+    "english": "protect"
+  },
+  {
+    "hangul": "주소",
+    "level": "TOPIK-I",
+    "english": "address"
+  },
+  {
+    "hangul": "지하",
+    "level": "TOPIK-I",
+    "english": "underground"
+  },
+  {
+    "hangul": "주스",
+    "level": "TOPIK-I",
+    "english": "juice"
+  },
+  {
+    "hangul": "지하도",
+    "level": "TOPIK-I",
+    "english": "underpass"
+  },
+  {
+    "hangul": "주위",
+    "level": "TOPIK-I",
+    "english": "around"
+  },
+  {
+    "hangul": "지하철",
+    "level": "TOPIK-I",
+    "english": "subway"
+  },
+  {
+    "hangul": "주인",
+    "level": "TOPIK-I",
+    "english": "owner"
+  },
+  {
+    "hangul": "지하철역",
+    "level": "TOPIK-I",
+    "english": "subway station"
+  },
+  {
+    "hangul": "주차장",
+    "level": "TOPIK-I",
+    "english": "parking lot"
+  },
+  {
+    "hangul": "직업",
+    "level": "TOPIK-I",
+    "english": "job, profession"
+  },
+  {
+    "hangul": "주차하다",
+    "level": "TOPIK-I",
+    "english": "park"
+  },
+  {
+    "hangul": "직원",
+    "level": "TOPIK-I",
+    "english": "employee, staff"
+  },
+  {
+    "hangul": "주황색",
+    "level": "TOPIK-I",
+    "english": "orange color"
+  },
+  {
+    "hangul": "직장",
+    "level": "TOPIK-I",
+    "english": "workplace"
+  },
+  {
+    "hangul": "죽",
+    "level": "TOPIK-I",
+    "english": "bamboo, porridge"
+  },
+  {
+    "hangul": "직접",
+    "level": "TOPIK-I",
+    "english": "directly, direct"
+  },
+  {
+    "hangul": "죽다",
+    "level": "TOPIK-I",
+    "english": "die"
+  },
+  {
+    "hangul": "진달래",
+    "level": "TOPIK-I",
+    "english": "azalea"
+  },
+  {
+    "hangul": "준비",
+    "level": "TOPIK-I",
+    "english": "preparation"
+  },
+  {
+    "hangul": "질",
+    "level": "TOPIK-I",
+    "english": "quality"
+  },
+  {
+    "hangul": "준비하다",
+    "level": "TOPIK-I",
+    "english": "prepare"
+  },
+  {
+    "hangul": "질문",
+    "level": "TOPIK-I",
+    "english": "question"
+  },
+  {
+    "hangul": "줄",
+    "level": "TOPIK-I",
+    "english": "line, column, string"
+  },
+  {
+    "hangul": "질문하다",
+    "level": "TOPIK-I",
+    "english": "ask a question"
+  },
+  {
+    "hangul": "줄다",
+    "level": "TOPIK-I",
+    "english": "shrink, decrease"
+  },
+  {
+    "hangul": "짐",
+    "level": "TOPIK-I",
+    "english": "load, baggage"
+  },
+  {
+    "hangul": "중",
+    "level": "TOPIK-I",
+    "english": "medium, during"
+  },
+  {
+    "hangul": "집",
+    "level": "TOPIK-I",
+    "english": "house, shop"
+  },
+  {
+    "hangul": "중국",
+    "level": "TOPIK-I",
+    "english": "China"
+  },
+  {
+    "hangul": "짓다",
+    "level": "TOPIK-I",
+    "english": "build, create"
+  },
+  {
+    "hangul": "중국어",
+    "level": "TOPIK-I",
+    "english": "Chinese"
+  },
+  {
+    "hangul": "짜다",
+    "level": "TOPIK-I",
+    "english": "salty, make (the plan)"
+  },
+  {
+    "hangul": "중국집",
+    "level": "TOPIK-I",
+    "english": "Chinese restaurant"
+  },
+  {
+    "hangul": "짜리",
+    "level": "TOPIK-I",
+    "english": "a value (won coin)"
+  },
+  {
+    "hangul": "중식",
+    "level": "TOPIK-I",
+    "english": "Chinese cuisine"
+  },
+  {
+    "hangul": "짧다",
+    "level": "TOPIK-I",
+    "english": "short"
+  },
+  {
+    "hangul": "중심",
+    "level": "TOPIK-I",
+    "english": "center"
+  },
+  {
+    "hangul": "쪽",
+    "level": "TOPIK-I",
+    "english": "side, page"
+  },
+  {
+    "hangul": "중요",
+    "level": "TOPIK-I",
+    "english": "importance"
+  },
+  {
+    "hangul": "쯤",
+    "level": "TOPIK-I",
+    "english": "about, around ~"
+  },
+  {
+    "hangul": "중요하다",
+    "level": "TOPIK-I",
+    "english": "important"
+  },
+  {
+    "hangul": "찌개",
+    "level": "TOPIK-I",
+    "english": "stew, soup"
+  },
+  {
+    "hangul": "중학교",
+    "level": "TOPIK-I",
+    "english": "middle school, Junior high school"
+  },
+  {
+    "hangul": "찍다",
+    "level": "TOPIK-I",
+    "english": "pierce, take (a photo), press"
+  },
+  {
+    "hangul": "중학생",
+    "level": "TOPIK-I",
+    "english": "middle school student"
+  },
+  {
+    "hangul": "차",
+    "level": "TOPIK-I",
+    "english": "car, tea"
+  },
+  {
+    "hangul": "즐거워하다",
+    "level": "TOPIK-I",
+    "english": "have fun"
+  },
+  {
+    "hangul": "차갑다",
+    "level": "TOPIK-I",
+    "english": "cold"
+  },
+  {
+    "hangul": "즐겁다",
+    "level": "TOPIK-I",
+    "english": "fun, be pleasant"
+  },
+  {
+    "hangul": "차다",
+    "level": "TOPIK-I",
+    "english": "kick"
+  },
+  {
+    "hangul": "즐기다",
+    "level": "TOPIK-I",
+    "english": "enjoy, have fun"
+  },
+  {
+    "hangul": "차리다",
+    "level": "TOPIK-I",
+    "english": "prepare, arrange"
+  },
+  {
+    "hangul": "증세",
+    "level": "TOPIK-I",
+    "english": "symptom, medical condition"
+  },
+  {
+    "hangul": "착하다",
+    "level": "TOPIK-I",
+    "english": "be good, friendly"
+  },
+  {
+    "hangul": "지각",
+    "level": "TOPIK-I",
+    "english": "tardy, being late"
+  },
+  {
+    "hangul": "참",
+    "level": "TOPIK-I",
+    "english": "really, very"
+  },
+  {
+    "hangul": "지갑",
+    "level": "TOPIK-I",
+    "english": "wallet"
+  },
+  {
+    "hangul": "창문",
+    "level": "TOPIK-I",
+    "english": "window"
+  },
+  {
+    "hangul": "지금",
+    "level": "TOPIK-I",
+    "english": "now"
+  },
+  {
+    "hangul": "찾다",
+    "level": "TOPIK-I",
+    "english": "find, visit"
+  },
+  {
+    "hangul": "지나다",
+    "level": "TOPIK-I",
+    "english": "pass by"
+  },
+  {
+    "hangul": "찾아가다",
+    "level": "TOPIK-I",
+    "english": "go to visit"
+  },
+  {
+    "hangul": "지난달",
+    "level": "TOPIK-I",
+    "english": "last month"
+  },
+  {
+    "hangul": "찾아오다",
+    "level": "TOPIK-I",
+    "english": "come to visit"
+  },
+  {
+    "hangul": "지난번",
+    "level": "TOPIK-I",
+    "english": "last time"
+  },
+  {
+    "hangul": "채소",
+    "level": "TOPIK-I",
+    "english": "vegetable"
+  },
+  {
+    "hangul": "지난주",
+    "level": "TOPIK-I",
+    "english": "last week"
+  },
+  {
+    "hangul": "책",
+    "level": "TOPIK-I",
+    "english": "book"
+  },
+  {
+    "hangul": "지내다",
+    "level": "TOPIK-I",
+    "english": "stay, spend, live"
+  },
+  {
+    "hangul": "책방",
+    "level": "TOPIK-I",
+    "english": "bookstore"
+  },
+  {
+    "hangul": "책상",
+    "level": "TOPIK-I",
+    "english": "desk"
+  },
+  {
+    "hangul": "층",
+    "level": "TOPIK-I",
+    "english": "layer, ~ floor"
+  },
+  {
+    "hangul": "책임",
+    "level": "TOPIK-I",
+    "english": "responsibility"
+  },
+  {
+    "hangul": "치과",
+    "level": "TOPIK-I",
+    "english": "dentist, dentistry"
+  },
+  {
+    "hangul": "책장",
+    "level": "TOPIK-I",
+    "english": "bookshelf"
+  },
+  {
+    "hangul": "치료하다",
+    "level": "TOPIK-I",
+    "english": "treat"
+  },
+  {
+    "hangul": "처음",
+    "level": "TOPIK-I",
+    "english": "first, for the first time"
+  },
+  {
+    "hangul": "치마",
+    "level": "TOPIK-I",
+    "english": "skirt"
+  },
+  {
+    "hangul": "처음 뵙겠습니다",
+    "level": "TOPIK-I",
+    "english": "Nice to meet you."
+  },
+  {
+    "hangul": "치약",
+    "level": "TOPIK-I",
+    "english": "toothpaste"
+  },
+  {
+    "hangul": "천",
+    "level": "TOPIK-I",
+    "english": "1000"
+  },
+  {
+    "hangul": "친구",
+    "level": "TOPIK-I",
+    "english": "friend"
+  },
+  {
+    "hangul": "천천히",
+    "level": "TOPIK-I",
+    "english": "slowly"
+  },
+  {
+    "hangul": "친절하다",
+    "level": "TOPIK-I",
+    "english": "be kind"
+  },
+  {
+    "hangul": "철",
+    "level": "TOPIK-I",
+    "english": "iron, season"
+  },
+  {
+    "hangul": "친척",
+    "level": "TOPIK-I",
+    "english": "relative"
+  },
+  {
+    "hangul": "첫",
+    "level": "TOPIK-I",
+    "english": "first"
+  },
+  {
+    "hangul": "친하다",
+    "level": "TOPIK-I",
+    "english": "close, familiar"
+  },
+  {
+    "hangul": "첫째",
+    "level": "TOPIK-I",
+    "english": "first"
+  },
+  {
+    "hangul": "칠",
+    "level": "TOPIK-I",
+    "english": "7"
+  },
+  {
+    "hangul": "청바지",
+    "level": "TOPIK-I",
+    "english": "blue jeans"
+  },
+  {
+    "hangul": "칠십",
+    "level": "TOPIK-I",
+    "english": "70"
+  },
+  {
+    "hangul": "청소기",
+    "level": "TOPIK-I",
+    "english": "vacuum cleaner"
+  },
+  {
+    "hangul": "칠월",
+    "level": "TOPIK-I",
+    "english": "July"
+  },
+  {
+    "hangul": "청소하다",
+    "level": "TOPIK-I",
+    "english": "sweep, clean"
+  },
+  {
+    "hangul": "칠판",
+    "level": "TOPIK-I",
+    "english": "blackboard"
+  },
+  {
+    "hangul": "초",
+    "level": "TOPIK-I",
+    "english": "~second(s)"
+  },
+  {
+    "hangul": "침대",
+    "level": "TOPIK-I",
+    "english": "bed"
+  },
+  {
+    "hangul": "초대하다",
+    "level": "TOPIK-I",
+    "english": "invite"
+  },
+  {
+    "hangul": "칫솔",
+    "level": "TOPIK-I",
+    "english": "toothbrush"
+  },
+  {
+    "hangul": "초등학교",
+    "level": "TOPIK-I",
+    "english": "elementary school"
+  },
+  {
+    "hangul": "카드",
+    "level": "TOPIK-I",
+    "english": "card"
+  },
+  {
+    "hangul": "초등학생",
+    "level": "TOPIK-I",
+    "english": "elementary student"
+  },
+  {
+    "hangul": "카레",
+    "level": "TOPIK-I",
+    "english": "curry"
+  },
+  {
+    "hangul": "초록색",
+    "level": "TOPIK-I",
+    "english": "green color"
+  },
+  {
+    "hangul": "카메라",
+    "level": "TOPIK-I",
+    "english": "camera"
+  },
+  {
+    "hangul": "초콜릿",
+    "level": "TOPIK-I",
+    "english": "chocolate"
+  },
+  {
+    "hangul": "카페",
+    "level": "TOPIK-I",
+    "english": "cafe, coffee shops"
+  },
+  {
+    "hangul": "촬영하다",
+    "level": "TOPIK-I",
+    "english": "take a picture"
+  },
+  {
+    "hangul": "칼",
+    "level": "TOPIK-I",
+    "english": "knife, cutlery, swords"
+  },
+  {
+    "hangul": "최고",
+    "level": "TOPIK-I",
+    "english": "best, the highest"
+  },
+  {
+    "hangul": "캐나다",
+    "level": "TOPIK-I",
+    "english": "Canada"
+  },
+  {
+    "hangul": "추다",
+    "level": "TOPIK-I",
+    "english": "dance"
+  },
+  {
+    "hangul": "커피",
+    "level": "TOPIK-I",
+    "english": "coffee"
+  },
+  {
+    "hangul": "추석",
+    "level": "TOPIK-I",
+    "english": "Chusoku (Korean Thanksgiving Day)"
+  },
+  {
+    "hangul": "커피숍",
+    "level": "TOPIK-I",
+    "english": "coffee shop"
+  },
+  {
+    "hangul": "추억",
+    "level": "TOPIK-I",
+    "english": "memory"
+  },
+  {
+    "hangul": "컴퓨터",
+    "level": "TOPIK-I",
+    "english": "computer, PC"
+  },
+  {
+    "hangul": "축구",
+    "level": "TOPIK-I",
+    "english": "football, soccer"
+  },
+  {
+    "hangul": "컵",
+    "level": "TOPIK-I",
+    "english": "cup"
+  },
+  {
+    "hangul": "축제",
+    "level": "TOPIK-I",
+    "english": "festival"
+  },
+  {
+    "hangul": "케이크",
+    "level": "TOPIK-I",
+    "english": "cake"
+  },
+  {
+    "hangul": "축하",
+    "level": "TOPIK-I",
+    "english": "celebration"
+  },
+  {
+    "hangul": "켜다",
+    "level": "TOPIK-I",
+    "english": "turn on (the light, the power, etc.)"
+  },
+  {
+    "hangul": "축하하다",
+    "level": "TOPIK-I",
+    "english": "celebrate"
+  },
+  {
+    "hangul": "코",
+    "level": "TOPIK-I",
+    "english": "nose"
+  },
+  {
+    "hangul": "축하합니다",
+    "level": "TOPIK-I",
+    "english": "congratulations"
+  },
+  {
+    "hangul": "코트",
+    "level": "TOPIK-I",
+    "english": "coat"
+  },
+  {
+    "hangul": "출구",
+    "level": "TOPIK-I",
+    "english": "exit"
+  },
+  {
+    "hangul": "코피",
+    "level": "TOPIK-I",
+    "english": "nosebleed"
+  },
+  {
+    "hangul": "출근하다",
+    "level": "TOPIK-I",
+    "english": "go to work"
+  },
+  {
+    "hangul": "콜라",
+    "level": "TOPIK-I",
+    "english": "Coke"
+  },
+  {
+    "hangul": "출발",
+    "level": "TOPIK-I",
+    "english": "start, departure"
+  },
+  {
+    "hangul": "콧노래",
+    "level": "TOPIK-I",
+    "english": "humming"
+  },
+  {
+    "hangul": "출발하다",
+    "level": "TOPIK-I",
+    "english": "depart"
+  },
+  {
+    "hangul": "콧물",
+    "level": "TOPIK-I",
+    "english": "snot, nasal discharge"
+  },
+  {
+    "hangul": "출장",
+    "level": "TOPIK-I",
+    "english": "business trip"
+  },
+  {
+    "hangul": "콩",
+    "level": "TOPIK-I",
+    "english": "bean, soy"
+  },
+  {
+    "hangul": "춤",
+    "level": "TOPIK-I",
+    "english": "dance"
+  },
+  {
+    "hangul": "크기",
+    "level": "TOPIK-I",
+    "english": "size"
+  },
+  {
+    "hangul": "춤추다",
+    "level": "TOPIK-I",
+    "english": "dance"
+  },
+  {
+    "hangul": "크다",
+    "level": "TOPIK-I",
+    "english": "big, large"
+  },
+  {
+    "hangul": "춥다",
+    "level": "TOPIK-I",
+    "english": "cold"
+  },
+  {
+    "hangul": "크리스마스",
+    "level": "TOPIK-I",
+    "english": "Christmas"
+  },
+  {
+    "hangul": "취미",
+    "level": "TOPIK-I",
+    "english": "hobby"
+  },
+  {
+    "hangul": "큰아버지",
+    "level": "TOPIK-I",
+    "english": "uncle"
+  },
+  {
+    "hangul": "취소하다",
+    "level": "TOPIK-I",
+    "english": "cancel"
+  },
+  {
+    "hangul": "큰어머니",
+    "level": "TOPIK-I",
+    "english": "aunt"
+  },
+  {
+    "hangul": "취직하다",
+    "level": "TOPIK-I",
+    "english": "get a job"
+  },
+  {
+    "hangul": "키",
+    "level": "TOPIK-I",
+    "english": "key, height"
+  },
+  {
+    "hangul": "킬로그램",
+    "level": "TOPIK-I",
+    "english": "kilogram"
+  },
+  {
+    "hangul": "펜",
+    "level": "TOPIK-I",
+    "english": "pen"
+  },
+  {
+    "hangul": "킬로미터",
+    "level": "TOPIK-I",
+    "english": "kilometer"
+  },
+  {
+    "hangul": "펴다",
+    "level": "TOPIK-I",
+    "english": "spread, stretch"
+  },
+  {
+    "hangul": "타다",
+    "level": "TOPIK-I",
+    "english": "ride, get on"
+  },
+  {
+    "hangul": "편",
+    "level": "TOPIK-I",
+    "english": "side, episode"
+  },
+  {
+    "hangul": "타월",
+    "level": "TOPIK-I",
+    "english": "towel"
+  },
+  {
+    "hangul": "편지",
+    "level": "TOPIK-I",
+    "english": "letter"
+  },
+  {
+    "hangul": "탁구",
+    "level": "TOPIK-I",
+    "english": "table tennis"
+  },
+  {
+    "hangul": "편하다",
+    "level": "TOPIK-I",
+    "english": "comfortable, easy, convenient"
+  },
+  {
+    "hangul": "태국",
+    "level": "TOPIK-I",
+    "english": "Thailand"
+  },
+  {
+    "hangul": "평양",
+    "level": "TOPIK-I",
+    "english": "Pyongyang"
+  },
+  {
+    "hangul": "태권도",
+    "level": "TOPIK-I",
+    "english": "Taekwondo"
+  },
+  {
+    "hangul": "평일",
+    "level": "TOPIK-I",
+    "english": "weekday"
+  },
+  {
+    "hangul": "태어나다",
+    "level": "TOPIK-I",
+    "english": "be born"
+  },
+  {
+    "hangul": "포도",
+    "level": "TOPIK-I",
+    "english": "grape"
+  },
+  {
+    "hangul": "태풍",
+    "level": "TOPIK-I",
+    "english": "typhoon"
+  },
+  {
+    "hangul": "포장",
+    "level": "TOPIK-I",
+    "english": "packing"
+  },
+  {
+    "hangul": "택시",
+    "level": "TOPIK-I",
+    "english": "taxi"
+  },
+  {
+    "hangul": "표",
+    "level": "TOPIK-I",
+    "english": "table, ticket"
+  },
+  {
+    "hangul": "탤런트",
+    "level": "TOPIK-I",
+    "english": "entertainers"
+  },
+  {
+    "hangul": "표현",
+    "level": "TOPIK-I",
+    "english": "expression"
+  },
+  {
+    "hangul": "터미널",
+    "level": "TOPIK-I",
+    "english": "terminal"
+  },
+  {
+    "hangul": "푹",
+    "level": "TOPIK-I",
+    "english": "deeply"
+  },
+  {
+    "hangul": "테니스",
+    "level": "TOPIK-I",
+    "english": "tennis"
+  },
+  {
+    "hangul": "풀",
+    "level": "TOPIK-I",
+    "english": "pool, grass"
+  },
+  {
+    "hangul": "테이블",
+    "level": "TOPIK-I",
+    "english": "table"
+  },
+  {
+    "hangul": "풀다",
+    "level": "TOPIK-I",
+    "english": "solve"
+  },
+  {
+    "hangul": "텔레비전",
+    "level": "TOPIK-I",
+    "english": "TV"
+  },
+  {
+    "hangul": "프랑스",
+    "level": "TOPIK-I",
+    "english": "France"
+  },
+  {
+    "hangul": "토마토",
+    "level": "TOPIK-I",
+    "english": "tomato"
+  },
+  {
+    "hangul": "프로그램",
+    "level": "TOPIK-I",
+    "english": "program"
+  },
+  {
+    "hangul": "토요일",
+    "level": "TOPIK-I",
+    "english": "Saturday"
+  },
+  {
+    "hangul": "프린트",
+    "level": "TOPIK-I",
+    "english": "print"
+  },
+  {
+    "hangul": "통",
+    "level": "TOPIK-I",
+    "english": "barrel, ~ package(s)"
+  },
+  {
+    "hangul": "피",
+    "level": "TOPIK-I",
+    "english": "blood"
+  },
+  {
+    "hangul": "통장",
+    "level": "TOPIK-I",
+    "english": "bank book, (deposit) passbook"
+  },
+  {
+    "hangul": "피곤하다",
+    "level": "TOPIK-I",
+    "english": "tired"
+  },
+  {
+    "hangul": "통하다",
+    "level": "TOPIK-I",
+    "english": "pass, lead"
+  },
+  {
+    "hangul": "피다",
+    "level": "TOPIK-I",
+    "english": "bloom"
+  },
+  {
+    "hangul": "퇴근하다",
+    "level": "TOPIK-I",
+    "english": "leave the office"
+  },
+  {
+    "hangul": "피아노",
+    "level": "TOPIK-I",
+    "english": "piano"
+  },
+  {
+    "hangul": "특별히",
+    "level": "TOPIK-I",
+    "english": "especially"
+  },
+  {
+    "hangul": "피우다",
+    "level": "TOPIK-I",
+    "english": "smoke, bloom"
+  },
+  {
+    "hangul": "특징",
+    "level": "TOPIK-I",
+    "english": "characteristic, feature"
+  },
+  {
+    "hangul": "피자",
+    "level": "TOPIK-I",
+    "english": "pizza"
+  },
+  {
+    "hangul": "특히",
+    "level": "TOPIK-I",
+    "english": "especially, in particular"
+  },
+  {
+    "hangul": "필름",
+    "level": "TOPIK-I",
+    "english": "film"
+  },
+  {
+    "hangul": "틀다",
+    "level": "TOPIK-I",
+    "english": "turn on (the switch)"
+  },
+  {
+    "hangul": "필요",
+    "level": "TOPIK-I",
+    "english": "necessity"
+  },
+  {
+    "hangul": "틀리다",
+    "level": "TOPIK-I",
+    "english": "wrong"
+  },
+  {
+    "hangul": "필요하다",
+    "level": "TOPIK-I",
+    "english": "need"
+  },
+  {
+    "hangul": "티셔츠",
+    "level": "TOPIK-I",
+    "english": "t-shirt"
+  },
+  {
+    "hangul": "필통",
+    "level": "TOPIK-I",
+    "english": "pencil case"
+  },
+  {
+    "hangul": "팀",
+    "level": "TOPIK-I",
+    "english": "team"
+  },
+  {
+    "hangul": "하나",
+    "level": "TOPIK-I",
+    "english": "1"
+  },
+  {
+    "hangul": "파",
+    "level": "TOPIK-I",
+    "english": "wave, green onion"
+  },
+  {
+    "hangul": "하늘",
+    "level": "TOPIK-I",
+    "english": "sky"
+  },
+  {
+    "hangul": "파란색",
+    "level": "TOPIK-I",
+    "english": "blue color"
+  },
+  {
+    "hangul": "하늘색",
+    "level": "TOPIK-I",
+    "english": "sky blue, light blue"
+  },
+  {
+    "hangul": "파랗다",
+    "level": "TOPIK-I",
+    "english": "blue"
+  },
+  {
+    "hangul": "하다",
+    "level": "TOPIK-I",
+    "english": "do, say"
+  },
+  {
+    "hangul": "파티",
+    "level": "TOPIK-I",
+    "english": "party"
+  },
+  {
+    "hangul": "하루",
+    "level": "TOPIK-I",
+    "english": "one day"
+  },
+  {
+    "hangul": "팔",
+    "level": "TOPIK-I",
+    "english": "8"
+  },
+  {
+    "hangul": "하숙",
+    "level": "TOPIK-I",
+    "english": "boarding house, lodging house"
+  },
+  {
+    "hangul": "팔다",
+    "level": "TOPIK-I",
+    "english": "sell"
+  },
+  {
+    "hangul": "하숙집",
+    "level": "TOPIK-I",
+    "english": "boarding house, lodging house"
+  },
+  {
+    "hangul": "팔리다",
+    "level": "TOPIK-I",
+    "english": "sell, be sold"
+  },
+  {
+    "hangul": "하얀색",
+    "level": "TOPIK-I",
+    "english": "white color"
+  },
+  {
+    "hangul": "팔십",
+    "level": "TOPIK-I",
+    "english": "80"
+  },
+  {
+    "hangul": "하얗다",
+    "level": "TOPIK-I",
+    "english": "white"
+  },
+  {
+    "hangul": "팔월",
+    "level": "TOPIK-I",
+    "english": "August"
+  },
+  {
+    "hangul": "하지만",
+    "level": "TOPIK-I",
+    "english": "but, however"
+  },
+  {
+    "hangul": "패션",
+    "level": "TOPIK-I",
+    "english": "fashion"
+  },
+  {
+    "hangul": "학",
+    "level": "TOPIK-I",
+    "english": "crane"
+  },
+  {
+    "hangul": "퍼센트",
+    "level": "TOPIK-I",
+    "english": "percent"
+  },
+  {
+    "hangul": "학교",
+    "level": "TOPIK-I",
+    "english": "school"
+  },
+  {
+    "hangul": "페이지",
+    "level": "TOPIK-I",
+    "english": "page"
+  },
+  {
+    "hangul": "학기",
+    "level": "TOPIK-I",
+    "english": "semester"
+  },
+  {
+    "hangul": "학년",
+    "level": "TOPIK-I",
+    "english": "grade, school year"
+  },
+  {
+    "hangul": "호주",
+    "level": "TOPIK-I",
+    "english": "Australia"
+  },
+  {
+    "hangul": "학생",
+    "level": "TOPIK-I",
+    "english": "student"
+  },
+  {
+    "hangul": "호텔",
+    "level": "TOPIK-I",
+    "english": "hotel"
+  },
+  {
+    "hangul": "학생증",
+    "level": "TOPIK-I",
+    "english": "student ID card"
+  },
+  {
+    "hangul": "혼자",
+    "level": "TOPIK-I",
+    "english": "alone"
+  },
+  {
+    "hangul": "학원",
+    "level": "TOPIK-I",
+    "english": "academy, school"
+  },
+  {
+    "hangul": "홈페이지",
+    "level": "TOPIK-I",
+    "english": "home page"
+  },
+  {
+    "hangul": "한",
+    "level": "TOPIK-I",
+    "english": "one, one of the ~"
+  },
+  {
+    "hangul": "홍차",
+    "level": "TOPIK-I",
+    "english": "black tea"
+  },
+  {
+    "hangul": "한강",
+    "level": "TOPIK-I",
+    "english": "Han River, Hangang"
+  },
+  {
+    "hangul": "화",
+    "level": "TOPIK-I",
+    "english": "anger"
+  },
+  {
+    "hangul": "한국",
+    "level": "TOPIK-I",
+    "english": "Korea"
+  },
+  {
+    "hangul": "화가",
+    "level": "TOPIK-I",
+    "english": "artist, painter"
+  },
+  {
+    "hangul": "한국드라마",
+    "level": "TOPIK-I",
+    "english": "Korean drama"
+  },
+  {
+    "hangul": "화나다",
+    "level": "TOPIK-I",
+    "english": "angry"
+  },
+  {
+    "hangul": "한국말",
+    "level": "TOPIK-I",
+    "english": "Korean language"
+  },
+  {
+    "hangul": "화내다",
+    "level": "TOPIK-I",
+    "english": "get angry"
+  },
+  {
+    "hangul": "한국사람",
+    "level": "TOPIK-I",
+    "english": "Korean people"
+  },
+  {
+    "hangul": "화요일",
+    "level": "TOPIK-I",
+    "english": "Tuesday"
+  },
+  {
+    "hangul": "한국어",
+    "level": "TOPIK-I",
+    "english": "Korean language"
+  },
+  {
+    "hangul": "화장실",
+    "level": "TOPIK-I",
+    "english": "restroom, toilet, lavatory"
+  },
+  {
+    "hangul": "한국요리",
+    "level": "TOPIK-I",
+    "english": "Korean cuisine"
+  },
+  {
+    "hangul": "화장품",
+    "level": "TOPIK-I",
+    "english": "cosmetics"
+  },
+  {
+    "hangul": "한글",
+    "level": "TOPIK-I",
+    "english": "Hangul"
+  },
+  {
+    "hangul": "화장하다",
+    "level": "TOPIK-I",
+    "english": "makeup"
+  },
+  {
+    "hangul": "한번",
+    "level": "TOPIK-I",
+    "english": "once"
+  },
+  {
+    "hangul": "확인하다",
+    "level": "TOPIK-I",
+    "english": "confirm, check"
+  },
+  {
+    "hangul": "한복",
+    "level": "TOPIK-I",
+    "english": "Hanbok, Korean traditional clothes"
+  },
+  {
+    "hangul": "환영하다",
+    "level": "TOPIK-I",
+    "english": "welcome"
+  },
+  {
+    "hangul": "한식",
+    "level": "TOPIK-I",
+    "english": "Korean cuisine"
+  },
+  {
+    "hangul": "환자",
+    "level": "TOPIK-I",
+    "english": "patient"
+  },
+  {
+    "hangul": "한자",
+    "level": "TOPIK-I",
+    "english": "Chinese character"
+  },
+  {
+    "hangul": "회사",
+    "level": "TOPIK-I",
+    "english": "company"
+  },
+  {
+    "hangul": "할머니",
+    "level": "TOPIK-I",
+    "english": "grandmother"
+  },
+  {
+    "hangul": "회사원",
+    "level": "TOPIK-I",
+    "english": "employee"
+  },
+  {
+    "hangul": "할아버지",
+    "level": "TOPIK-I",
+    "english": "grandfather"
+  },
+  {
+    "hangul": "회색",
+    "level": "TOPIK-I",
+    "english": "grey"
+  },
+  {
+    "hangul": "할인",
+    "level": "TOPIK-I",
+    "english": "sale, discount"
+  },
+  {
+    "hangul": "회의",
+    "level": "TOPIK-I",
+    "english": "conference"
+  },
+  {
+    "hangul": "함께",
+    "level": "TOPIK-I",
+    "english": "together"
+  },
+  {
+    "hangul": "횡단보도",
+    "level": "TOPIK-I",
+    "english": "crosswalk"
+  },
+  {
+    "hangul": "합격",
+    "level": "TOPIK-I",
+    "english": "pass"
+  },
+  {
+    "hangul": "후",
+    "level": "TOPIK-I",
+    "english": "after"
+  },
+  {
+    "hangul": "항상",
+    "level": "TOPIK-I",
+    "english": "always"
+  },
+  {
+    "hangul": "후배",
+    "level": "TOPIK-I",
+    "english": "Junior"
+  },
+  {
+    "hangul": "해",
+    "level": "TOPIK-I",
+    "english": "year, sun"
+  },
+  {
+    "hangul": "휴가",
+    "level": "TOPIK-I",
+    "english": "vacation, holiday"
+  },
+  {
+    "hangul": "해외",
+    "level": "TOPIK-I",
+    "english": "overseas"
+  },
+  {
+    "hangul": "휴대전화",
+    "level": "TOPIK-I",
+    "english": "cell phone, mobile phone"
+  },
+  {
+    "hangul": "해외여행",
+    "level": "TOPIK-I",
+    "english": "overseas trip"
+  },
+  {
+    "hangul": "휴일",
+    "level": "TOPIK-I",
+    "english": "holiday"
+  },
+  {
+    "hangul": "핸드폰",
+    "level": "TOPIK-I",
+    "english": "cell phone, mobile phone"
+  },
+  {
+    "hangul": "휴지",
+    "level": "TOPIK-I",
+    "english": "toilet paper"
+  },
+  {
+    "hangul": "햄버거",
+    "level": "TOPIK-I",
+    "english": "hamburger"
+  },
+  {
+    "hangul": "휴지통",
+    "level": "TOPIK-I",
+    "english": "trash can"
+  },
+  {
+    "hangul": "햇빛",
+    "level": "TOPIK-I",
+    "english": "sunshine, sunlight"
+  },
+  {
+    "hangul": "흐리다",
+    "level": "TOPIK-I",
+    "english": "cloudy"
+  },
+  {
+    "hangul": "행복",
+    "level": "TOPIK-I",
+    "english": "happiness"
+  },
+  {
+    "hangul": "흰색",
+    "level": "TOPIK-I",
+    "english": "white color"
+  },
+  {
+    "hangul": "행복하다",
+    "level": "TOPIK-I",
+    "english": "happy"
+  },
+  {
+    "hangul": "힘",
+    "level": "TOPIK-I",
+    "english": "power"
+  },
+  {
+    "hangul": "행사",
+    "level": "TOPIK-I",
+    "english": "event"
+  },
+  {
+    "hangul": "허리",
+    "level": "TOPIK-I",
+    "english": "waist, hip"
+  },
+  {
+    "hangul": "현금",
+    "level": "TOPIK-I",
+    "english": "cash"
+  },
+  {
+    "hangul": "현재",
+    "level": "TOPIK-I",
+    "english": "now, current"
+  },
+  {
+    "hangul": "형",
+    "level": "TOPIK-I",
+    "english": "brother (as seen from the younger brother)"
+  },
+  {
+    "hangul": "형님",
+    "level": "TOPIK-I",
+    "english": "big brother (honorific form)"
+  },
+  {
+    "hangul": "형제",
+    "level": "TOPIK-I",
+    "english": "sibling"
+  },
+  {
+    "hangul": "호",
+    "level": "TOPIK-I",
+    "english": "No. ~"
+  },
+  {
+    "hangul": "호랑이",
+    "level": "TOPIK-I",
+    "english": "tiger"
+  }
+]
