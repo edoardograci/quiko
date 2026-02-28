@@ -8,12 +8,7 @@ export async function GET() {
         const allSettings = db.select().from(settings).all();
         const result: Record<string, string> = {};
         for (const s of allSettings) {
-            // Mask API key
-            if (s.key === 'krdict_api_key' && s.value) {
-                result[s.key] = '•'.repeat(Math.min(s.value.length, 32));
-            } else {
-                result[s.key] = s.value ?? '';
-            }
+            result[s.key] = s.value ?? '';
         }
         return NextResponse.json(result);
     } catch (error) {

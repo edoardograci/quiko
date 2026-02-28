@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 import { sentences, sentenceWords, sentenceGrammarPatterns, grammarPatterns, words } from '@/lib/db/schema';
-import { desc, eq, sql, like, and } from 'drizzle-orm';
+import { desc, eq, sql, like, and, inArray } from 'drizzle-orm';
 
 export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url);
@@ -26,15 +26,34 @@ export async function GET(req: NextRequest) {
             ? db.select({ count: sql<number>`count(*)` }).from(sentences).where(whereClause).get()
             : db.select({ count: sql<number>`count(*)` }).from(sentences).get())?.count ?? 0;
 
-        // Enrich with grammar patterns
-        const enriched = result.map(s => {
-            const patterns = db.select({ id: grammarPatterns.id, pattern: grammarPatterns.pattern, name_en: grammarPatterns.name_en })
+        // Enrich with grammar patterns using a single batch query
+        const sentenceIds = result.map((s) => s.id);
+        const patternsBySentenceId = new Map<number, { id: number; pattern: string | null; name_en: string }[]>();
+
+        if (sentenceIds.length > 0) {
+            const rows = db
+                .select({
+                    sentence_id: sentenceGrammarPatterns.sentence_id,
+                    id: grammarPatterns.id,
+                    pattern: grammarPatterns.pattern,
+                    name_en: grammarPatterns.name_en,
+                })
                 .from(sentenceGrammarPatterns)
                 .innerJoin(grammarPatterns, eq(grammarPatterns.id, sentenceGrammarPatterns.grammar_pattern_id))
-                .where(eq(sentenceGrammarPatterns.sentence_id, s.id))
+                .where(inArray(sentenceGrammarPatterns.sentence_id, sentenceIds))
                 .all();
-            return { ...s, grammarPatterns: patterns };
-        });
+
+            for (const row of rows) {
+                const arr = patternsBySentenceId.get(row.sentence_id) ?? [];
+                arr.push({ id: row.id, pattern: row.pattern, name_en: row.name_en });
+                patternsBySentenceId.set(row.sentence_id, arr);
+            }
+        }
+
+        const enriched = result.map((s) => ({
+            ...s,
+            grammarPatterns: patternsBySentenceId.get(s.id) ?? [],
+        }));
 
         return NextResponse.json({ sentences: enriched, total, page, limit });
     } catch (error) {

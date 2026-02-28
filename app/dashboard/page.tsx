@@ -9,7 +9,7 @@ import { Skeleton } from '@/components/ui/skeleton';
 import {
     Brain, BookOpen, AlignLeft, Layers,
     TrendingUp, Clock, Target, Zap,
-    Calendar, ChevronRight, Flame
+    Calendar, ChevronRight, Flame, Headphones
 } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 import { ReviewHeatmap } from '@/components/charts/ReviewHeatmap';
@@ -30,6 +30,13 @@ interface DashboardStats {
     streakDays: number;
     reviewedToday: number;
     dailyGoal: number;
+    listening?: {
+        id: number;
+        title: string;
+        youtube_id: string;
+        last_position_seconds: number;
+        completed: number;
+    } | null;
 }
 
 export default function DashboardPage() {
@@ -50,13 +57,36 @@ export default function DashboardPage() {
                 const reviewStats = await statsRes.json();
                 const wordsData = await wordsRes.json();
 
-                // Count total items
-                const [sentRes, gramRes] = await Promise.all([
+                // Count total items & listening progress
+                const [sentRes, gramRes, listeningRes] = await Promise.all([
                     fetch('/api/sentences?limit=1'),
                     fetch('/api/grammar?limit=1'),
+                    fetch('/api/listening'),
                 ]);
                 const sent = await sentRes.json();
                 const gram = await gramRes.json();
+                const listeningData = await listeningRes.json();
+
+                const episodes = (listeningData.episodes ?? []) as Array<{
+                    id: number;
+                    title: string;
+                    youtube_id: string;
+                    progress: { last_position_seconds: number; completed: number; last_watched: number } | null;
+                }>;
+
+                const inProgress = episodes
+                    .filter((e) => e.progress && e.progress.completed !== 1 && e.progress.last_position_seconds > 0)
+                    .sort((a, b) => (b.progress!.last_watched - a.progress!.last_watched));
+
+                const latestListening = inProgress.length > 0
+                    ? {
+                        id: inProgress[0].id,
+                        title: inProgress[0].title,
+                        youtube_id: inProgress[0].youtube_id,
+                        last_position_seconds: inProgress[0].progress!.last_position_seconds,
+                        completed: inProgress[0].progress!.completed,
+                    }
+                    : null;
 
                 setStats({
                     dueCount: due.review ?? 0,
@@ -71,6 +101,7 @@ export default function DashboardPage() {
                     streakDays: reviewStats.streak_days ?? 0,
                     reviewedToday: reviewStats.reviewed_today ?? 0,
                     dailyGoal: reviewStats.daily_goal ?? 20,
+                    listening: latestListening,
                 });
             } catch (e) {
                 console.error(e);
@@ -182,6 +213,37 @@ export default function DashboardPage() {
                             )}
                         </div>
                     </Card>
+
+                    {/* Continue Listening */}
+                    {stats?.listening && (
+                        <Card className="p-4 flex items-center gap-3">
+                            <div className="w-20 h-16 rounded-md overflow-hidden bg-muted flex items-center justify-center">
+                                {stats.listening.youtube_id ? (
+                                    <img
+                                        src={`https://img.youtube.com/vi/${stats.listening.youtube_id}/mqdefault.jpg`}
+                                        alt={stats.listening.title}
+                                        className="w-full h-full object-cover"
+                                    />
+                                ) : (
+                                    <Headphones className="w-6 h-6 text-muted-foreground" />
+                                )}
+                            </div>
+                            <div className="flex-1 min-w-0">
+                                <p className="text-xs text-muted-foreground mb-0.5">
+                                    {t({ ko: '계속 듣기', en: 'Continue Listening' })}
+                                </p>
+                                <p className="text-sm font-medium truncate">
+                                    {stats.listening.title}
+                                </p>
+                            </div>
+                            <Link href={`/listening/${stats.listening.id}`}>
+                                <Button size="sm" variant="outline" className="gap-1">
+                                    <Headphones className="w-4 h-4" />
+                                    {t({ ko: '이어보기', en: 'Continue' })}
+                                </Button>
+                            </Link>
+                        </Card>
+                    )}
 
                     {/* Quick Stats */}
                     <div className="grid grid-cols-2 gap-3">

@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { cn } from '@/lib/utils';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 interface KoreanTextProps {
     text: string;
@@ -74,9 +75,9 @@ function KoreanWordToken({ word, enableHover, onClick }: { word: string, enableH
         if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
 
-    return (
+    const content = (
         <span
-            className="group relative cursor-text outline-none focus:bg-primary/20 selection:bg-primary/30"
+            className="cursor-text outline-none focus:bg-primary/20 selection:bg-primary/30"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             onClick={(e) => {
@@ -86,12 +87,26 @@ function KoreanWordToken({ word, enableHover, onClick }: { word: string, enableH
             }}
         >
             {word}
-            {enableHover && gloss && (
-                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 px-2 py-1 bg-popover text-popover-foreground text-[10px] rounded shadow-md border border-border opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50">
-                    <span className="font-bold">{gloss.dictForm}</span>
-                    {gloss.defEn && <span>: {gloss.defEn}</span>}
-                </div>
-            )}
         </span>
+    );
+
+    if (!enableHover) {
+        return content;
+    }
+
+    return (
+        <TooltipProvider>
+            <Tooltip>
+                <TooltipTrigger asChild>
+                    {content}
+                </TooltipTrigger>
+                {gloss && (
+                    <TooltipContent side="top" sideOffset={4}>
+                        <span className="font-bold">{gloss.dictForm}</span>
+                        {gloss.defEn && <span>: {gloss.defEn}</span>}
+                    </TooltipContent>
+                )}
+            </Tooltip>
+        </TooltipProvider>
     );
 }

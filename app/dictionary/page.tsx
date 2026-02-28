@@ -87,7 +87,7 @@ export default function DictionaryPage() {
                     >
                         {t({ ko: '한국어 사전', en: 'Korean Dictionary' })}
                     </h1>
-                    <p className="text-xs text-muted-foreground">KRDICT · Korean Learners' Dictionary</p>
+                    <p className="text-xs text-muted-foreground">KRDICT · Korean Learners&#39; Dictionary</p>
                 </div>
 
                 <div className="relative">

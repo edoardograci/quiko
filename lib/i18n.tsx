@@ -124,6 +124,31 @@ export const strings = {
         saved: { ko: '설정이 저장되었습니다', en: 'Settings saved' },
         saveFail: { ko: '저장 실패', en: 'Failed to save' },
     },
+    listening: {
+        title: { ko: '듣기 연습', en: 'Listening Practice' },
+        subtitle: { ko: 'TTMIK 이야기 시리즈', en: 'TTMIK Iyagi Series' },
+        setYoutubeId: { ko: 'YouTube ID 설정', en: 'Set YouTube ID' },
+        noTranscript: { ko: '자막을 불러올 수 없어요', en: 'Transcript unavailable' },
+        loadingTranscript: { ko: '자막 불러오는 중...', en: 'Loading transcript...' },
+        watchBtn: { ko: '시청하기', en: 'Watch' },
+        continueBtn: { ko: '이어보기', en: 'Continue' },
+        completed: { ko: '완료', en: 'Completed' },
+        noYoutubeId: { ko: 'YouTube ID가 설정되지 않았어요', en: 'No YouTube ID set' },
+        transcriptPanel: { ko: '자막', en: 'Transcript' },
+        mineWord: { ko: '단어 추가', en: 'Add Word' },
+        mineSentence: { ko: '문장 채굴', en: 'Mine Sentence' },
+    },
+    import: {
+        title: { ko: 'Anki 덱 가져오기', en: 'Import Anki Deck' },
+        subtitle: { ko: '.apkg 파일을 업로드하여 단어를 가져오세요', en: 'Upload an .apkg file to import vocabulary' },
+        preview: { ko: '미리보기', en: 'Preview' },
+        found: { ko: '개의 한국어 카드를 찾았어요', en: 'Korean cards found' },
+        importBtn: { ko: '가져오기', en: 'Import' },
+        importSuccess: { ko: '개의 새 단어를 추가했어요', en: 'new words added' },
+        skipped: { ko: '개는 이미 있어요', en: 'already in library' },
+        curatedDecks: { ko: '추천 Anki 덱', en: 'Recommended Anki Decks' },
+        curatedDesc: { ko: '아래 덱을 AnkiWeb에서 다운로드한 후 위에서 가져오세요', en: 'Download these decks from AnkiWeb, then import them above' },
+    },
     common: {
         cancel: { ko: '취소', en: 'Cancel' },
         save: { ko: '저장', en: 'Save' },
@@ -167,7 +192,13 @@ export function LangProvider({ children }: { children: React.ReactNode }) {
 
     useEffect(() => {
         const saved = localStorage.getItem('quiko-lang') as Lang | null;
-        if (saved === 'ko' || saved === 'en') setLangState(saved);
+        if (saved === 'ko' || saved === 'en') {
+            // Load initial language preference from localStorage.
+            // This runs once on mount and synchronizes React state with external storage.
+            setTimeout(() => {
+                setLangState(saved);
+            }, 0);
+        }
     }, []);
 
     const setLang = (l: Lang) => {

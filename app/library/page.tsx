@@ -73,8 +73,10 @@ export default function LibraryPage() {
             toast.success('Book uploaded successfully!');
             setShowUploadModal(false);
             fetchBooks();
-        } catch (error: any) {
-            toast.error(error.message || 'Upload failed');
+        } catch (error: unknown) {
+            const message =
+                error instanceof Error ? error.message : 'Upload failed';
+            toast.error(message);
         } finally {
             setUploading(false);
         }

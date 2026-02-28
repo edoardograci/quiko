@@ -140,6 +140,36 @@ export function initializeDatabase() {
       key TEXT PRIMARY KEY,
       value TEXT
     );
+    CREATE TABLE IF NOT EXISTS listening_episodes (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      title TEXT NOT NULL,
+      series TEXT NOT NULL DEFAULT 'TTMIK',
+      level TEXT,
+      episode_number INTEGER,
+      youtube_id TEXT NOT NULL UNIQUE,
+      thumbnail_url TEXT,
+      duration_seconds INTEGER,
+      description TEXT,
+      added_at INTEGER NOT NULL DEFAULT (unixepoch())
+    );
+
+    CREATE TABLE IF NOT EXISTS listening_transcripts (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      episode_id INTEGER NOT NULL REFERENCES listening_episodes(id) ON DELETE CASCADE,
+      start_ms INTEGER NOT NULL,
+      end_ms INTEGER NOT NULL,
+      text TEXT NOT NULL,
+      UNIQUE(episode_id, start_ms)
+    );
+
+    CREATE TABLE IF NOT EXISTS listening_progress (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      episode_id INTEGER NOT NULL REFERENCES listening_episodes(id) ON DELETE CASCADE,
+      last_position_seconds INTEGER NOT NULL DEFAULT 0,
+      completed INTEGER NOT NULL DEFAULT 0,
+      last_watched INTEGER NOT NULL DEFAULT (unixepoch()),
+      UNIQUE(episode_id)
+    );
     CREATE TABLE IF NOT EXISTS books (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       title TEXT NOT NULL,
@@ -172,6 +202,36 @@ export function initializeDatabase() {
   const settingsStmt = rawDb.prepare('INSERT OR IGNORE INTO settings (key, value) VALUES (?, ?)');
   for (const [key, value] of defaultSettings) {
     settingsStmt.run(key, value);
+  }
+
+  const listeningEpisodesSeed = [
+    { episode_number: 1, title: 'Iyagi #1 – 좋아하는 계절 (Favorite Season)', series: 'TTMIK', level: 'beginner', description: null, youtube_id: '' },
+    { episode_number: 2, title: 'Iyagi #2 – 아침 (Morning)', series: 'TTMIK', level: 'beginner', description: null, youtube_id: '' },
+    { episode_number: 3, title: 'Iyagi #3 – 자기 전에 (Before Sleeping)', series: 'TTMIK', level: 'beginner', description: null, youtube_id: '' },
+    { episode_number: 4, title: 'Iyagi #4 – 일요일 오후 (Sunday Afternoon)', series: 'TTMIK', level: 'beginner', description: null, youtube_id: '' },
+    { episode_number: 5, title: 'Iyagi #5 – 음악 (Music)', series: 'TTMIK', level: 'beginner', description: null, youtube_id: '' },
+    { episode_number: 6, title: 'Iyagi #6 – 영화 (Movies)', series: 'TTMIK', level: 'beginner', description: null, youtube_id: '' },
+    { episode_number: 7, title: 'Iyagi #7 – 휴가 (Vacation)', series: 'TTMIK', level: 'beginner', description: null, youtube_id: '' },
+    { episode_number: 8, title: 'Iyagi #8 – 취미 (Hobbies)', series: 'TTMIK', level: 'beginner', description: null, youtube_id: '' },
+    { episode_number: 9, title: 'Iyagi #9 – 음식 (Food)', series: 'TTMIK', level: 'beginner', description: null, youtube_id: '' },
+    { episode_number: 10, title: 'Iyagi #10 – 친구 (Friends)', series: 'TTMIK', level: 'beginner', description: null, youtube_id: '' },
+    { episode_number: 11, title: 'Iyagi #11 – 날씨 (Weather)', series: 'TTMIK', level: 'beginner', description: null, youtube_id: '' },
+    { episode_number: 12, title: 'Iyagi #12 – 학교 (School)', series: 'TTMIK', level: 'beginner', description: null, youtube_id: '' },
+    { episode_number: 13, title: 'Iyagi #13 – 가족 (Family)', series: 'TTMIK', level: 'beginner', description: null, youtube_id: '' },
+    { episode_number: 14, title: 'Iyagi #14 – 건강 (Health)', series: 'TTMIK', level: 'beginner', description: null, youtube_id: '' },
+    { episode_number: 15, title: 'Iyagi #15 – 여행 (Travel)', series: 'TTMIK', level: 'beginner', description: null, youtube_id: '' },
+    { episode_number: 16, title: 'Iyagi #16 – 쇼핑 (Shopping)', series: 'TTMIK', level: 'beginner', description: null, youtube_id: '' },
+    { episode_number: 17, title: 'Iyagi #17 – 직업 (Jobs)', series: 'TTMIK', level: 'beginner', description: null, youtube_id: '' },
+    { episode_number: 18, title: 'Iyagi #18 – 운동 (Exercise)', series: 'TTMIK', level: 'beginner', description: null, youtube_id: '' },
+    { episode_number: 19, title: 'Iyagi #19 – 집 (Home)', series: 'TTMIK', level: 'beginner', description: null, youtube_id: '' },
+    { episode_number: 20, title: 'Iyagi #20 – 주말 (Weekend)', series: 'TTMIK', level: 'beginner', description: null, youtube_id: '' },
+  ];
+
+  const listeningStmt = rawDb.prepare(
+    'INSERT OR IGNORE INTO listening_episodes (episode_number, title, series, level, description, youtube_id) VALUES (?, ?, ?, ?, ?, ?)',
+  );
+  for (const e of listeningEpisodesSeed) {
+    listeningStmt.run(e.episode_number, e.title, e.series, e.level, e.description, e.youtube_id);
   }
 
   rawDb.close();

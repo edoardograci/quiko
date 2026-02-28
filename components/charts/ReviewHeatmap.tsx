@@ -3,14 +3,15 @@
 import { useMemo } from 'react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
+const TODAY_DAY = Math.floor(Date.now() / 1000 / 86400);
+
 interface ReviewHeatmapProps {
     data: Array<{ day: number; count: number }>;
 }
 
 export function ReviewHeatmap({ data }: ReviewHeatmapProps) {
     const { weeks } = useMemo(() => {
-        const today = Math.floor(Date.now() / 1000);
-        const todayDay = Math.floor(today / 86400);
+        const todayDay = TODAY_DAY;
 
         const countMap = new Map<number, number>();
         for (const d of data) {

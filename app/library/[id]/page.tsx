@@ -78,7 +78,7 @@ export default function ReadingViewPage({ params }: { params: Promise<{ id: stri
             const text = selection.trim();
             // Check if it has Korean characters
             if (/[가-힣]/.test(text)) {
-                if (text.includes(' ') || text.length > 10) {
+                if (text.includes(' ')) {
                     setSelectedSentence(text);
                     setShowSentenceModal(true);
                 } else {

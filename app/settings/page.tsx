@@ -9,11 +9,11 @@ import { Separator } from '@/components/ui/separator';
 import { Switch } from '@/components/ui/switch';
 import { Slider } from '@/components/ui/slider';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Settings2, Database, Eye, Keyboard, Brain, CheckCircle2, Loader2, RefreshCw, Download } from 'lucide-react';
+import { Settings2, Database, Eye, Keyboard, Brain, CheckCircle2, Loader2, RefreshCw, Download, Upload } from 'lucide-react';
 import { toast } from 'sonner';
 import { useTheme } from 'next-themes';
-import { initializeDatabase } from '@/lib/db/init';
 import { useLang } from '@/lib/i18n';
+import Link from 'next/link';
 
 interface SettingsData {
     krdict_api_key: string;
@@ -294,6 +294,12 @@ export default function SettingsPage() {
                         {seeding ? <Loader2 className="w-4 h-4 animate-spin" /> : <RefreshCw className="w-4 h-4" />}
                         {t({ ko: '데이터베이스 시드 (문법 패턴 로드)', en: 'Seed Database (Load Grammar Patterns)' })}
                     </Button>
+                    <Link href="/import">
+                        <Button variant="outline" className="w-full gap-2 justify-start">
+                            <Upload className="w-4 h-4" />
+                            {t({ ko: 'Anki 덱 가져오기', en: 'Import Anki Deck (.apkg)' })}
+                        </Button>
+                    </Link>
                     <Button
                         variant="outline"
                         className="w-full gap-2 justify-start"

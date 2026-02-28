@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 import { grammarPatterns, sentenceGrammarPatterns, reviews } from '@/lib/db/schema';
-import { desc, eq, sql, like, and } from 'drizzle-orm';
+import { desc, eq, sql, like, and, inArray } from 'drizzle-orm';
 import { createReviewCard } from '@/lib/fsrs';
 
 export async function GET(req: NextRequest) {
@@ -29,14 +29,20 @@ export async function GET(req: NextRequest) {
             ? db.select({ count: sql<number>`count(*)` }).from(grammarPatterns).where(whereClause).get()
             : db.select({ count: sql<number>`count(*)` }).from(grammarPatterns).get())?.count ?? 0;
 
-        // Add sentence counts
-        const enriched = result.map(p => {
-            const sentenceCount = db.select({ count: sql<number>`count(*)` })
+        // Add sentence counts using a single batch query
+        const patternIds = result.map((p) => p.id);
+        const sentenceCounts = patternIds.length > 0
+            ? db.select({
+                grammar_pattern_id: sentenceGrammarPatterns.grammar_pattern_id,
+                count: sql<number>`count(*)`,
+            })
                 .from(sentenceGrammarPatterns)
-                .where(eq(sentenceGrammarPatterns.grammar_pattern_id, p.id))
-                .get()?.count ?? 0;
-            return { ...p, sentence_count: sentenceCount };
-        });
+                .where(inArray(sentenceGrammarPatterns.grammar_pattern_id, patternIds))
+                .groupBy(sentenceGrammarPatterns.grammar_pattern_id)
+                .all()
+            : [];
+        const countMap = new Map(sentenceCounts.map((r) => [r.grammar_pattern_id, r.count]));
+        const enriched = result.map((p) => ({ ...p, sentence_count: countMap.get(p.id) ?? 0 }));
 
         return NextResponse.json({ patterns: enriched, total, page, limit });
     } catch (error) {

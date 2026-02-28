@@ -9,7 +9,6 @@ async function seed() {
 
     // Seed settings
     const defaultSettings = [
-        { key: 'krdict_api_key', value: '' },
         { key: 'daily_review_limit', value: '50' },
         { key: 'new_cards_per_day', value: '10' },
         { key: 'target_retention', value: '0.90' },

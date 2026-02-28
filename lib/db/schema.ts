@@ -139,6 +139,39 @@ export const settings = sqliteTable('settings', {
   value: text('value'),
 });
 
+export const listeningEpisodes = sqliteTable('listening_episodes', {
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  title: text('title').notNull(),
+  series: text('series').notNull().default('TTMIK'),
+  level: text('level'),
+  episode_number: integer('episode_number'),
+  youtube_id: text('youtube_id').notNull().unique(),
+  thumbnail_url: text('thumbnail_url'),
+  duration_seconds: integer('duration_seconds'),
+  description: text('description'),
+  added_at: integer('added_at').notNull().$defaultFn(() => Math.floor(Date.now() / 1000)),
+});
+
+export const listeningTranscripts = sqliteTable('listening_transcripts', {
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  episode_id: integer('episode_id').notNull().references(() => listeningEpisodes.id, { onDelete: 'cascade' }),
+  start_ms: integer('start_ms').notNull(),
+  end_ms: integer('end_ms').notNull(),
+  text: text('text').notNull(),
+}, (t) => ({
+  uniq: uniqueIndex('listening_transcripts_unique').on(t.episode_id, t.start_ms),
+}));
+
+export const listeningProgress = sqliteTable('listening_progress', {
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  episode_id: integer('episode_id').notNull().references(() => listeningEpisodes.id, { onDelete: 'cascade' }),
+  last_position_seconds: integer('last_position_seconds').notNull().default(0),
+  completed: integer('completed').notNull().default(0),
+  last_watched: integer('last_watched').notNull().$defaultFn(() => Math.floor(Date.now() / 1000)),
+}, (t) => ({
+  uniq: uniqueIndex('listening_progress_unique').on(t.episode_id),
+}));
+
 export type Sentence = typeof sentences.$inferSelect;
 export type NewSentence = typeof sentences.$inferInsert;
 export type Word = typeof words.$inferSelect;
@@ -152,3 +185,6 @@ export type Review = typeof reviews.$inferSelect;
 export type NewReview = typeof reviews.$inferInsert;
 export type ReviewLog = typeof reviewLogs.$inferSelect;
 export type Settings = typeof settings.$inferSelect;
+export type ListeningEpisode = typeof listeningEpisodes.$inferSelect;
+export type ListeningTranscript = typeof listeningTranscripts.$inferSelect;
+export type ListeningProgress = typeof listeningProgress.$inferSelect;

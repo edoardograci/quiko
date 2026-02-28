@@ -8,8 +8,8 @@ import {
     Brain,
     BookOpen,
     Search,
-    Settings2,
     Library,
+    Headphones,
 } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
@@ -18,8 +18,8 @@ const navItems = [
     { icon: Brain, labelKo: '복습', href: '/review', showBadge: true },
     { icon: BookOpen, labelKo: '단어장', href: '/vocabulary' },
     { icon: Library, labelKo: '라이브러리', href: '/library' },
+    { icon: Headphones, labelKo: '듣기', href: '/listening' },
     { icon: Search, labelKo: '사전', href: '/dictionary' },
-    { icon: Settings2, labelKo: '설정', href: '/settings' },
 ];
 
 export function BottomNav() {

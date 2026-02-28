@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 import { reviews, words, grammarPatterns, wordDefinitions, wordExamples, sentences } from '@/lib/db/schema';
-import { lte, eq, and, asc } from 'drizzle-orm';
+import { lte, eq, and, asc, inArray } from 'drizzle-orm';
 
 export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url);
@@ -40,9 +40,6 @@ export async function GET(req: NextRequest) {
         // Combine due + new (deduplicated)
         const existingIds = new Set(dueReviews.map(r => r.id));
         const combined = [...dueReviews, ...newReviews.filter(r => !existingIds.has(r.id))].slice(0, dailyLimit);
-
-        // Inherit inArray if not already imported
-        const { inArray } = await import('drizzle-orm');
 
         // Enrich cards with item data
         const cards = [];

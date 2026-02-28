@@ -73,6 +73,10 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ type
         });
 
     } catch (error) {
+        // Clean up partial file so next request doesn't serve garbage
+        if (fs.existsSync(filePath)) {
+            fs.unlinkSync(filePath);
+        }
         console.error('Audio generation error:', error);
         return NextResponse.json({ error: 'Failed to generate audio' }, { status: 500 });
     }

@@ -12,6 +12,7 @@ import {
     Search,
     Settings2,
     Library,
+    Headphones,
 } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Badge } from '@/components/ui/badge';
@@ -24,6 +25,7 @@ const navItems = [
     { icon: AlignLeft, labelKo: '문장', labelEn: 'Sentences', href: '/sentences' },
     { icon: Layers, labelKo: '문법', labelEn: 'Grammar', href: '/grammar' },
     { icon: Library, labelKo: '라이브러리', labelEn: 'Library', href: '/library' },
+    { icon: Headphones, labelKo: '듣기', labelEn: 'Listening', href: '/listening' },
     { icon: Search, labelKo: '사전', labelEn: 'Dictionary', href: '/dictionary' },
     { icon: Settings2, labelKo: '설정', labelEn: 'Settings', href: '/settings' },
 ];
