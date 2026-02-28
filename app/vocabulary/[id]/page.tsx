@@ -7,10 +7,11 @@ import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Skeleton } from '@/components/ui/skeleton';
-import { ArrowLeft, Volume2, Pencil, Trash2, BookOpen, RotateCcw } from 'lucide-react';
+import { ArrowLeft, Volume2, Pencil, Trash2, BookOpen, RotateCcw, Loader2 } from 'lucide-react';
 import { POS_LABELS, LEVEL_COLORS, type MorphemeToken } from '@/lib/hangul';
 import { STATE_LABELS } from '@/lib/fsrs';
 import { MorphemeBreakdown } from '@/components/vocabulary/MorphemeBreakdown';
+import { EditWordForm } from '@/components/vocabulary/EditWordForm';
 import { cn } from '@/lib/utils';
 import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
@@ -45,6 +46,8 @@ export default function WordDetailPage({ params }: Props) {
     const { id } = use(params);
     const [data, setData] = useState<WordDetail | null>(null);
     const [loading, setLoading] = useState(true);
+    const [isPlaying, setIsPlaying] = useState(false);
+    const [isEditing, setIsEditing] = useState(false);
     const router = useRouter();
 
     useEffect(() => {
@@ -62,10 +65,16 @@ export default function WordDetailPage({ params }: Props) {
         router.push('/vocabulary');
     };
 
-    const handlePlayAudio = () => {
-        if (data?.word.audio_url) {
-            const audio = new Audio(data.word.audio_url);
-            audio.play().catch(() => { });
+    const handlePlayAudio = async () => {
+        setIsPlaying(true);
+        try {
+            const url = `/api/audio/word/${id}`;
+            const audio = new Audio(url);
+            audio.onended = () => setIsPlaying(false);
+            audio.onerror = () => setIsPlaying(false);
+            await audio.play();
+        } catch {
+            setIsPlaying(false);
         }
     };
 
@@ -82,6 +91,37 @@ export default function WordDetailPage({ params }: Props) {
     if (!data) return <div className="p-8 text-center text-muted-foreground">{t({ ko: '단어를 찾을 수 없어요', en: 'Word not found' })}</div>;
 
     const { word, definitions, examples, reviews: reviewCards, linkedSentences } = data;
+
+    if (isEditing) {
+        return (
+            <div className="p-6 max-w-3xl mx-auto animate-fade-in">
+                <div className="mb-6 flex items-center justify-between">
+                    <h1 className="text-2xl font-bold">{t({ ko: '단어 수정', en: 'Edit Word' })}</h1>
+                    <Button variant="ghost" size="sm" onClick={() => setIsEditing(false)}>
+                        {t({ ko: '취소', en: 'Cancel' })}
+                    </Button>
+                </div>
+                <Card className="p-6">
+                    <EditWordForm
+                        initialWord={word}
+                        initialDefinitions={definitions.map(d => ({
+                            definition_ko: d.definition_ko || '',
+                            definition_en: d.definition_en || '',
+                            order_num: d.order_num || 1
+                        }))}
+                        initialExampleKo={examples[0]?.example_ko || ''}
+                        initialExampleEn={examples[0]?.example_en || ''}
+                        onSuccess={() => {
+                            setIsEditing(false);
+                            setLoading(true);
+                            fetch(`/api/words/${id}`).then(r => r.json()).then(setData).finally(() => setLoading(false));
+                        }}
+                        onCancel={() => setIsEditing(false)}
+                    />
+                </Card>
+            </div>
+        );
+    }
 
     return (
         <div className="p-6 max-w-3xl mx-auto animate-fade-in">
@@ -107,14 +147,13 @@ export default function WordDetailPage({ params }: Props) {
                         {word.hanja && (
                             <span className="text-2xl text-muted-foreground">{word.hanja}</span>
                         )}
-                        {word.audio_url && (
-                            <button
-                                onClick={handlePlayAudio}
-                                className="w-8 h-8 rounded-full border border-border flex items-center justify-center hover:bg-muted transition-colors"
-                            >
-                                <Volume2 className="w-4 h-4 text-muted-foreground" />
-                            </button>
-                        )}
+                        <button
+                            onClick={handlePlayAudio}
+                            disabled={isPlaying}
+                            className="w-10 h-10 rounded-full border border-border flex items-center justify-center hover:bg-muted transition-colors disabled:opacity-50"
+                        >
+                            {isPlaying ? <Loader2 className="w-5 h-5 text-muted-foreground animate-spin" /> : <Volume2 className="w-5 h-5 text-muted-foreground" />}
+                        </button>
                     </div>
                     <div className="flex items-center gap-2 mt-3 flex-wrap">
                         {word.pos && (
@@ -140,7 +179,7 @@ export default function WordDetailPage({ params }: Props) {
                     </div>
                 </div>
                 <div className="flex gap-2 shrink-0">
-                    <Button variant="outline" size="icon" className="h-8 w-8">
+                    <Button variant="outline" size="icon" className="h-8 w-8" onClick={() => setIsEditing(true)}>
                         <Pencil className="w-3.5 h-3.5" />
                     </Button>
                     <Button

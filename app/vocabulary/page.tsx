@@ -28,6 +28,7 @@ import { STATE_LABELS } from '@/lib/fsrs';
 import { AddWordForm } from '@/components/vocabulary/AddWordForm';
 import { useVirtualizer } from '@tanstack/react-virtual';
 import { useLang } from '@/lib/i18n';
+import { AudioButton } from '@/components/ui/audio-button';
 
 interface Word {
     id: number;
@@ -206,9 +207,17 @@ export default function VocabularyPage() {
                                         transform: `translateY(${virtualItem.start}px)`,
                                     }}
                                 >
-                                    <button
+                                    <div
                                         onClick={() => router.push(`/vocabulary/${word.id}`)}
-                                        className="w-full flex items-center gap-4 px-4 py-3 hover:bg-muted/50 rounded-xl transition-colors group text-left"
+                                        className="w-full flex items-center gap-4 px-4 py-3 hover:bg-muted/50 rounded-xl transition-colors group text-left cursor-pointer"
+                                        role="button"
+                                        tabIndex={0}
+                                        onKeyDown={(e) => {
+                                            if (e.key === 'Enter' || e.key === ' ') {
+                                                e.preventDefault();
+                                                router.push(`/vocabulary/${word.id}`);
+                                            }
+                                        }}
                                     >
                                         <div className="flex-1 min-w-0">
                                             <div className="flex items-center gap-2 flex-wrap">
@@ -219,6 +228,12 @@ export default function VocabularyPage() {
                                                 >
                                                     {word.hangul}
                                                 </span>
+                                                <AudioButton
+                                                    type="word"
+                                                    id={word.id}
+                                                    className="w-7 h-7 mx-1"
+                                                    iconSize={14}
+                                                />
                                                 {word.hanja && (
                                                     <span className="text-sm text-muted-foreground">{word.hanja}</span>
                                                 )}
@@ -241,7 +256,7 @@ export default function VocabularyPage() {
                                             )}
                                         </div>
                                         <ChevronRight className="w-4 h-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
-                                    </button>
+                                    </div>
                                 </div>
                             );
                         })}

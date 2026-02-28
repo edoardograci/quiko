@@ -1,7 +1,8 @@
 import { NextResponse } from 'next/server';
 import { db } from '@/lib/db';
-import { reviewLogs, reviews } from '@/lib/db/schema';
+import { reviewLogs, reviews, settings } from '@/lib/db/schema';
 import { gte, sql, eq, and } from 'drizzle-orm';
+import { calculateStreak } from '@/lib/stats';
 
 export async function GET() {
     try {
@@ -47,12 +48,31 @@ export async function GET() {
             .groupBy(reviews.state)
             .all();
 
+        const allLogs = db.select({ reviewed_at: reviewLogs.reviewed_at }).from(reviewLogs).all();
+        const streakDays = calculateStreak(allLogs);
+
+        const todayStart = new Date();
+        todayStart.setHours(0, 0, 0, 0);
+        const todayStartSecs = Math.floor(todayStart.getTime() / 1000);
+
+        const todayLogs = db.select()
+            .from(reviewLogs)
+            .where(gte(reviewLogs.reviewed_at, todayStartSecs))
+            .all();
+        const reviewedToday = todayLogs.length;
+
+        const goalSetting = db.select().from(settings).where(eq(settings.key, 'daily_goal')).get();
+        const dailyGoal = goalSetting ? parseInt(goalSetting.value || '20') : 20;
+
         return NextResponse.json({
             accuracy_7d: accuracy7d,
             total_reviews: recentLogs.length,
             heatmap: heatmapLogs,
             upcoming_reviews: upcoming,
             state_counts: stateCounts,
+            streak_days: streakDays,
+            reviewed_today: reviewedToday,
+            daily_goal: dailyGoal,
         });
     } catch (error) {
         console.error('Stats error:', error);

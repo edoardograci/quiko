@@ -116,6 +116,24 @@ export const krdictCache = sqliteTable('krdict_cache', {
   cached_at: integer('cached_at').notNull().$defaultFn(() => Math.floor(Date.now() / 1000)),
 });
 
+export const books = sqliteTable('books', {
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  title: text('title').notNull(),
+  filename: text('filename').notNull(),
+  total_pages: integer('total_pages'),
+  description: text('description'),
+  added_at: integer('added_at').notNull().$defaultFn(() => Math.floor(Date.now() / 1000)),
+});
+
+export const readingProgress = sqliteTable('reading_progress', {
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  book_id: integer('book_id').notNull().references(() => books.id, { onDelete: 'cascade' }),
+  current_page: integer('current_page').notNull().default(1),
+  last_read: integer('last_read').notNull().$defaultFn(() => Math.floor(Date.now() / 1000)),
+}, (t) => ({
+  uniq: uniqueIndex('reading_progress_unique').on(t.book_id),
+}));
+
 export const settings = sqliteTable('settings', {
   key: text('key').primaryKey(),
   value: text('value'),

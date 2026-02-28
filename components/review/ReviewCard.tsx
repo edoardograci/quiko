@@ -11,6 +11,7 @@ import { MorphemeBreakdown } from '@/components/vocabulary/MorphemeBreakdown';
 import { Badge } from '@/components/ui/badge';
 import { STATE_LABELS } from '@/lib/fsrs';
 import { useLang } from '@/lib/i18n';
+import { AudioButton } from '@/components/ui/audio-button';
 
 interface ReviewCardData {
     review_id: number;
@@ -185,14 +186,17 @@ export function ReviewCard({ card, onRate, sessionProgress }: ReviewCardProps) {
                         <div className="bg-card border border-border rounded-2xl shadow-lg p-8 md:p-12 min-h-[300px] flex flex-col gap-6">
                             {isWordCard && (
                                 <>
-                                    <div className="text-center">
-                                        <h2
-                                            className="text-5xl font-medium text-foreground korean"
-                                            lang="ko"
-                                            style={{ fontFamily: 'var(--font-noto-kr), Noto Sans KR, sans-serif' }}
-                                        >
-                                            {card.word!.hangul}
-                                        </h2>
+                                    <div className="flex flex-col items-center justify-center">
+                                        <div className="flex items-center gap-4">
+                                            <h2
+                                                className="text-5xl font-medium text-foreground korean"
+                                                lang="ko"
+                                                style={{ fontFamily: 'var(--font-noto-kr), Noto Sans KR, sans-serif' }}
+                                            >
+                                                {card.word!.hangul}
+                                            </h2>
+                                            <AudioButton type="word" id={card.word!.id} className="w-10 h-10 shrink-0" iconSize={20} />
+                                        </div>
                                         {card.word!.notes && (
                                             <p className="text-lg text-muted-foreground mt-2">{card.word!.notes}</p>
                                         )}
@@ -235,14 +239,15 @@ export function ReviewCard({ card, onRate, sessionProgress }: ReviewCardProps) {
                                     </div>
                                     <p className="text-sm text-muted-foreground leading-relaxed">{card.pattern!.description}</p>
                                     {card.pattern!.example_pattern_use && (
-                                        <div className="bg-muted/50 rounded-lg p-3">
+                                        <div className="bg-muted/50 rounded-lg p-3 flex items-center gap-3">
                                             <p
-                                                className="text-base korean"
+                                                className="text-base korean flex-1"
                                                 lang="ko"
                                                 style={{ fontFamily: 'var(--font-noto-kr), Noto Sans KR, sans-serif' }}
                                             >
                                                 {card.pattern!.example_pattern_use}
                                             </p>
+                                            <AudioButton type="grammar" id={card.pattern!.id} className="w-8 h-8 shrink-0" iconSize={16} />
                                         </div>
                                     )}
                                 </>

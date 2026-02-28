@@ -10,6 +10,8 @@ import { Separator } from '@/components/ui/separator';
 import { ArrowLeft, AlignLeft } from 'lucide-react';
 import { LEVEL_COLORS } from '@/lib/hangul';
 import { cn } from '@/lib/utils';
+import { KoreanText } from '@/components/ui/korean-text';
+import { AudioButton } from '@/components/ui/audio-button';
 
 interface Props { params: Promise<{ id: string }> }
 
@@ -93,14 +95,13 @@ export default function GrammarDetailPage({ params }: Props) {
             {p.example_pattern_use && (
                 <div className="mb-6">
                     <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">예시</p>
-                    <div className="bg-muted/40 rounded-lg px-4 py-3 border-l-2 border-primary/40">
-                        <p
-                            className="text-base korean"
-                            lang="ko"
-                            style={{ fontFamily: 'var(--font-noto-kr), Noto Sans KR, sans-serif' }}
-                        >
-                            {p.example_pattern_use}
-                        </p>
+                    <div className="bg-muted/40 rounded-lg px-4 py-3 border-l-2 border-primary/40 flex items-center justify-between gap-4">
+                        <KoreanText
+                            text={p.example_pattern_use}
+                            enableHover={true}
+                            className="text-base"
+                        />
+                        <AudioButton type="grammar" id={p.id} className="w-8 h-8 shrink-0" iconSize={16} />
                     </div>
                 </div>
             )}
@@ -132,14 +133,12 @@ export default function GrammarDetailPage({ params }: Props) {
                         {data.linkedSentences.map(s => (
                             <Link key={s.id} href={`/sentences/${s.id}`}>
                                 <Card className="px-4 py-3 hover:border-primary/30 transition-colors cursor-pointer group">
-                                    <p
-                                        className="text-sm korean"
-                                        lang="ko"
-                                        style={{ fontFamily: 'var(--font-noto-kr), Noto Sans KR, sans-serif' }}
-                                    >
-                                        {s.korean}
-                                    </p>
-                                    <p className="text-xs text-muted-foreground mt-0.5">{s.natural_translation}</p>
+                                    <KoreanText
+                                        text={s.korean}
+                                        enableHover={true}
+                                        className="text-sm"
+                                    />
+                                    <p className="text-xs text-muted-foreground mt-1">{s.natural_translation}</p>
                                 </Card>
                             </Link>
                         ))}

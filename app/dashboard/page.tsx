@@ -9,8 +9,9 @@ import { Skeleton } from '@/components/ui/skeleton';
 import {
     Brain, BookOpen, AlignLeft, Layers,
     TrendingUp, Clock, Target, Zap,
-    Calendar, ChevronRight,
+    Calendar, ChevronRight, Flame
 } from 'lucide-react';
+import { Progress } from '@/components/ui/progress';
 import { ReviewHeatmap } from '@/components/charts/ReviewHeatmap';
 import { RetentionChart } from '@/components/charts/RetentionChart';
 import { cn } from '@/lib/utils';
@@ -26,6 +27,9 @@ interface DashboardStats {
     heatmap: Array<{ day: number; count: number }>;
     upcoming: Array<{ day: number; count: number }>;
     recentWords: Array<{ id: number; hangul: string; notes?: string; pos?: string; level?: string }>;
+    streakDays: number;
+    reviewedToday: number;
+    dailyGoal: number;
 }
 
 export default function DashboardPage() {
@@ -64,6 +68,9 @@ export default function DashboardPage() {
                     heatmap: reviewStats.heatmap ?? [],
                     upcoming: reviewStats.upcoming_reviews ?? [],
                     recentWords: wordsData.words?.slice(0, 5) ?? [],
+                    streakDays: reviewStats.streak_days ?? 0,
+                    reviewedToday: reviewStats.reviewed_today ?? 0,
+                    dailyGoal: reviewStats.daily_goal ?? 20,
                 });
             } catch (e) {
                 console.error(e);
@@ -140,6 +147,40 @@ export default function DashboardPage() {
                                 </span>
                             </Button>
                         </Link>
+                    </Card>
+
+                    {/* Streak & Daily Goal */}
+                    <Card className="p-6 relative overflow-hidden group border-orange-500/20">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-3xl -mr-10 -mt-10" />
+                        <div className="flex items-center justify-between mb-4 relative">
+                            <div>
+                                <h3 className="text-sm font-medium flex items-center gap-2">
+                                    <Flame className="w-4 h-4 text-orange-500" />
+                                    {t({ ko: '연속 학습', en: 'Study Streak' })}
+                                </h3>
+                                <div className="flex items-baseline gap-1 mt-1">
+                                    <span className="text-2xl font-bold">{loading ? '-' : stats?.streakDays}</span>
+                                    <span className="text-sm text-muted-foreground">{t({ ko: '일', en: 'days' })}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="relative">
+                            <div className="flex justify-between text-xs mb-1.5">
+                                <span className="text-muted-foreground">{t({ ko: '오늘의 목표', en: 'Daily Goal' })}</span>
+                                <span className="font-medium">
+                                    {loading ? '-' : stats?.reviewedToday} / {loading ? '-' : stats?.dailyGoal}
+                                </span>
+                            </div>
+                            <Progress
+                                value={stats ? Math.min((stats.reviewedToday / stats.dailyGoal) * 100, 100) : 0}
+                                className="h-2 bg-muted/50"
+                            />
+                            {stats && stats.reviewedToday >= stats.dailyGoal && (
+                                <p className="text-[10px] text-green-500 mt-2 text-center animate-fade-in">
+                                    {t({ ko: '오늘의 목표 달성! 멋져요!', en: 'Daily goal met! Awesome job!' })}
+                                </p>
+                            )}
+                        </div>
                     </Card>
 
                     {/* Quick Stats */}

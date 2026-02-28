@@ -140,17 +140,33 @@ export function initializeDatabase() {
       key TEXT PRIMARY KEY,
       value TEXT
     );
+    CREATE TABLE IF NOT EXISTS books (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      title TEXT NOT NULL,
+      filename TEXT NOT NULL,
+      total_pages INTEGER,
+      description TEXT,
+      added_at INTEGER NOT NULL DEFAULT (unixepoch())
+    );
+
+    CREATE TABLE IF NOT EXISTS reading_progress (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      book_id INTEGER NOT NULL REFERENCES books(id) ON DELETE CASCADE,
+      current_page INTEGER NOT NULL DEFAULT 1,
+      last_read INTEGER NOT NULL DEFAULT (unixepoch()),
+      UNIQUE(book_id)
+    );
   `);
 
   // Seed default settings
   const defaultSettings = [
-    ['krdict_api_key', ''],
     ['daily_review_limit', '50'],
     ['new_cards_per_day', '10'],
     ['target_retention', '0.90'],
     ['theme', 'system'],
     ['show_pronunciation', 'true'],
     ['use_onscreen_keyboard', 'auto'],
+    ['daily_goal', '20'],
   ];
 
   const settingsStmt = rawDb.prepare('INSERT OR IGNORE INTO settings (key, value) VALUES (?, ?)');

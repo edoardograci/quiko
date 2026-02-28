@@ -3,7 +3,7 @@
 import { useState, useCallback } from 'react';
 
 // es-hangul assemble/disassemble
-let _esHangul: { assemble: (str: string) => string; disassemble: (str: string, grouped?: boolean) => string[] } | null = null;
+let _esHangul: { assemble: (fragments: string[]) => string; disassemble: (str: string, grouped?: boolean) => string[] } | null = null;
 
 async function getEsHangul() {
     if (!_esHangul) {

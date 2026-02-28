@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 import { words, wordDefinitions, wordExamples, reviews, sentenceWords, sentences } from '@/lib/db/schema';
-import { eq } from 'drizzle-orm';
+import { eq, inArray } from 'drizzle-orm';
 
 export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
@@ -22,7 +22,7 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ id: 
         const sw = db.select().from(sentenceWords).where(eq(sentenceWords.word_id, wordId)).all();
         const linkedSentences = sw.length > 0
             ? db.select().from(sentences)
-                .where(eq(sentences.id, sw[0].sentence_id))
+                .where(inArray(sentences.id, sw.map(r => r.sentence_id)))
                 .limit(5)
                 .all()
             : [];
@@ -40,13 +40,40 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
 
     try {
         const body = await req.json();
-        const { hangul, hanja, pronunciation, pos, level, frequency_rank, stem, irregular_type, notes, tags } = body;
+        const { hangul, hanja, pronunciation, pos, level, frequency_rank, stem, irregular_type, notes, tags, definitions, examples } = body;
 
         db.update(words).set({
             hangul, hanja, pronunciation, pos, level, frequency_rank, stem, irregular_type, notes,
             tags: tags ? JSON.stringify(tags) : null,
             updated_at: Math.floor(Date.now() / 1000),
         }).where(eq(words.id, wordId)).run();
+
+        // Update definitions
+        if (definitions) {
+            db.delete(wordDefinitions).where(eq(wordDefinitions.word_id, wordId)).run();
+            for (const def of definitions) {
+                db.insert(wordDefinitions).values({
+                    word_id: wordId,
+                    definition_ko: def.definition_ko,
+                    definition_en: def.definition_en,
+                    order_num: def.order_num || 1,
+                    krdict_target_code: def.krdict_target_code,
+                }).run();
+            }
+        }
+
+        // Update examples
+        if (examples) {
+            db.delete(wordExamples).where(eq(wordExamples.word_id, wordId)).run();
+            for (const ex of examples) {
+                db.insert(wordExamples).values({
+                    word_id: wordId,
+                    example_ko: ex.example_ko,
+                    example_en: ex.example_en,
+                    source: ex.source || 'custom',
+                }).run();
+            }
+        }
 
         return NextResponse.json({ success: true });
     } catch (error) {

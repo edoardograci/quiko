@@ -41,22 +41,56 @@ export async function GET(req: NextRequest) {
         const existingIds = new Set(dueReviews.map(r => r.id));
         const combined = [...dueReviews, ...newReviews.filter(r => !existingIds.has(r.id))].slice(0, dailyLimit);
 
+        // Inherit inArray if not already imported
+        const { inArray } = await import('drizzle-orm');
+
         // Enrich cards with item data
         const cards = [];
+        const wordIds = Array.from(new Set(combined.filter(r => r.item_type === 'word').map(r => r.item_id)));
+        const grammarIds = Array.from(new Set(combined.filter(r => r.item_type === 'grammar_pattern').map(r => r.item_id)));
+
+        const wordMap = new Map();
+        const defMap = new Map();
+        const exMap = new Map();
+        const patternMap = new Map();
+
+        if (wordIds.length > 0) {
+            const fetchedWords = await db.select().from(words).where(inArray(words.id, wordIds)).all();
+            fetchedWords.forEach(w => wordMap.set(w.id, w));
+
+            const fetchedDefs = await db.select().from(wordDefinitions).where(inArray(wordDefinitions.word_id, wordIds)).all();
+            fetchedDefs.forEach(d => {
+                const arr = defMap.get(d.word_id) || [];
+                arr.push(d);
+                defMap.set(d.word_id, arr);
+            });
+
+            const fetchedExs = await db.select().from(wordExamples).where(inArray(wordExamples.word_id, wordIds)).all();
+            fetchedExs.forEach(e => {
+                const arr = exMap.get(e.word_id) || [];
+                // limit to 2 manually or just add all and slice per word
+                if (arr.length < 2) arr.push(e);
+                exMap.set(e.word_id, arr);
+            });
+        }
+
+        if (grammarIds.length > 0) {
+            const fetchedPatterns = await db.select().from(grammarPatterns).where(inArray(grammarPatterns.id, grammarIds)).all();
+            fetchedPatterns.forEach(p => patternMap.set(p.id, p));
+        }
+
         for (const review of combined) {
             if (review.item_type === 'word') {
-                const word = await db.select().from(words).where(eq(words.id, review.item_id)).get();
+                const word = wordMap.get(review.item_id);
                 if (!word) continue;
-                const definitions = await db.select().from(wordDefinitions).where(eq(wordDefinitions.word_id, word.id)).all();
-                const examples = await db.select().from(wordExamples).where(eq(wordExamples.word_id, word.id)).limit(2).all();
                 cards.push({
                     review_id: review.id,
                     item_type: 'word',
                     item_id: review.item_id,
                     review_mode: review.review_mode,
                     word,
-                    definitions,
-                    examples,
+                    definitions: defMap.get(review.item_id) || [],
+                    examples: exMap.get(review.item_id) || [],
                     fsrs: {
                         state: review.state,
                         due: review.due,
@@ -67,7 +101,7 @@ export async function GET(req: NextRequest) {
                     },
                 });
             } else if (review.item_type === 'grammar_pattern') {
-                const pattern = await db.select().from(grammarPatterns).where(eq(grammarPatterns.id, review.item_id)).get();
+                const pattern = patternMap.get(review.item_id);
                 if (!pattern) continue;
                 cards.push({
                     review_id: review.id,

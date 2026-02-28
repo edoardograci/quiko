@@ -69,9 +69,8 @@ export function dbReviewToCard(review: {
         reps: review.reps,
         lapses: review.lapses,
         state: review.state as State,
-        learning_steps: 0,
         last_review: review.last_review ? new Date(review.last_review * 1000) : new Date(),
-    };
+    } as unknown as Card;
 }
 
 export function getIntervalLabel(days: number): { ko: string, en: string } {

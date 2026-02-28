@@ -23,6 +23,7 @@ interface SettingsData {
     theme: string;
     show_pronunciation: string;
     use_onscreen_keyboard: string;
+    daily_goal: string;
 }
 
 export default function SettingsPage() {
@@ -31,6 +32,7 @@ export default function SettingsPage() {
     const [loading, setLoading] = useState(true);
     const [saving, setSaving] = useState(false);
     const [seeding, setSeeding] = useState(false);
+    const [krdictDetected, setKrdictDetected] = useState<boolean | null>(null);
     const { setTheme } = useTheme();
 
     useEffect(() => {
@@ -40,6 +42,11 @@ export default function SettingsPage() {
                 setSettings(data);
                 // Don't pre-fill the API key field (it's masked)
             })
+            .catch(console.error);
+
+        fetch('/api/settings/krdict-status')
+            .then(r => r.json())
+            .then(data => setKrdictDetected(data.detected))
             .catch(console.error)
             .finally(() => setLoading(false));
     }, []);
@@ -135,6 +142,22 @@ export default function SettingsPage() {
                         onValueChange={([v]) => setSettings(s => ({ ...s, daily_review_limit: String(v) }))}
                         onValueCommit={([v]) => save({ daily_review_limit: String(v) })}
                         min={10}
+                        max={200}
+                        step={5}
+                        className="w-full"
+                    />
+                </div>
+
+                <div className="space-y-2">
+                    <div className="flex justify-between">
+                        <Label className="text-xs text-muted-foreground">{t({ ko: '하루 목표 카드 수', en: 'Daily Goal (Cards)' })}</Label>
+                        <span className="text-sm font-mono font-medium">{settings.daily_goal ?? '20'}{t({ ko: '개', en: '' })}</span>
+                    </div>
+                    <Slider
+                        value={[parseInt(settings.daily_goal ?? '20')]}
+                        onValueChange={([v]) => setSettings(s => ({ ...s, daily_goal: String(v) }))}
+                        onValueCommit={([v]) => save({ daily_goal: String(v) })}
+                        min={5}
                         max={200}
                         step={5}
                         className="w-full"
@@ -251,6 +274,15 @@ export default function SettingsPage() {
                     <h2 className="font-medium text-sm">{t({ ko: '데이터 관리', en: 'Data Management' })}</h2>
                 </div>
                 <Separator />
+
+                <div className="flex items-center justify-between pb-2">
+                    <div>
+                        <Label className="text-sm">KRDICT API Key</Label>
+                        <p className="text-xs text-muted-foreground mt-0.5">
+                            {krdictDetected === null ? '...' : krdictDetected ? '✅ Detected (from .env)' : '⚠️ Not set (check .env)'}
+                        </p>
+                    </div>
+                </div>
 
                 <div className="space-y-3">
                     <Button

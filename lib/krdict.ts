@@ -11,7 +11,7 @@ interface KrdictEntry {
     pos: string;
     sense: Array<{
         definition: string;
-        translation?: { trans_word?: string; trans_dfn?: string };
+        translation?: Array<{ trans_word?: string; trans_dfn?: string }>;
         example?: Array<{ example: string }> | { example: string };
     }>;
     pronunciation?: string;
@@ -58,7 +58,7 @@ function parseXml(xml: string): DictResult[] {
                 return {
                     order: i + 1,
                     definition_ko: s.definition || '',
-                    definition_en: s.translation?.trans_dfn || s.translation?.trans_word,
+                    definition_en: (s.translation && s.translation.length > 0) ? (s.translation[0].trans_dfn || s.translation[0].trans_word) : '',
                     examples: examples as string[],
                 };
             }),

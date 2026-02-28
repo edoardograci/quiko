@@ -13,6 +13,7 @@ import { cn } from '@/lib/utils';
 import { LEVEL_COLORS } from '@/lib/hangul';
 import { AddSentenceForm } from '@/components/sentences/AddSentenceForm';
 import { useLang } from '@/lib/i18n';
+import { KoreanText } from '@/components/ui/korean-text';
 
 interface Sentence {
     id: number;
@@ -112,13 +113,13 @@ export default function SentencesPage() {
                         {sentences.map(s => (
                             <Link key={s.id} href={`/sentences/${s.id}`}>
                                 <Card className="p-5 hover:border-primary/30 hover:shadow-md transition-all cursor-pointer h-full flex flex-col group">
-                                    <p
-                                        className="text-lg font-medium korean leading-snug mb-2"
-                                        lang="ko"
-                                        style={{ fontFamily: 'var(--font-noto-kr), Noto Sans KR, sans-serif' }}
-                                    >
-                                        {s.korean}
-                                    </p>
+                                    <div className="mb-2">
+                                        <KoreanText
+                                            text={s.korean}
+                                            enableHover={true}
+                                            className="text-lg font-medium leading-snug"
+                                        />
+                                    </div>
                                     <p className="text-sm text-muted-foreground flex-1">{s.natural_translation}</p>
 
                                     {/* Grammar pattern badges */}

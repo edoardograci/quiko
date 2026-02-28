@@ -13,6 +13,7 @@ import { cn } from '@/lib/utils';
 import { LEVEL_COLORS } from '@/lib/hangul';
 import { AddGrammarForm } from '@/components/grammar/AddGrammarForm';
 import { useLang } from '@/lib/i18n';
+import { KoreanText } from '@/components/ui/korean-text';
 
 interface GrammarPattern {
     id: number;
@@ -190,13 +191,13 @@ export default function GrammarPage() {
                                     </p>
 
                                     {p.example_pattern_use && (
-                                        <p
-                                            className="text-sm mt-3 text-foreground/80 korean border-l-2 border-primary/30 pl-3 italic"
-                                            lang="ko"
-                                            style={{ fontFamily: 'var(--font-noto-kr), Noto Sans KR, sans-serif' }}
-                                        >
-                                            {p.example_pattern_use}
-                                        </p>
+                                        <div className="mt-3 border-l-2 border-primary/30 pl-3 italic">
+                                            <KoreanText
+                                                text={p.example_pattern_use}
+                                                enableHover={true}
+                                                className="text-sm text-foreground/80"
+                                            />
+                                        </div>
                                     )}
 
                                     <div className="flex items-center gap-2 mt-4 flex-wrap">

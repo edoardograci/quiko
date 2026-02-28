@@ -12,13 +12,14 @@ import { toast } from 'sonner';
 import { useLang } from '@/lib/i18n';
 
 interface AddSentenceFormProps {
+    initialKorean?: string;
     onSuccess: (id: number) => void;
     onCancel: () => void;
 }
 
-export function AddSentenceForm({ onSuccess, onCancel }: AddSentenceFormProps) {
+export function AddSentenceForm({ initialKorean = '', onSuccess, onCancel }: AddSentenceFormProps) {
     const { lang, t } = useLang();
-    const [korean, setKorean] = useState('');
+    const [korean, setKorean] = useState(initialKorean);
     const [literalTranslation, setLiteralTranslation] = useState('');
     const [naturalTranslation, setNaturalTranslation] = useState('');
     const [source, setSource] = useState('');

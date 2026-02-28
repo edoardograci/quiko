@@ -7,10 +7,11 @@ import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Separator } from '@/components/ui/separator';
-import { ArrowLeft, Volume2, Layers } from 'lucide-react';
+import { ArrowLeft, Volume2, Layers, Loader2 } from 'lucide-react';
 import { LEVEL_COLORS, type MorphemeToken } from '@/lib/hangul';
 import { MorphemeBreakdown } from '@/components/vocabulary/MorphemeBreakdown';
 import { cn } from '@/lib/utils';
+import { KoreanText } from '@/components/ui/korean-text';
 
 interface Props { params: Promise<{ id: string }> }
 
@@ -28,6 +29,7 @@ export default function SentenceDetailPage({ params }: Props) {
         grammarPatterns: Array<{ id: number; pattern: string; name_en: string; description: string }>;
     } | null>(null);
     const [loading, setLoading] = useState(true);
+    const [isPlaying, setIsPlaying] = useState(false);
 
     useEffect(() => {
         fetch(`/api/sentences/${id}`)
@@ -36,6 +38,19 @@ export default function SentenceDetailPage({ params }: Props) {
             .catch(console.error)
             .finally(() => setLoading(false));
     }, [id]);
+
+    const handlePlayAudio = async () => {
+        setIsPlaying(true);
+        try {
+            const url = `/api/audio/sentence/${id}`;
+            const audio = new Audio(url);
+            audio.onended = () => setIsPlaying(false);
+            audio.onerror = () => setIsPlaying(false);
+            await audio.play();
+        } catch {
+            setIsPlaying(false);
+        }
+    };
 
     if (loading) return (
         <div className="p-6 max-w-3xl mx-auto space-y-4">
@@ -60,13 +75,13 @@ export default function SentenceDetailPage({ params }: Props) {
 
             {/* Main sentence */}
             <div className="mb-6">
-                <h1
-                    className="text-3xl md:text-4xl font-medium text-foreground korean leading-snug mb-4"
-                    lang="ko"
-                    style={{ fontFamily: 'var(--font-noto-kr), Noto Sans KR, sans-serif' }}
-                >
-                    {sentence.korean}
-                </h1>
+                <div className="mb-4">
+                    <KoreanText
+                        text={sentence.korean}
+                        enableHover={true}
+                        className="text-3xl md:text-4xl font-medium leading-snug"
+                    />
+                </div>
                 <p className="text-lg text-muted-foreground mb-2">{sentence.natural_translation}</p>
                 {sentence.literal_translation && (
                     <p className="text-sm text-muted-foreground/70 italic">{sentence.literal_translation}</p>
@@ -77,14 +92,13 @@ export default function SentenceDetailPage({ params }: Props) {
                             {sentence.level}
                         </Badge>
                     )}
-                    {sentence.audio_url && (
-                        <button
-                            onClick={() => new Audio(sentence.audio_url!).play().catch(() => { })}
-                            className="w-7 h-7 rounded-full border border-border flex items-center justify-center hover:bg-muted transition-colors"
-                        >
-                            <Volume2 className="w-3.5 h-3.5 text-muted-foreground" />
-                        </button>
-                    )}
+                    <button
+                        onClick={handlePlayAudio}
+                        disabled={isPlaying}
+                        className="w-8 h-8 rounded-full border border-border flex items-center justify-center hover:bg-muted transition-colors disabled:opacity-50"
+                    >
+                        {isPlaying ? <Loader2 className="w-4 h-4 text-muted-foreground animate-spin" /> : <Volume2 className="w-4 h-4 text-muted-foreground" />}
+                    </button>
                 </div>
             </div>
 
