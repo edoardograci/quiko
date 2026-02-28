@@ -32,7 +32,6 @@ export default function SettingsPage() {
     const [loading, setLoading] = useState(true);
     const [saving, setSaving] = useState(false);
     const [seeding, setSeeding] = useState(false);
-    const [krdictDetected, setKrdictDetected] = useState<boolean | null>(null);
     const { setTheme } = useTheme();
 
     useEffect(() => {
@@ -40,15 +39,9 @@ export default function SettingsPage() {
             .then(r => r.json())
             .then(data => {
                 setSettings(data);
-                // Don't pre-fill the API key field (it's masked)
+                setLoading(false);
             })
             .catch(console.error);
-
-        fetch('/api/settings/krdict-status')
-            .then(r => r.json())
-            .then(data => setKrdictDetected(data.detected))
-            .catch(console.error)
-            .finally(() => setLoading(false));
     }, []);
 
     const save = async (updates: Partial<SettingsData>) => {
@@ -275,16 +268,14 @@ export default function SettingsPage() {
                 </div>
                 <Separator />
 
-                <div className="flex items-center justify-between pb-2">
-                    <div>
-                        <Label className="text-sm">KRDICT API Key</Label>
-                        <p className="text-xs text-muted-foreground mt-0.5">
-                            {krdictDetected === null ? '...' : krdictDetected ? '✅ Detected (from .env)' : '⚠️ Not set (check .env)'}
-                        </p>
-                    </div>
+                <div className="pb-2">
+                    <Label className="text-sm">KRDICT API Key</Label>
+                    <p className="text-xs text-muted-foreground mt-0.5">
+                        {t({ ko: 'KRDICT API 키는 .env 파일에서 관리됩니다.', en: 'KRDICT API key is managed via .env file' })}
+                    </p>
                 </div>
 
-                <div className="space-y-3">
+                <div className="flex flex-col gap-3">
                     <Button
                         variant="outline"
                         className="w-full gap-2 justify-start"
@@ -294,7 +285,7 @@ export default function SettingsPage() {
                         {seeding ? <Loader2 className="w-4 h-4 animate-spin" /> : <RefreshCw className="w-4 h-4" />}
                         {t({ ko: '데이터베이스 시드 (문법 패턴 로드)', en: 'Seed Database (Load Grammar Patterns)' })}
                     </Button>
-                    <Link href="/import">
+                    <Link href="/import" className="block w-full">
                         <Button variant="outline" className="w-full gap-2 justify-start">
                             <Upload className="w-4 h-4" />
                             {t({ ko: 'Anki 덱 가져오기', en: 'Import Anki Deck (.apkg)' })}

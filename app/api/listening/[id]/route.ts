@@ -84,7 +84,7 @@ export async function PUT(
                 .where(eq(listeningEpisodes.id, episodeId))
                 .run();
 
-            tx.deleteFrom(listeningProgress)
+            tx.delete(listeningProgress)
                 .where(eq(listeningProgress.episode_id, episodeId))
                 .run();
         });

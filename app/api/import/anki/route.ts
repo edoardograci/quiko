@@ -59,8 +59,8 @@ async function parseApkgFile(file: Blob): Promise<ParsedResult> {
     try {
         tempDb = new Database(tempPath, { readonly: true });
 
-        const stmt = tempDb.prepare<{ id: number; flds: string }>('SELECT id, flds FROM notes');
-        const rows = stmt.all();
+        const stmt = tempDb.prepare('SELECT id, flds FROM notes');
+        const rows = stmt.all() as { id: number; flds: string }[];
 
         const cards: ParsedCard[] = [];
         const totalNotes = rows.length;

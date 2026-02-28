@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { use, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useLang } from '@/lib/i18n';
 import { Card } from '@/components/ui/card';
@@ -8,7 +8,9 @@ import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Progress } from '@/components/ui/progress';
 import { KoreanText } from '@/components/ui/korean-text';
-import { ArrowLeft, Loader2, Play, Pause, Headphones } from 'lucide-react';
+import { ArrowLeft, Loader2, Play, Pause, Headphones, Youtube } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { toast } from 'sonner';
 
 interface ListeningEpisode {
     id: number;
@@ -54,6 +56,8 @@ export default function ListeningEpisodePage({ params }: { params: Promise<{ id:
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
     const [playerReady, setPlayerReady] = useState(false);
     const [isPlaying, setIsPlaying] = useState(false);
+    const [ytInput, setYtInput] = useState('');
+    const [isUpdatingYt, setIsUpdatingYt] = useState(false);
 
     const playerRef = useRef<YT.Player | null>(null);
     const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -131,13 +135,13 @@ export default function ListeningEpisodePage({ params }: { params: Promise<{ id:
                 cc_lang_pref: 'ko',
             },
             events: {
-                onReady: (event) => {
+                onReady: (event: YT.PlayerEvent) => {
                     setPlayerReady(true);
                     if (progress && progress.last_position_seconds > 0) {
                         event.target.seekTo(progress.last_position_seconds, true);
                     }
                 },
-                onStateChange: (event) => {
+                onStateChange: (event: YT.OnStateChangeEvent) => {
                     const YTState = window.YT.PlayerState;
                     if (event.data === YTState.PLAYING) {
                         setIsPlaying(true);
@@ -252,22 +256,67 @@ export default function ListeningEpisodePage({ params }: { params: Promise<{ id:
                         {t({ ko: '뒤로', en: 'Back' })}
                     </Button>
                 </Link>
-                <Card className="p-6 space-y-3">
-                    <h2 className="text-sm font-medium flex items-center gap-2">
-                        <Headphones className="w-4 h-4" />
-                        {t({ ko: 'YouTube ID가 설정되지 않았어요', en: 'No YouTube ID set' })}
-                    </h2>
-                    <p className="text-sm text-muted-foreground">
+                <Card className="p-6 space-y-4">
+                    <div className="flex items-center gap-3">
+                        <div className="p-2 bg-amber-100 rounded-full">
+                            <Headphones className="w-5 h-5 text-amber-600" />
+                        </div>
+                        <div>
+                            <h2 className="text-sm font-semibold">
+                                {t({ ko: 'YouTube ID 설정', en: 'Set YouTube ID' })}
+                            </h2>
+                            <p className="text-xs text-muted-foreground">
+                                {t({
+                                    ko: '이 에피소드를 시청하려면 YouTube 비디오 ID 또는 URL이 필요합니다.',
+                                    en: 'You need a YouTube Video ID or URL to watch this episode.',
+                                })}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="flex gap-2">
+                        <Input
+                            placeholder="e.g. https://www.youtube.com/watch?v=..."
+                            value={ytInput}
+                            onChange={(e) => setYtInput(e.target.value)}
+                            className="bg-muted/50"
+                            disabled={isUpdatingYt}
+                        />
+                        <Button
+                            disabled={isUpdatingYt || !ytInput.trim()}
+                            onClick={async () => {
+                                setIsUpdatingYt(true);
+                                try {
+                                    const res = await fetch(`/api/listening/${episodeId}`, {
+                                        method: 'PUT',
+                                        headers: { 'Content-Type': 'application/json' },
+                                        body: JSON.stringify({ youtube_id: ytInput }),
+                                    });
+                                    if (res.ok) {
+                                        const data = await res.json();
+                                        setEpisode(data.episode);
+                                        toast.success(t({ ko: 'YouTube ID가 설정되었습니다', en: 'YouTube ID set successfully' }));
+                                    } else {
+                                        const data = await res.json();
+                                        toast.error(data.error || 'Failed to update');
+                                    }
+                                } catch {
+                                    toast.error('Network error');
+                                } finally {
+                                    setIsUpdatingYt(false);
+                                }
+                            }}
+                        >
+                            {isUpdatingYt ? <Loader2 className="w-4 h-4 animate-spin mr-2" /> : null}
+                            {t({ ko: '저장', en: 'Save' })}
+                        </Button>
+                    </div>
+                    <p className="text-[10px] text-muted-foreground italic">
                         {t({
-                            ko: '에피소드 목록에서 YouTube ID를 설정한 후 다시 시도하세요.',
-                            en: 'Set the YouTube ID for this episode from the list page and try again.',
+                            ko: 'Iyagi 시리즈인 경우 해당 에피소드의 YouTube 링크를 붙여넣으세요.',
+                            en: 'For Iyagi series, paste the YouTube link for the corresponding episode.',
                         })}
                     </p>
-                    <Link href="/listening">
-                        <Button variant="outline" size="sm" className="mt-2">
-                            {t({ ko: '에피소드 목록으로', en: 'Back to Episodes' })}
-                        </Button>
-                    </Link>
                 </Card>
             </div>
         );
@@ -373,11 +422,10 @@ export default function ListeningEpisodePage({ params }: { params: Promise<{ id:
                                 <div
                                     key={seg.id}
                                     id={`seg-${seg.id}`}
-                                    className={`rounded-md px-2 py-1 cursor-pointer border ${
-                                        isActive
-                                            ? 'bg-primary/10 border-primary'
-                                            : 'border-transparent hover:bg-muted/60'
-                                    }`}
+                                    className={`rounded-md px-2 py-1 cursor-pointer border ${isActive
+                                        ? 'bg-primary/10 border-primary'
+                                        : 'border-transparent hover:bg-muted/60'
+                                        }`}
                                     onClick={() => {
                                         if (!playerRef.current) return;
                                         playerRef.current.seekTo(seg.start_ms / 1000, true);
