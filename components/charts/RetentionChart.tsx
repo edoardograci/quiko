@@ -22,7 +22,7 @@ export function RetentionChart({ data }: RetentionChartProps) {
                 <XAxis dataKey="date" tick={{ fontSize: 10 }} tickLine={false} />
                 <YAxis domain={[0, 100]} tick={{ fontSize: 10 }} tickLine={false} />
                 <Tooltip
-                    formatter={(value: number) => [`${value}%`, '정확도']}
+                    formatter={(value: number | undefined) => [`${value ?? 0}%`, '정확도']}
                     contentStyle={{
                         background: 'rgb(var(--card))',
                         border: '1px solid rgb(var(--border))',

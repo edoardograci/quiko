@@ -8,7 +8,7 @@ let _esHangul: { assemble: (str: string) => string; disassemble: (str: string, g
 async function getEsHangul() {
     if (!_esHangul) {
         const mod = await import('es-hangul');
-        _esHangul = { assemble: mod.assemble, disassemble: mod.disassemble };
+        _esHangul = { assemble: mod.assemble, disassemble: (str: string) => mod.disassemble(str).split('') };
     }
     return _esHangul;
 }
@@ -21,7 +21,7 @@ export function useHangulComposer(onChange: (value: string) => void) {
         setJamo(prev => {
             const newJamo = [...prev, j];
             // assemble expects a string
-            const assembled = assemble(newJamo.join(''));
+            const assembled = assemble(newJamo);
             onChange(assembled);
             return newJamo;
         });
@@ -32,7 +32,7 @@ export function useHangulComposer(onChange: (value: string) => void) {
         setJamo(prev => {
             if (prev.length === 0) return prev;
             const newJamo = prev.slice(0, -1);
-            const assembled = newJamo.length > 0 ? assemble(newJamo.join('')) : '';
+            const assembled = newJamo.length > 0 ? assemble(newJamo) : '';
             onChange(assembled);
             return newJamo;
         });

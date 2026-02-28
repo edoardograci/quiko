@@ -12,8 +12,8 @@ export async function GET(req: NextRequest) {
 
     try {
         // Get settings
-        const limitSetting = db.query.settings.findFirst({ where: (s, { eq }) => eq(s.key, 'daily_review_limit') });
-        const newCardsSetting = db.query.settings.findFirst({ where: (s, { eq }) => eq(s.key, 'new_cards_per_day') });
+        const limitSetting = await db.query.settings.findFirst({ where: (s, { eq }) => eq(s.key, 'daily_review_limit') });
+        const newCardsSetting = await db.query.settings.findFirst({ where: (s, { eq }) => eq(s.key, 'new_cards_per_day') });
         const dailyLimit = parseInt(limitSetting?.value ?? '50');
         const newCardsLimit = parseInt(newCardsSetting?.value ?? '10');
 
@@ -45,10 +45,10 @@ export async function GET(req: NextRequest) {
         const cards = [];
         for (const review of combined) {
             if (review.item_type === 'word') {
-                const word = db.select().from(words).where(eq(words.id, review.item_id)).get();
+                const word = await db.select().from(words).where(eq(words.id, review.item_id)).get();
                 if (!word) continue;
-                const definitions = db.select().from(wordDefinitions).where(eq(wordDefinitions.word_id, word.id)).all();
-                const examples = db.select().from(wordExamples).where(eq(wordExamples.word_id, word.id)).limit(2).all();
+                const definitions = await db.select().from(wordDefinitions).where(eq(wordDefinitions.word_id, word.id)).all();
+                const examples = await db.select().from(wordExamples).where(eq(wordExamples.word_id, word.id)).limit(2).all();
                 cards.push({
                     review_id: review.id,
                     item_type: 'word',
@@ -67,7 +67,7 @@ export async function GET(req: NextRequest) {
                     },
                 });
             } else if (review.item_type === 'grammar_pattern') {
-                const pattern = db.select().from(grammarPatterns).where(eq(grammarPatterns.id, review.item_id)).get();
+                const pattern = await db.select().from(grammarPatterns).where(eq(grammarPatterns.id, review.item_id)).get();
                 if (!pattern) continue;
                 cards.push({
                     review_id: review.id,

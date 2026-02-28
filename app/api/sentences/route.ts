@@ -88,7 +88,7 @@ export async function POST(req: NextRequest) {
             }
         }
 
-        return NextResponse.json({ id: sentenceId, ...result }, { status: 201 });
+        return NextResponse.json(result, { status: 201 });
     } catch (error) {
         console.error('Sentences POST error:', error);
         return NextResponse.json({ error: 'Failed to create sentence' }, { status: 500 });

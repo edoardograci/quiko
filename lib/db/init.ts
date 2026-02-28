@@ -1,5 +1,5 @@
-import { db } from './db';
-import { settings } from './db/schema';
+import { db } from './index';
+import { settings } from './schema';
 
 /**
  * Initialize the database with required tables via SQL.
@@ -12,16 +12,16 @@ import fs from 'fs';
 const DB_PATH = path.join(process.cwd(), 'data', 'quiko.db');
 
 export function initializeDatabase() {
-    const dataDir = path.dirname(DB_PATH);
-    if (!fs.existsSync(dataDir)) {
-        fs.mkdirSync(dataDir, { recursive: true });
-    }
+  const dataDir = path.dirname(DB_PATH);
+  if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir, { recursive: true });
+  }
 
-    const rawDb = new Database(DB_PATH);
-    rawDb.pragma('journal_mode = WAL');
-    rawDb.pragma('foreign_keys = ON');
+  const rawDb = new Database(DB_PATH);
+  rawDb.pragma('journal_mode = WAL');
+  rawDb.pragma('foreign_keys = ON');
 
-    rawDb.exec(`
+  rawDb.exec(`
     CREATE TABLE IF NOT EXISTS sentences (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       korean TEXT NOT NULL,
@@ -142,21 +142,21 @@ export function initializeDatabase() {
     );
   `);
 
-    // Seed default settings
-    const defaultSettings = [
-        ['krdict_api_key', ''],
-        ['daily_review_limit', '50'],
-        ['new_cards_per_day', '10'],
-        ['target_retention', '0.90'],
-        ['theme', 'system'],
-        ['show_pronunciation', 'true'],
-        ['use_onscreen_keyboard', 'auto'],
-    ];
+  // Seed default settings
+  const defaultSettings = [
+    ['krdict_api_key', ''],
+    ['daily_review_limit', '50'],
+    ['new_cards_per_day', '10'],
+    ['target_retention', '0.90'],
+    ['theme', 'system'],
+    ['show_pronunciation', 'true'],
+    ['use_onscreen_keyboard', 'auto'],
+  ];
 
-    const settingsStmt = rawDb.prepare('INSERT OR IGNORE INTO settings (key, value) VALUES (?, ?)');
-    for (const [key, value] of defaultSettings) {
-        settingsStmt.run(key, value);
-    }
+  const settingsStmt = rawDb.prepare('INSERT OR IGNORE INTO settings (key, value) VALUES (?, ?)');
+  for (const [key, value] of defaultSettings) {
+    settingsStmt.run(key, value);
+  }
 
-    rawDb.close();
+  rawDb.close();
 }

@@ -24,7 +24,7 @@ export const STATE_LABELS = {
 
 export function processReview(card: Card, rating: Rating) {
     const now = new Date();
-    const result = scheduler.next(card, now, rating);
+    const result = scheduler.next(card, now, rating as any);
     return {
         card: result.card,
         log: result.log,
@@ -69,6 +69,7 @@ export function dbReviewToCard(review: {
         reps: review.reps,
         lapses: review.lapses,
         state: review.state as State,
+        learning_steps: 0,
         last_review: review.last_review ? new Date(review.last_review * 1000) : new Date(),
     };
 }
@@ -86,7 +87,7 @@ export function previewRatings(card: Card) {
     const now = new Date();
     const results: Record<number, { interval: number; label: { ko: string, en: string } }> = {};
     for (const rating of [Rating.Again, Rating.Hard, Rating.Good, Rating.Easy]) {
-        const result = scheduler.next(card, now, rating);
+        const result = scheduler.next(card, now, rating as any);
         const days = result.card.scheduled_days;
         results[rating] = { interval: days, label: getIntervalLabel(days) };
     }
