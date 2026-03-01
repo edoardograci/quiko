@@ -105,7 +105,7 @@ export default function ReviewEntryPage() {
                 <p className="text-muted-foreground mt-1 text-sm">{t({ ko: 'Review Session', en: 'Spaced Repetition' })}</p>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-6">
                 {sessions.map(({ icon: Icon, label, subtitle, desc, href, data, color, bg }) => (
                     <Link key={href} href={href}>
                         <Card className={`p-5 hover:shadow-md transition-all cursor-pointer border ${bg} group`}>
@@ -163,9 +163,9 @@ export default function ReviewEntryPage() {
                                             <BookOpen className="w-5 h-5 text-muted-foreground" />
                                         </div>
                                         <div className="flex-1 min-w-0">
-                                            <div className="flex items-center gap-2">
-                                                <h3 className="font-semibold text-foreground">{deck.name}</h3>
-                                                <Badge variant="secondary" className="text-xs">{deck.source}</Badge>
+                                            <div className="flex items-center gap-2 flex-wrap">
+                                                <h3 className="font-semibold text-foreground truncate">{deck.name}</h3>
+                                                <Badge variant="secondary" className="text-xs shrink-0">{deck.source}</Badge>
                                             </div>
                                             {loading ? (
                                                 <Skeleton className="h-4 w-32 mt-2" />

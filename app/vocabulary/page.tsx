@@ -220,9 +220,9 @@ export default function VocabularyPage() {
                                         }}
                                     >
                                         <div className="flex-1 min-w-0">
-                                            <div className="flex items-center gap-2 flex-wrap">
+                                            <div className="flex items-center gap-2 flex-wrap min-w-0">
                                                 <span
-                                                    className="text-lg font-medium korean"
+                                                    className="text-lg font-medium korean truncate"
                                                     lang="ko"
                                                     style={{ fontFamily: 'var(--font-noto-kr), Noto Sans KR, sans-serif' }}
                                                 >
