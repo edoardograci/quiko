@@ -14,6 +14,7 @@ import {
 import { Progress } from '@/components/ui/progress';
 import { ReviewHeatmap } from '@/components/charts/ReviewHeatmap';
 import { RetentionChart } from '@/components/charts/RetentionChart';
+import { StreakAndHeatmap } from '@/components/charts/StreakAndHeatmap';
 import { cn } from '@/lib/utils';
 import { useLang } from '@/lib/i18n';
 
@@ -25,8 +26,6 @@ interface DashboardStats {
     totalGrammar: number;
     accuracy7d: number;
     heatmap: Array<{ day: number; count: number }>;
-    upcoming: Array<{ day: number; count: number }>;
-    recentWords: Array<{ id: number; hangul: string; notes?: string; pos?: string; level?: string }>;
     streakDays: number;
     reviewedToday: number;
     dailyGoal: number;
@@ -47,15 +46,13 @@ export default function DashboardPage() {
     useEffect(() => {
         async function fetchDashboard() {
             try {
-                const [dueRes, statsRes, wordsRes] = await Promise.all([
+                const [dueRes, statsRes] = await Promise.all([
                     fetch('/api/review/due?count_only=false&limit=100'),
                     fetch('/api/review/stats'),
-                    fetch('/api/words?limit=5&sort=created_at'),
                 ]);
 
                 const due = await dueRes.json();
                 const reviewStats = await statsRes.json();
-                const wordsData = await wordsRes.json();
 
                 // Count total items & listening progress
                 const [sentRes, gramRes, listeningRes] = await Promise.all([
@@ -91,13 +88,11 @@ export default function DashboardPage() {
                 setStats({
                     dueCount: due.review ?? 0,
                     newCount: due.new ?? 0,
-                    totalWords: wordsData.total ?? 0,
+                    totalWords: sent.total ?? 0,
                     totalSentences: sent.total ?? 0,
                     totalGrammar: gram.total ?? 0,
                     accuracy7d: reviewStats.accuracy_7d ?? 0,
                     heatmap: reviewStats.heatmap ?? [],
-                    upcoming: reviewStats.upcoming_reviews ?? [],
-                    recentWords: wordsData.words?.slice(0, 5) ?? [],
                     streakDays: reviewStats.streak_days ?? 0,
                     reviewedToday: reviewStats.reviewed_today ?? 0,
                     dailyGoal: reviewStats.daily_goal ?? 20,
@@ -180,40 +175,6 @@ export default function DashboardPage() {
                         </Link>
                     </Card>
 
-                    {/* Streak & Daily Goal */}
-                    <Card className="p-6 relative overflow-hidden group border-orange-500/20">
-                        <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-3xl -mr-10 -mt-10" />
-                        <div className="flex items-center justify-between mb-4 relative">
-                            <div>
-                                <h3 className="text-sm font-medium flex items-center gap-2">
-                                    <Flame className="w-4 h-4 text-orange-500" />
-                                    {t({ ko: '연속 학습', en: 'Study Streak' })}
-                                </h3>
-                                <div className="flex items-baseline gap-1 mt-1">
-                                    <span className="text-2xl font-bold">{loading ? '-' : stats?.streakDays}</span>
-                                    <span className="text-sm text-muted-foreground">{t({ ko: '일', en: 'days' })}</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="relative">
-                            <div className="flex justify-between text-xs mb-1.5">
-                                <span className="text-muted-foreground">{t({ ko: '오늘의 목표', en: 'Daily Goal' })}</span>
-                                <span className="font-medium">
-                                    {loading ? '-' : stats?.reviewedToday} / {loading ? '-' : stats?.dailyGoal}
-                                </span>
-                            </div>
-                            <Progress
-                                value={stats ? Math.min((stats.reviewedToday / stats.dailyGoal) * 100, 100) : 0}
-                                className="h-2 bg-muted/50"
-                            />
-                            {stats && stats.reviewedToday >= stats.dailyGoal && (
-                                <p className="text-[10px] text-green-500 mt-2 text-center animate-fade-in">
-                                    {t({ ko: '오늘의 목표 달성! 멋져요!', en: 'Daily goal met! Awesome job!' })}
-                                </p>
-                            )}
-                        </div>
-                    </Card>
-
                     {/* Continue Listening */}
                     {stats?.listening && (
                         <Card className="p-4 flex items-center gap-3">
@@ -268,85 +229,22 @@ export default function DashboardPage() {
                             </Link>
                         ))}
                     </div>
-
-                    {/* Upcoming reviews */}
-                    <Card className="p-4">
-                        <div className="flex items-center justify-between mb-3">
-                            <h3 className="text-sm font-medium">{t({ ko: '향후 7일 복습', en: 'Next 7 Days' })}</h3>
-                            <Calendar className="w-4 h-4 text-muted-foreground" />
-                        </div>
-                        {loading ? (
-                            <Skeleton className="h-20" />
-                        ) : (
-                            <div className="flex items-end gap-1 h-16">
-                                {(stats?.upcoming ?? []).map((day, i) => {
-                                    const maxCount = Math.max(...(stats?.upcoming ?? []).map(d => d.count), 1);
-                                    const height = maxCount > 0 ? Math.max((day.count / maxCount) * 100, 4) : 4;
-                                    const dayLabels = [t({ ko: '오늘', en: 'Today' }), t({ ko: '내일', en: 'Tmrw' }), t({ ko: '모레', en: 'Next' })];
-                                    return (
-                                        <div key={i} className="flex-1 flex flex-col items-center gap-1">
-                                            <div
-                                                className="w-full rounded-sm bg-primary/30 transition-all"
-                                                style={{ height: `${height}%`, minHeight: '4px' }}
-                                                title={`${day.count}${t({ ko: '개', en: '' })}`}
-                                            />
-                                            <span className="text-[9px] text-muted-foreground">
-                                                {i < 3 ? dayLabels[i] : `+${i}`}
-                                            </span>
-                                        </div>
-                                    );
-                                })}
-                            </div>
-                        )}
-                    </Card>
-
-                    {/* Recently added words */}
-                    <Card className="p-4">
-                        <div className="flex items-center justify-between mb-3">
-                            <h3 className="text-sm font-medium">{t({ ko: '최근 추가', en: 'Recently Added' })}</h3>
-                            <Link href="/vocabulary" className="text-xs text-primary hover:underline">{t({ ko: '전체 보기', en: 'View all' })}</Link>
-                        </div>
-                        {loading ? (
-                            <div className="space-y-2">
-                                {Array.from({ length: 3 }).map((_, i) => <Skeleton key={i} className="h-8" />)}
-                            </div>
-                        ) : stats?.recentWords.length === 0 ? (
-                            <p className="text-xs text-muted-foreground text-center py-4">{t({ ko: '아직 단어가 없어요', en: 'No words yet' })}</p>
-                        ) : (
-                            <div className="space-y-1.5">
-                                {stats!.recentWords.map(w => (
-                                    <Link key={w.id} href={`/vocabulary/${w.id}`}>
-                                        <div className="flex items-center justify-between py-1.5 px-2 rounded-lg hover:bg-muted/50 transition-colors group">
-                                            <div className="flex items-center gap-3">
-                                                <span
-                                                    className="text-base font-medium korean"
-                                                    lang="ko"
-                                                    style={{ fontFamily: 'var(--font-noto-kr), Noto Sans KR, sans-serif' }}
-                                                >
-                                                    {w.hangul}
-                                                </span>
-                                                <span className="text-xs text-muted-foreground truncate max-w-[100px]">
-                                                    {w.notes}
-                                                </span>
-                                            </div>
-                                            <ChevronRight className="w-3 h-3 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
-                                        </div>
-                                    </Link>
-                                ))}
-                            </div>
-                        )}
-                    </Card>
                 </div>
 
                 <div className="lg:col-span-2 space-y-6">
-                    {/* Heatmap */}
-                    <Card className="p-6">
-                        <div className="flex items-center justify-between mb-4">
-                            <h3 className="text-sm font-medium">{t({ ko: '복습 기록', en: 'Review History' })}</h3>
-                            <TrendingUp className="w-4 h-4 text-muted-foreground" />
-                        </div>
-                        {loading ? <Skeleton className="h-32" /> : <ReviewHeatmap data={stats?.heatmap ?? []} />}
-                    </Card>
+                    {/* Streak + Heatmap Component */}
+                    {loading ? (
+                        <Card className="p-6">
+                            <Skeleton className="h-64" />
+                        </Card>
+                    ) : (
+                        <StreakAndHeatmap
+                            streakDays={stats?.streakDays ?? 0}
+                            reviewedToday={stats?.reviewedToday ?? 0}
+                            dailyGoal={stats?.dailyGoal ?? 20}
+                            heatmapData={stats?.heatmap ?? []}
+                        />
+                    )}
 
                     {/* Study tips when empty */}
                     {!loading && (stats?.totalWords ?? 0) === 0 && (

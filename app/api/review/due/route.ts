@@ -1,41 +1,70 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { db } from '@/lib/db';
-import { reviews, words, grammarPatterns, wordDefinitions, wordExamples, sentences } from '@/lib/db/schema';
+import { reviews, words, grammarPatterns, wordDefinitions, wordExamples, sentences, reviewDeckAssignments } from '@/lib/db/schema';
 import { lte, eq, and, asc, inArray } from 'drizzle-orm';
 
 export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url);
     const countOnly = searchParams.get('count_only') === 'true';
     const mode = searchParams.get('mode'); // 'word' | 'grammar' | null (all)
+    const deckId = searchParams.get('deck_id') ? parseInt(searchParams.get('deck_id')!, 10) : null;
 
     const now = Math.floor(Date.now() / 1000);
 
     try {
-        // Get settings
-        const limitSetting = await db.query.settings.findFirst({ where: (s, { eq }) => eq(s.key, 'daily_review_limit') });
-        const newCardsSetting = await db.query.settings.findFirst({ where: (s, { eq }) => eq(s.key, 'new_cards_per_day') });
-        const dailyLimit = parseInt(limitSetting?.value ?? '50');
-        const newCardsLimit = parseInt(newCardsSetting?.value ?? '10');
+        // Get settings - use deck settings if deck_id provided, otherwise global settings
+        let dailyLimit = 50;
+        let newCardsLimit = 10;
 
-        // Build query
-        let dueQuery = db.select().from(reviews).where(lte(reviews.due, now));
-
-        if (mode === 'word') {
-            dueQuery = db.select().from(reviews).where(and(lte(reviews.due, now), eq(reviews.item_type, 'word')));
-        } else if (mode === 'grammar') {
-            dueQuery = db.select().from(reviews).where(and(lte(reviews.due, now), eq(reviews.item_type, 'grammar_pattern')));
+        if (deckId) {
+            const deckSettings = await db.query.deckSettings?.findFirst?.({ where: (ds, { eq }) => eq(ds.deck_id, deckId) });
+            if (deckSettings) {
+                dailyLimit = deckSettings.daily_review_limit;
+                newCardsLimit = deckSettings.new_cards_per_day;
+            }
+        } else {
+            const limitSetting = await db.query.settings.findFirst({ where: (s, { eq }) => eq(s.key, 'daily_review_limit') });
+            const newCardsSetting = await db.query.settings.findFirst({ where: (s, { eq }) => eq(s.key, 'new_cards_per_day') });
+            dailyLimit = parseInt(limitSetting?.value ?? '50');
+            newCardsLimit = parseInt(newCardsSetting?.value ?? '10');
         }
 
-        const dueReviews = dueQuery.orderBy(asc(reviews.due)).limit(dailyLimit).all();
+        // Get all reviews first, then filter by deck if needed
+        let allReviews = db.select().from(reviews).all();
+
+        // If deck_id is provided, filter to only reviews assigned to that deck
+        if (deckId) {
+            const deckAssignedReviewIds = db.select({ review_id: reviewDeckAssignments.review_id })
+                .from(reviewDeckAssignments)
+                .where(eq(reviewDeckAssignments.deck_id, deckId))
+                .all()
+                .map(r => r.review_id);
+            allReviews = allReviews.filter(r => deckAssignedReviewIds.includes(r.id));
+        }
+
+        // Filter due reviews
+        let dueReviews = allReviews.filter(r => r.due <= now).sort((a, b) => a.due - b.due).slice(0, dailyLimit);
+
+        if (mode === 'word') {
+            dueReviews = dueReviews.filter(r => r.item_type === 'word');
+        } else if (mode === 'grammar') {
+            dueReviews = dueReviews.filter(r => r.item_type === 'grammar_pattern');
+        }
 
         if (countOnly) {
             return NextResponse.json({ total: dueReviews.length });
         }
 
-        const newReviews = db.select().from(reviews)
-            .where(eq(reviews.state, 0))
-            .limit(newCardsLimit)
-            .all();
+        // Filter new reviews
+        let newReviews = allReviews.filter(r => r.state === 0);
+
+        if (mode === 'word') {
+            newReviews = newReviews.filter(r => r.item_type === 'word');
+        } else if (mode === 'grammar') {
+            newReviews = newReviews.filter(r => r.item_type === 'grammar_pattern');
+        }
+
+        newReviews = newReviews.slice(0, newCardsLimit);
 
         // Combine due + new (deduplicated)
         const existingIds = new Set(dueReviews.map(r => r.id));

@@ -145,7 +145,7 @@ export const listeningEpisodes = sqliteTable('listening_episodes', {
   series: text('series').notNull().default('TTMIK'),
   level: text('level'),
   episode_number: integer('episode_number'),
-  youtube_id: text('youtube_id').notNull().unique(),
+  youtube_id: text('youtube_id'),
   thumbnail_url: text('thumbnail_url'),
   duration_seconds: integer('duration_seconds'),
   description: text('description'),
@@ -172,6 +172,37 @@ export const listeningProgress = sqliteTable('listening_progress', {
   uniq: uniqueIndex('listening_progress_unique').on(t.episode_id),
 }));
 
+export const decks = sqliteTable('decks', {
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  name: text('name').notNull(),
+  source: text('source').notNull().default('anki'), // 'anki' | 'manual'
+  description: text('description'),
+  created_at: integer('created_at').notNull().$defaultFn(() => Math.floor(Date.now() / 1000)),
+});
+
+export const deckSettings = sqliteTable('deck_settings', {
+  deck_id: integer('deck_id').primaryKey().references(() => decks.id, { onDelete: 'cascade' }),
+  daily_review_limit: integer('daily_review_limit').notNull().default(50),
+  new_cards_per_day: integer('new_cards_per_day').notNull().default(10),
+  target_retention: real('target_retention').notNull().default(0.9),
+});
+
+export const reviewDeckAssignments = sqliteTable('review_deck_assignments', {
+  review_id: integer('review_id').notNull().references(() => reviews.id, { onDelete: 'cascade' }),
+  deck_id: integer('deck_id').notNull().references(() => decks.id, { onDelete: 'cascade' }),
+}, (t) => ({
+  pk: primaryKey({ columns: [t.review_id, t.deck_id] }),
+}));
+
+export const goals = sqliteTable('goals', {
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  type: text('type').notNull(), // 'words_learned' | 'reviews_completed'
+  target: integer('target').notNull(),
+  period: text('period').notNull(), // 'week' | 'month'
+  created_at: integer('created_at').notNull().$defaultFn(() => Math.floor(Date.now() / 1000)),
+  active: integer('active').notNull().default(1), // 1 = active
+});
+
 export type Sentence = typeof sentences.$inferSelect;
 export type NewSentence = typeof sentences.$inferInsert;
 export type Word = typeof words.$inferSelect;
@@ -188,3 +219,7 @@ export type Settings = typeof settings.$inferSelect;
 export type ListeningEpisode = typeof listeningEpisodes.$inferSelect;
 export type ListeningTranscript = typeof listeningTranscripts.$inferSelect;
 export type ListeningProgress = typeof listeningProgress.$inferSelect;
+export type Deck = typeof decks.$inferSelect;
+export type DeckSettings = typeof deckSettings.$inferSelect;
+export type ReviewDeckAssignment = typeof reviewDeckAssignments.$inferSelect;
+export type Goal = typeof goals.$inferSelect;

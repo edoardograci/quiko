@@ -15,24 +15,41 @@ interface DueInfo {
     review: number;
 }
 
+interface Deck {
+    id: number;
+    name: string;
+    source: string;
+    due_count: number;
+}
+
 export default function ReviewEntryPage() {
     const { lang, t } = useLang();
     const [allDue, setAllDue] = useState<DueInfo | null>(null);
     const [wordDue, setWordDue] = useState<DueInfo | null>(null);
     const [grammarDue, setGrammarDue] = useState<DueInfo | null>(null);
+    const [decks, setDecks] = useState<Deck[]>([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         async function fetchDue() {
             try {
-                const [all, words, grammar] = await Promise.all([
+                const [all, words, grammar, decksRes] = await Promise.all([
                     fetch('/api/review/due').then(r => r.json()),
                     fetch('/api/review/due?mode=word').then(r => r.json()),
                     fetch('/api/review/due?mode=grammar').then(r => r.json()),
+                    fetch('/api/decks').then(r => r.json()),
                 ]);
                 setAllDue(all);
                 setWordDue(words);
                 setGrammarDue(grammar);
+                // Map decks to the format we need
+                const deckData = (decksRes.decks || []).map((d: any) => ({
+                    id: d.id,
+                    name: d.name,
+                    source: d.source,
+                    due_count: d.due_count,
+                }));
+                setDecks(deckData);
             } catch (e) {
                 console.error(e);
             } finally {
@@ -129,6 +146,47 @@ export default function ReviewEntryPage() {
                         </Card>
                     </Link>
                 ))}
+
+                {/* Decks section */}
+                {!loading && decks.length > 0 && (
+                    <>
+                        <div className="mt-8 mb-4">
+                            <h2 className="text-sm font-semibold text-muted-foreground">
+                                {t({ ko: '임포트된 덱', en: 'Imported Decks' })}
+                            </h2>
+                        </div>
+                        {decks.map((deck) => (
+                            <Link key={deck.id} href={`/review/deck/${deck.id}`}>
+                                <Card className="p-5 hover:shadow-md transition-all cursor-pointer border border-border/50 group">
+                                    <div className="flex items-center gap-4">
+                                        <div className="w-10 h-10 rounded-xl bg-muted flex items-center justify-center shrink-0">
+                                            <BookOpen className="w-5 h-5 text-muted-foreground" />
+                                        </div>
+                                        <div className="flex-1 min-w-0">
+                                            <div className="flex items-center gap-2">
+                                                <h3 className="font-semibold text-foreground">{deck.name}</h3>
+                                                <Badge variant="secondary" className="text-xs">{deck.source}</Badge>
+                                            </div>
+                                            {loading ? (
+                                                <Skeleton className="h-4 w-32 mt-2" />
+                                            ) : (
+                                                <div className="flex items-center gap-3 mt-2">
+                                                    <span className="text-xs text-muted-foreground">
+                                                        {t({ ko: '예정', en: 'Due' })} <span className="font-medium">{deck.due_count}</span>
+                                                    </span>
+                                                    <span className="text-xs text-muted-foreground flex items-center gap-1">
+                                                        <Clock className="w-3 h-3" />~{Math.ceil(deck.due_count * 10 / 60)}{t({ ko: '분', en: 'm' })}
+                                                    </span>
+                                                </div>
+                                            )}
+                                        </div>
+                                        <ChevronRight className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors shrink-0" />
+                                    </div>
+                                </Card>
+                            </Link>
+                        ))}
+                    </>
+                )}
             </div>
 
             {!loading && (allDue?.total ?? 0) === 0 && (

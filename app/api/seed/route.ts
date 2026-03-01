@@ -18,6 +18,7 @@ export async function POST() {
             { key: 'theme', value: 'system' },
             { key: 'show_pronunciation', value: 'true' },
             { key: 'use_onscreen_keyboard', value: 'auto' },
+            { key: 'daily_goal', value: '20' },
         ];
         for (const s of defaultSettings) {
             db.insert(settings).values(s).onConflictDoNothing().run();

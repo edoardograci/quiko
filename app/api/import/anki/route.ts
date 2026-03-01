@@ -4,9 +4,10 @@ import Database from 'better-sqlite3';
 import os from 'os';
 import path from 'path';
 import fs from 'fs';
+import { eq, and } from 'drizzle-orm';
 
 import { db } from '@/lib/db';
-import { words, wordDefinitions, reviews } from '@/lib/db/schema';
+import { words, wordDefinitions, reviews, decks, deckSettings, reviewDeckAssignments } from '@/lib/db/schema';
 import { createReviewCard } from '@/lib/fsrs';
 
 interface ParsedCard {
@@ -107,6 +108,7 @@ export async function POST(req: NextRequest) {
     try {
         const formData = await req.formData();
         const file = formData.get('file');
+        const deckName = formData.get('name') as string | null;
 
         if (!file || !(file instanceof Blob)) {
             return NextResponse.json(
@@ -115,6 +117,11 @@ export async function POST(req: NextRequest) {
             );
         }
 
+        // Extract filename without extension for default deck name
+        const fileName = (file as any).name || 'imported_deck';
+        const defaultDeckName = fileName.replace(/\.apkg$/i, '');
+        const finalDeckName = deckName || defaultDeckName;
+
         const { totalNotes, cards } = await parseApkgFile(file);
         const totalKorean = cards.length;
 
@@ -122,6 +129,7 @@ export async function POST(req: NextRequest) {
             return NextResponse.json({
                 total: totalNotes,
                 korean_cards: totalKorean,
+                deck_name: finalDeckName,
                 preview: cards.slice(0, 10).map((c) => ({
                     hangul: c.hangul,
                     definition: c.definition,
@@ -131,8 +139,25 @@ export async function POST(req: NextRequest) {
 
         let imported = 0;
         let skipped = 0;
+        let deckId = 0;
 
         db.transaction((tx) => {
+            // Create deck record
+            const deckResult = tx.insert(decks).values({
+                name: finalDeckName,
+                source: 'anki',
+                created_at: Math.floor(Date.now() / 1000),
+            }).run();
+            deckId = Number(deckResult.lastInsertRowid);
+
+            // Create deck settings
+            tx.insert(deckSettings).values({
+                deck_id: deckId,
+                daily_review_limit: 50,
+                new_cards_per_day: 10,
+                target_retention: 0.9,
+            }).run();
+
             for (const card of cards) {
                 const truncatedNotes =
                     card.rawBack.length > 200
@@ -150,33 +175,52 @@ export async function POST(req: NextRequest) {
                     .onConflictDoNothing()
                     .run();
 
+                let wordId: number;
                 if (insertResult.changes && insertResult.changes > 0) {
                     imported += 1;
-                    const wordId = Number(insertResult.lastInsertRowid);
+                    wordId = Number(insertResult.lastInsertRowid);
+                } else {
+                    // Word already exists, fetch its ID
+                    skipped += 1;
+                    const existingWord = tx.select().from(words).where(eq(words.hangul, card.hangul)).get();
+                    if (!existingWord) continue;
+                    wordId = existingWord.id;
+                }
 
-                    if (card.definition) {
-                        tx.insert(wordDefinitions)
-                            .values({
-                                word_id: wordId,
-                                definition_en: card.definition,
-                                order_num: 1,
-                                definition_ko: null,
-                                krdict_target_code: null,
-                            })
-                            .onConflictDoNothing()
-                            .run();
+                if (card.definition) {
+                    tx.insert(wordDefinitions)
+                        .values({
+                            word_id: wordId,
+                            definition_en: card.definition,
+                            order_num: 1,
+                            definition_ko: null,
+                            krdict_target_code: null,
+                        })
+                        .onConflictDoNothing()
+                        .run();
+                }
+
+                // Create or get review cards and assign to deck
+                const recReviews = tx.select().from(reviews).where(and(eq(reviews.item_type, 'word'), eq(reviews.item_id, wordId))).all();
+                
+                if (recReviews.length === 0) {
+                    // Create review cards for this word
+                    const recResult1 = tx.insert(reviews).values(createReviewCard('word', wordId, 'recognition')).onConflictDoNothing().run();
+                    if (recResult1.changes && recResult1.changes > 0) {
+                        const reviewId = Number(recResult1.lastInsertRowid);
+                        tx.insert(reviewDeckAssignments).values({ review_id: reviewId, deck_id: deckId }).onConflictDoNothing().run();
                     }
 
-                    tx.insert(reviews)
-                        .values(createReviewCard('word', wordId, 'recognition'))
-                        .onConflictDoNothing()
-                        .run();
-                    tx.insert(reviews)
-                        .values(createReviewCard('word', wordId, 'production'))
-                        .onConflictDoNothing()
-                        .run();
+                    const prodResult = tx.insert(reviews).values(createReviewCard('word', wordId, 'production')).onConflictDoNothing().run();
+                    if (prodResult.changes && prodResult.changes > 0) {
+                        const reviewId = Number(prodResult.lastInsertRowid);
+                        tx.insert(reviewDeckAssignments).values({ review_id: reviewId, deck_id: deckId }).onConflictDoNothing().run();
+                    }
                 } else {
-                    skipped += 1;
+                    // Word already has reviews, assign them to this deck
+                    for (const review of recReviews) {
+                        tx.insert(reviewDeckAssignments).values({ review_id: review.id, deck_id: deckId }).onConflictDoNothing().run();
+                    }
                 }
             }
         });
@@ -185,6 +229,8 @@ export async function POST(req: NextRequest) {
             imported,
             skipped,
             total: totalKorean,
+            deck_id: deckId,
+            deck_name: finalDeckName,
         });
     } catch (error) {
         console.error('Anki import error:', error);
