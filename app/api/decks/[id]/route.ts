@@ -3,13 +3,10 @@ import { db } from '@/lib/db';
 import { decks, deckSettings, reviewDeckAssignments, reviews } from '@/lib/db/schema';
 import { eq } from 'drizzle-orm';
 
-interface RouteParams {
-    params: { id: string };
-}
-
-export async function GET(req: NextRequest, { params }: RouteParams) {
+export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
     try {
-        const deckId = parseInt(params.id, 10);
+        const { id } = await params;
+        const deckId = parseInt(id, 10);
         const deck = db.select().from(decks).where(eq(decks.id, deckId)).get();
 
         if (!deck) {
@@ -36,9 +33,10 @@ export async function GET(req: NextRequest, { params }: RouteParams) {
     }
 }
 
-export async function PUT(req: NextRequest, { params }: RouteParams) {
+export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
     try {
-        const deckId = parseInt(params.id, 10);
+        const { id } = await params;
+        const deckId = parseInt(id, 10);
         const body = await req.json();
         const { name, description, settings } = body;
 
@@ -89,9 +87,10 @@ export async function PUT(req: NextRequest, { params }: RouteParams) {
     }
 }
 
-export async function DELETE(req: NextRequest, { params }: RouteParams) {
+export async function DELETE(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
     try {
-        const deckId = parseInt(params.id, 10);
+        const { id } = await params;
+        const deckId = parseInt(id, 10);
         const deck = db.select().from(decks).where(eq(decks.id, deckId)).get();
 
         if (!deck) {

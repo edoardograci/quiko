@@ -3,13 +3,10 @@ import { db } from '@/lib/db';
 import { goals } from '@/lib/db/schema';
 import { eq } from 'drizzle-orm';
 
-interface RouteParams {
-    params: { id: string };
-}
-
-export async function PUT(req: NextRequest, { params }: RouteParams) {
+export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
     try {
-        const goalId = parseInt(params.id, 10);
+        const { id } = await params;
+        const goalId = parseInt(id, 10);
         const body = await req.json();
         const { target, period } = body;
 
@@ -38,9 +35,10 @@ export async function PUT(req: NextRequest, { params }: RouteParams) {
     }
 }
 
-export async function DELETE(req: NextRequest, { params }: RouteParams) {
+export async function DELETE(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
     try {
-        const goalId = parseInt(params.id, 10);
+        const { id } = await params;
+        const goalId = parseInt(id, 10);
         const goal = db.select().from(goals).where(eq(goals.id, goalId)).get();
 
         if (!goal) {
