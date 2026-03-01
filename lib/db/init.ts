@@ -10,16 +10,86 @@ import path from 'path';
 import fs from 'fs';
 
 const DB_PATH = path.join(process.cwd(), 'data', 'quiko.db');
+const INIT_LOCK_PATH = path.join(process.cwd(), 'data', '.init.lock');
+let initialized = false;
+
+function acquireLock() {
+  const maxWait = 30000; // 30 seconds
+  const start = Date.now();
+  
+  while (Date.now() - start < maxWait) {
+    try {
+      // Try to create the lock file exclusively
+      const fd = fs.openSync(INIT_LOCK_PATH, fs.constants.O_CREAT | fs.constants.O_EXCL | fs.constants.O_WRONLY);
+      fs.closeSync(fd);
+      return true;
+    } catch {
+      // Lock file exists, wait and retry
+      const delay = 50 + Math.random() * 50;
+      const waitStart = Date.now();
+      while (Date.now() - waitStart < delay) {
+        // Busy wait
+      }
+    }
+  }
+  return false;
+}
+
+function releaseLock() {
+  try {
+    fs.unlinkSync(INIT_LOCK_PATH);
+  } catch {
+    // Ignore if file doesn't exist
+  }
+}
 
 export function initializeDatabase() {
+  // Skip if already initialized in this process
+  if (initialized) {
+    return;
+  }
+
   const dataDir = path.dirname(DB_PATH);
   if (!fs.existsSync(dataDir)) {
     fs.mkdirSync(dataDir, { recursive: true });
   }
 
-  const rawDb = new Database(DB_PATH);
-  rawDb.pragma('journal_mode = WAL');
-  rawDb.pragma('foreign_keys = ON');
+  // Only one process should initialize at a time
+  if (!acquireLock()) {
+    console.warn('Failed to acquire initialization lock');
+    return;
+  }
+
+  try {
+    let retries = 0;
+    const maxRetries = 5;
+    let rawDb: Database.Database | null = null;
+
+    while (retries < maxRetries && !rawDb) {
+      try {
+        rawDb = new Database(DB_PATH);
+        rawDb.pragma('journal_mode = WAL');
+        rawDb.pragma('foreign_keys = ON');
+        rawDb.pragma('busy_timeout = 5000');
+        break;
+      } catch (error: any) {
+        retries++;
+        if (error.code === 'SQLITE_BUSY' && retries < maxRetries) {
+          // Wait a bit before retrying
+          const delay = 100 * Math.pow(2, retries - 1);
+          const start = Date.now();
+          while (Date.now() - start < delay) {
+            // Busy wait
+          }
+        } else {
+          throw error;
+        }
+      }
+    }
+
+    if (!rawDb) {
+      throw new Error('Failed to initialize database after retries');
+    }
 
   rawDb.exec(`
     CREATE TABLE IF NOT EXISTS sentences (
@@ -267,5 +337,9 @@ export function initializeDatabase() {
     listeningStmt.run(e.episode_number, e.title, e.series, e.level, e.description, e.youtube_id);
   }
 
-  rawDb.close();
+    rawDb.close();
+    initialized = true;
+  } finally {
+    releaseLock();
+  }
 }
