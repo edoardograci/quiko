@@ -14,6 +14,7 @@ import { toast } from 'sonner';
 import { useTheme } from 'next-themes';
 import { useLang } from '@/lib/i18n';
 import Link from 'next/link';
+import { cn } from '@/lib/utils';
 
 interface SettingsData {
     krdict_api_key: string;
@@ -27,7 +28,7 @@ interface SettingsData {
 }
 
 export default function SettingsPage() {
-    const { lang, t } = useLang();
+    const { lang, setLang, t } = useLang();
     const [settings, setSettings] = useState<Partial<SettingsData>>({});
     const [loading, setLoading] = useState(true);
     const [saving, setSaving] = useState(false);
@@ -107,14 +108,32 @@ export default function SettingsPage() {
 
     return (
         <div className="p-6 max-w-2xl mx-auto space-y-6">
-            <div>
-                <h1
-                    className="text-xl font-semibold"
-                    lang={lang}
-                    style={{ fontFamily: lang === 'ko' ? 'var(--font-noto-kr), Noto Sans KR, sans-serif' : 'inherit' }}
-                >
-                    {t({ ko: '설정', en: 'Settings' })}
-                </h1>
+            <div className="flex items-start justify-between">
+                <div>
+                    <h1
+                        className="text-xl font-semibold"
+                        lang={lang}
+                        style={{ fontFamily: lang === 'ko' ? 'var(--font-noto-kr), Noto Sans KR, sans-serif' : 'inherit' }}
+                    >
+                        {t({ ko: '설정', en: 'Settings' })}
+                    </h1>
+                </div>
+                
+                {/* Mobile Language Toggle - Only show on mobile */}
+                <div className="md:hidden flex bg-muted rounded-md p-0.5 text-[10px] shadow-sm">
+                    <button
+                        onClick={() => setLang('en')}
+                        className={cn('px-2.5 py-1 rounded-sm transition-colors', lang === 'en' ? 'bg-background shadow-sm font-medium' : 'text-muted-foreground hover:text-foreground')}
+                    >
+                        EN
+                    </button>
+                    <button
+                        onClick={() => setLang('ko')}
+                        className={cn('px-2.5 py-1 rounded-sm transition-colors', lang === 'ko' ? 'bg-background shadow-sm font-medium' : 'text-muted-foreground hover:text-foreground')}
+                    >
+                        KO
+                    </button>
+                </div>
             </div>
 
             {/* Review Settings */}
