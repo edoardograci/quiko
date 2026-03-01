@@ -6,10 +6,11 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Skeleton } from '@/components/ui/skeleton';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import {
     Brain, BookOpen, AlignLeft, Layers,
     TrendingUp, Clock, Target, Zap,
-    Calendar, ChevronRight, Flame, Headphones
+    Calendar, ChevronRight, Flame, Headphones, Settings2
 } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 import { ReviewHeatmap } from '@/components/charts/ReviewHeatmap';
@@ -42,6 +43,7 @@ export default function DashboardPage() {
     const { lang, setLang, t } = useLang();
     const [stats, setStats] = useState<DashboardStats | null>(null);
     const [loading, setLoading] = useState(true);
+    const [settingsOpen, setSettingsOpen] = useState(false);
 
     useEffect(() => {
         async function fetchDashboard() {
@@ -119,7 +121,9 @@ export default function DashboardPage() {
                         {new Date().toLocaleDateString(lang === 'ko' ? 'ko-KR' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' })}
                     </p>
                 </div>
-                <div className="flex bg-muted rounded-md p-0.5 text-[10px] shadow-sm">
+                
+                {/* Desktop Language Toggle */}
+                <div className="hidden md:flex bg-muted rounded-md p-0.5 text-[10px] shadow-sm">
                     <button
                         onClick={() => setLang('en')}
                         className={cn('px-2.5 py-1 rounded-sm transition-colors', lang === 'en' ? 'bg-background shadow-sm font-medium' : 'text-muted-foreground hover:text-foreground')}
@@ -133,6 +137,43 @@ export default function DashboardPage() {
                         KO
                     </button>
                 </div>
+
+                {/* Mobile Settings Icon */}
+                <Popover open={settingsOpen} onOpenChange={setSettingsOpen}>
+                    <PopoverTrigger asChild className="md:hidden">
+                        <button className="p-2 rounded-lg hover:bg-muted transition-colors">
+                            <Settings2 className="w-5 h-5 text-muted-foreground hover:text-foreground" />
+                        </button>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-48" align="end">
+                        <div className="space-y-3">
+                            <h3 className="text-sm font-semibold">{t({ ko: '설정', en: 'Settings' })}</h3>
+                            <div className="border-t pt-3">
+                                <p className="text-xs font-medium text-muted-foreground mb-2">{t({ ko: '언어', en: 'Language' })}</p>
+                                <div className="flex bg-muted rounded-md p-0.5 text-[10px] shadow-sm w-full">
+                                    <button
+                                        onClick={() => {
+                                            setLang('en');
+                                            setSettingsOpen(false);
+                                        }}
+                                        className={cn('flex-1 px-2 py-1 rounded-sm transition-colors', lang === 'en' ? 'bg-background shadow-sm font-medium' : 'text-muted-foreground hover:text-foreground')}
+                                    >
+                                        EN
+                                    </button>
+                                    <button
+                                        onClick={() => {
+                                            setLang('ko');
+                                            setSettingsOpen(false);
+                                        }}
+                                        className={cn('flex-1 px-2 py-1 rounded-sm transition-colors', lang === 'ko' ? 'bg-background shadow-sm font-medium' : 'text-muted-foreground hover:text-foreground')}
+                                    >
+                                        KO
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </PopoverContent>
+                </Popover>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
