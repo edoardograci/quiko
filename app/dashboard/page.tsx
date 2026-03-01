@@ -39,7 +39,7 @@ interface DashboardStats {
 }
 
 export default function DashboardPage() {
-    const { lang, t } = useLang();
+    const { lang, setLang, t } = useLang();
     const [stats, setStats] = useState<DashboardStats | null>(null);
     const [loading, setLoading] = useState(true);
 
@@ -111,12 +111,28 @@ export default function DashboardPage() {
 
     return (
         <div className="p-6 md:p-8 max-w-7xl mx-auto">
-            {/* Header */}
-            <div className="mb-8">
-                <h1 className="text-2xl font-semibold text-foreground">{t({ ko: '오늘의 학습', en: "Today's Study" })}</h1>
-                <p className="text-muted-foreground mt-1 text-sm">
-                    {new Date().toLocaleDateString(lang === 'ko' ? 'ko-KR' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' })}
-                </p>
+            {/* Header with Language Toggle */}
+            <div className="mb-8 flex items-start justify-between">
+                <div>
+                    <h1 className="text-2xl font-semibold text-foreground">{t({ ko: '오늘의 학습', en: "Today's Study" })}</h1>
+                    <p className="text-muted-foreground mt-1 text-sm">
+                        {new Date().toLocaleDateString(lang === 'ko' ? 'ko-KR' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' })}
+                    </p>
+                </div>
+                <div className="flex bg-muted rounded-md p-0.5 text-[10px] shadow-sm">
+                    <button
+                        onClick={() => setLang('en')}
+                        className={cn('px-2.5 py-1 rounded-sm transition-colors', lang === 'en' ? 'bg-background shadow-sm font-medium' : 'text-muted-foreground hover:text-foreground')}
+                    >
+                        EN
+                    </button>
+                    <button
+                        onClick={() => setLang('ko')}
+                        className={cn('px-2.5 py-1 rounded-sm transition-colors', lang === 'ko' ? 'bg-background shadow-sm font-medium' : 'text-muted-foreground hover:text-foreground')}
+                    >
+                        KO
+                    </button>
+                </div>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
