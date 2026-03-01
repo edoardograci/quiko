@@ -170,6 +170,18 @@ export function ReviewCard({ card, onRate, sessionProgress }: ReviewCardProps) {
                                 )}
                             </div>
 
+                            {/* Audio button */}
+                            {isWordCard && (
+                                <div className="flex justify-center mb-4">
+                                    <AudioButton
+                                        type="word"
+                                        id={card.word!.id}
+                                        className="w-12 h-12"
+                                        iconSize={20}
+                                    />
+                                </div>
+                            )}
+
                             {/* Show answer button */}
                             <button
                                 onClick={handleFlip}
